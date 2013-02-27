@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSites", "WebSites", "{F6F34B65-CAE3-4633-BEB7-FFC798E967EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{06DBA2CB-5E57-4AA8-8562-AEE5AB5877A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVPWithCWABQuickStart", "WebSites\MVPWithCWABQuickStart\MVPWithCWABQuickStart.csproj", "{39D48B17-0B30-45B3-B283-6537DD153E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Modules\Shell\Shell.csproj", "{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "Contacts\Contacts.csproj", "{448254EA-42D4-46F0-B189-1F6F13580BB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Tests", "Contacts.Tests\Contacts.Tests.csproj", "{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blocks", "Blocks", "{83C53ACE-3645-41FD-989D-885F28149769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWeb", "..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\CompositeWeb.csproj", "{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWeb.EnterpriseLibrary", "..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\CompositeWeb.EnterpriseLibrary.csproj", "{062567D9-73FC-4CD9-BD93-48066699CBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebControls", "..\..\..\BlocksTrunk\Source\WebControls\Source\WebControls\WebControls.csproj", "{0F60CA71-9C20-4337-B34D-D837BBC53A54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39D48B17-0B30-45B3-B283-6537DD153E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D48B17-0B30-45B3-B283-6537DD153E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D48B17-0B30-45B3-B283-6537DD153E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D48B17-0B30-45B3-B283-6537DD153E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448254EA-42D4-46F0-B189-1F6F13580BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448254EA-42D4-46F0-B189-1F6F13580BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448254EA-42D4-46F0-B189-1F6F13580BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448254EA-42D4-46F0-B189-1F6F13580BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39D48B17-0B30-45B3-B283-6537DD153E15} = {F6F34B65-CAE3-4633-BEB7-FFC798E967EB}
+		{0C2492F4-34C3-4B55-BD35-51C96E3D5F2B} = {06DBA2CB-5E57-4AA8-8562-AEE5AB5877A8}
+		{448254EA-42D4-46F0-B189-1F6F13580BB2} = {06DBA2CB-5E57-4AA8-8562-AEE5AB5877A8}
+		{4BA199D5-202C-4BA9-9BFB-EBF18BCCE6F5} = {06DBA2CB-5E57-4AA8-8562-AEE5AB5877A8}
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7} = {83C53ACE-3645-41FD-989D-885F28149769}
+		{062567D9-73FC-4CD9-BD93-48066699CBB9} = {83C53ACE-3645-41FD-989D-885F28149769}
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54} = {83C53ACE-3645-41FD-989D-885F28149769}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RootNamespace = MVPQuickstart
+		IsWCSFSolutionWAP = True
+		IsWCSFSolution = True
+	EndGlobalSection
+EndGlobal

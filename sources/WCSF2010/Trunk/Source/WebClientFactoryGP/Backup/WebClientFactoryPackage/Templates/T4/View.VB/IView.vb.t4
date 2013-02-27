@@ -1,0 +1,17 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ViewName" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+<#@ property processor="PropertyProcessor" name="ViewsFolder" #>
+Imports System
+Imports System.Collections.Generic
+Imports System.Text
+
+Namespace <#= this.ViewsFolder #>
+
+	Public Interface I<#= this.ViewName #>View
+
+	End Interface
+
+End Namespace

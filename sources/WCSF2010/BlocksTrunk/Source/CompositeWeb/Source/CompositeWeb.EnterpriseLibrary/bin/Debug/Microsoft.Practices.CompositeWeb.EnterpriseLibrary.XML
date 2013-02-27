@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.CompositeWeb.EnterpriseLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService">
+            <summary>
+            Implements the <see cref="T:Microsoft.Practices.CompositeWeb.Interfaces.IAuthorizationService"/> service using Enterprise Library.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService"/>.
+            </summary>
+            <param name="moduleName">The module name to get the authorization rules for.</param>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService.IsAuthorized(System.String)">
+            <summary>
+            Determines whether the current user is authorized or not given the specified context.
+            </summary>
+            <param name="context">The context or rule to be authorized.</param>
+            <returns><see langword="true"/> if the current user is authorized; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.Services.EnterpriseLibraryAuthorizationService.IsAuthorized(System.String,System.String)">
+            <summary>
+            Determines whether the specified role is authorized or not given the specified context
+            </summary>
+            <param name="role">The role to check authorization for.</param>
+            <param name="context">The context or rule to be authorized.</param>
+            <returns><see langword="true"/> if the current user is authorized; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.ExceptionLogger">
+            <summary>
+            Implamnets a <see cref="T:System.Web.IHttpModule"/> for logging exceptions using Enterprise Library.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.ExceptionLogger.Dispose">
+            <summary>
+            Disposes the object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.ExceptionLogger.Init(System.Web.HttpApplication)">
+            <summary>
+            Intializes the module.
+            </summary>
+            <param name="context">The application hosting the module.</param>
+        </member>
+        <member name="M:Microsoft.Practices.CompositeWeb.EnterpriseLibrary.ExceptionLogger.OnUnhandledException(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:System.Web.HttpApplication.Error"/> event, logging the expection using the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy"/>.
+            </summary>
+            <param name="sender">The object firing the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,38 @@
+<VSTemplate 
+	Version="2.0" 
+	Type="ProjectGroup"
+	xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <Name>Web Client Solution (C#, Web Site)</Name>
+    <Description>Web Client Software Factory Solution (C#, Web Site)</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>90</SortOrder>
+    <Icon>WCSF Guidance Package.ico</Icon>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>WebClient</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="WebSites">
+        <ProjectTemplateLink ProjectName="$WebUIProjectName$">Projects\WebProject.CS\WebUI.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Modules">
+        <ProjectTemplateLink ProjectName="Shell">Projects\Shell.CS\Shell.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=023ca9fed18f34f0</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0"
+              Recipe="CreateWebClientFactorySolutionCS">
+      <References>
+      </References>
+    </Template>
+  </WizardData>
+</VSTemplate>

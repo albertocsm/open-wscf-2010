@@ -1,0 +1,38 @@
+<VSTemplate
+	Version="2.0"
+	Type="ProjectGroup"
+	xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <Name>Web Client Solution (Visual Basic, WAP)</Name>
+		<Description>Web Client Software Factory Solution (Visual Basic, WAP)</Description>
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>96</SortOrder>
+		<Icon>WCSF Guidance Package.ico</Icon>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>WebClient</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="WebSites">
+				<ProjectTemplateLink ProjectName="$WebUIProjectName$">Projects\WebProject.VB\WebUI_WAP.vstemplate</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="Modules">
+				<ProjectTemplateLink ProjectName="Shell">Projects\Shell.VB\Shell.vstemplate</ProjectTemplateLink>
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+		<FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+				  SchemaVersion="1.0"
+				  Recipe="CreateWebClientFactorySolutionWAPVB">
+			<References>
+			</References>
+		</Template>
+	</WizardData>
+</VSTemplate>

@@ -1,0 +1,16 @@
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.XML
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\bin\Debug\Microsoft.Practices.CompositeWeb.xml
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\obj\Debug\CompositeWeb.EnterpriseLibrary.csprojResolveAssemblyReference.cache
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\obj\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\obj\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.pdb

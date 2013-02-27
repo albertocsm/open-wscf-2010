@@ -1,0 +1,38 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ViewName" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+Imports Microsoft.Practices.ObjectBuilder
+Imports System
+Imports <#= this.ModuleNamespace #>.MasterPages
+
+Namespace <#= this.ModuleNamespace #>.MasterPages
+	Partial Class <#= this.ViewName #>
+		Inherits Microsoft.Practices.CompositeWeb.Web.UI.MasterPage
+		Implements I<#= this.ViewName #>View
+
+		Private _presenter As <#= this.ViewName #>Presenter
+
+		Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+			If Not Me.IsPostBack Then
+				Me._presenter.OnViewInitialized()
+			End If
+			_presenter.OnViewLoaded()
+		End Sub
+
+		<CreateNew()> _
+		Public Property Presenter() As <#= this.ViewName #>Presenter
+			Get
+				Return Me._presenter
+			End Get
+			Set(ByVal value As <#= this.ViewName #>Presenter)
+		        If value Is Nothing Then
+			        Throw New ArgumentNullException("value")
+				End If
+				Me._presenter = value
+				Me._presenter.View = Me
+			End Set
+		End Property
+	End Class
+End Namespace

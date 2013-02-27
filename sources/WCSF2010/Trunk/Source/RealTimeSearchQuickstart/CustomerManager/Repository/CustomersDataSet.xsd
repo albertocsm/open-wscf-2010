@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomersDataSet" targetNamespace="http://tempuri.org/CustomersDataSet.xsd" xmlns:mstns="http://tempuri.org/CustomersDataSet.xsd" xmlns="http://tempuri.org/CustomersDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrderManagementDBConnectionString" IsAppSettingsProperty="True" Modifier="Assembly" Name="OrderManagementDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdersRepository.Services.Properties.Settings.GlobalReference.Default.OrderManagementDBConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CustomersDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="SearchQuickStart.WebUI" msprop:Generator_UserDSName="CustomersDataSet" msprop:Generator_DataSetName="CustomersDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customers" msprop:Generator_UserTableName="Customers" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_RowClassName="CustomersRow" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_TablePropName="Customers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInTable="AddressColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_UserColumnName="City" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInTable="CityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State" msprop:Generator_UserColumnName="State" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInTable="StateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zip" msprop:Generator_UserColumnName="Zip" msprop:Generator_ColumnPropNameInRow="Zip" msprop:Generator_ColumnVarNameInTable="columnZip" msprop:Generator_ColumnPropNameInTable="ZipColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="States" msprop:Generator_UserTableName="States" msprop:Generator_RowDeletedName="StatesRowDeleted" msprop:Generator_TableClassName="StatesDataTable" msprop:Generator_RowChangedName="StatesRowChanged" msprop:Generator_RowClassName="StatesRow" msprop:Generator_RowChangingName="StatesRowChanging" msprop:Generator_RowEvArgName="StatesRowChangeEvent" msprop:Generator_RowEvHandlerName="StatesRowChangeEventHandler" msprop:Generator_TablePropName="States" msprop:Generator_TableVarName="tableStates" msprop:Generator_RowDeletingName="StatesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Customers" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Customers" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+    <xs:unique name="PrimaryKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:States" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ModuleName" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+
+Namespace <#= this.ModuleNamespace #>.Views
+	Partial Public Class <#= this.ModuleName #>Default
+
+	End Class
+End Namespace

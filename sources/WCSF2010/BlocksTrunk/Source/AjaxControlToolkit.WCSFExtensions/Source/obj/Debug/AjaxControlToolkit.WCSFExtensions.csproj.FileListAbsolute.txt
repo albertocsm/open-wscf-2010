@@ -1,0 +1,8 @@
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\bin\Debug\AjaxControlToolkit.WCSFExtensions.XML
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\bin\Debug\AjaxControlToolkit.WCSFExtensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\bin\Debug\AjaxControlToolkit.WCSFExtensions.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\bin\Debug\AjaxControlToolkit.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\obj\Debug\AjaxControlToolkit.WCSFExtensions.Properties.Resources.resources
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\obj\Debug\AjaxControlToolkit.WCSFExtensions.csproj.GenerateResource.Cache
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\obj\Debug\AjaxControlToolkit.WCSFExtensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\obj\Debug\AjaxControlToolkit.WCSFExtensions.pdb

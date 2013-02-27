@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.CompositeWeb</RootNamespace>
+    <AssemblyName>Microsoft.Practices.CompositeWeb</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Microsoft.Practices.CompositeWeb.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <DocumentationFile>bin\Release\Microsoft.Practices.CompositeWeb.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization\Action.cs" />
+    <Compile Include="Authorization\AuthorizationRulesService.cs" />
+    <Compile Include="BuilderStrategies\ContainerAwareTypeMappingPolicy.cs" />
+    <Compile Include="BuilderStrategies\ContainerAwareTypeMappingStrategy.cs" />
+    <Compile Include="BuilderStrategies\IContainerAwareTypeMappingPolicy.cs" />
+    <Compile Include="Configuration\AuthorizationRuleCollection.cs" />
+    <Compile Include="Configuration\AuthorizationRuleElement.cs" />
+    <Compile Include="Configuration\ServiceConfigurationElement.cs" />
+    <Compile Include="Configuration\ServiceConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\ServiceInfo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Interfaces\IAuthorizationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IPermissionsCatalog.cs" />
+    <Compile Include="Interfaces\IRolesCatalog.cs" />
+    <Compile Include="Authorization\ModuleActionSet.cs" />
+    <Compile Include="Authorization\PermissionsCatalog.cs" />
+    <Compile Include="Authorization\RolesCatalog.cs" />
+    <Compile Include="Authorization\WebClientAuthorizationModule.cs" />
+    <Compile Include="BuilderStrategies\SessionStateBindingStrategy.cs" />
+    <Compile Include="Collections\ManagedObjectCollection.cs" />
+    <Compile Include="Collections\ServiceCollection.cs" />
+    <Compile Include="CompositionContainer.cs" />
+    <Compile Include="Configuration\DependantModuleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IAuthorizationRulesService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IServiceLoaderService.cs" />
+    <Compile Include="ModuleInitializer.cs" />
+    <Compile Include="Configuration\AuthorizationConfigurationSection.cs" />
+    <Compile Include="Configuration\ModuleConfigurationElement.cs" />
+    <Compile Include="Configuration\ModuleConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\ModuleDependency.cs" />
+    <Compile Include="Configuration\ModuleDependencyCollection.cs" />
+    <Compile Include="Configuration\ModuleDependencyConfigurationElement.cs" />
+    <Compile Include="Configuration\ModulesConfigurationSection.cs" />
+    <Compile Include="Configuration\ModuleInfo.cs" />
+    <Compile Include="Interfaces\IHttpContext.cs" />
+    <Compile Include="Interfaces\IHttpContextLocatorService.cs" />
+    <Compile Include="Interfaces\IHttpServerUtility.cs" />
+    <Compile Include="Interfaces\IManagedObjectCollection.cs" />
+    <Compile Include="Interfaces\IModuleInfoStore.cs" />
+    <Compile Include="Interfaces\IModuleInitializer.cs" />
+    <Compile Include="Interfaces\IModuleEnumerator.cs" />
+    <Compile Include="Interfaces\IModuleInfo.cs" />
+    <Compile Include="Interfaces\IModuleLoaderService.cs" />
+    <Compile Include="Interfaces\IServiceCollection.cs" />
+    <Compile Include="Interfaces\ISessionStateLocatorService.cs" />
+    <Compile Include="Interfaces\ISiteMapBuilderService.cs" />
+    <Compile Include="Interfaces\ISiteMapNodeLocator.cs" />
+    <Compile Include="Interfaces\IStateValue.cs" />
+    <Compile Include="Interfaces\IVirtualPathUtilityService.cs" />
+    <Compile Include="Interfaces\IWebClientApplication.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\BuildPlanPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\BuildPlanStrategy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Creation\AttributeBasedConstructorChooser.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Creation\CallConstructorStrategy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Creation\DefaultConstructorChooserPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Creation\IConstructorChooserPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\DynamicMethodBuildPlan.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\DynamicMethodPlanBuilderPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Method\AttributeBasedMethodChooser.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Method\CallMethodsStrategy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Method\IMethodChooserPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\CreateNewParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\DependencyParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\IParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\ParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\ParameterResolverMap.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\ProviderDependencyParameterResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\ServiceDependencyParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Parameters\StateDependencyParameterResolver.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\PlanBuilderStrategy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Properties\AttributeBasedPropertyChooser.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Properties\DefaultPropertyChooserPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Properties\IPropertyChooserPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\DynamicMethodPlan\Properties\SetPropertiesStrategy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\IBuildPlan.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\IBuildPlanPolicy.cs" />
+    <Compile Include="ObjectBuilder\BuildPlan\IPlanBuilderPolicy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\ConstructorReflectionStrategy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\CreationStrategy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\MethodReflectionStrategy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\PropertyReflectionStrategy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\ReflectionStrategy.cs" />
+    <Compile Include="ObjectBuilder\Strategies\SimplifiedSingletonStrategy.cs" />
+    <Compile Include="ObjectBuilder\WCSFBuilder.cs" />
+    <Compile Include="ObjectBuilder\WCSFBuilderBase.cs" />
+    <Compile Include="ObjectBuilder\WCSFBuilderStage.cs" />
+    <Compile Include="Services\ModuleLoadException.cs" />
+    <Compile Include="Services\ServiceLoaderService.cs" />
+    <Compile Include="SiteMapNodeInfo.cs" />
+    <Compile Include="ModuleDependencySolver.cs" />
+    <Compile Include="OptionalDependencyAttribute.cs" />
+    <Compile Include="Presenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderDependencyAttribute.cs" />
+    <Compile Include="Providers\ModuleSiteMapProvider.cs" />
+    <Compile Include="Providers\RoleProvider.cs" />
+    <Compile Include="ServiceDependencyAttribute.cs" />
+    <Compile Include="Services\HttpContextLocatorService.cs" />
+    <Compile Include="Interfaces\IModuleConfigurationLocatorService.cs" />
+    <Compile Include="Interfaces\IModuleContainerLocatorService.cs" />
+    <Compile Include="Services\ModuleConfigurationLocatorService.cs" />
+    <Compile Include="Services\ModuleContainerLocatorService.cs" />
+    <Compile Include="Services\ModuleLoaderService.cs" />
+    <Compile Include="Services\ServiceException.cs" />
+    <Compile Include="Services\ServiceMissingException.cs" />
+    <Compile Include="Services\SessionLocatorService.cs" />
+    <Compile Include="Services\SiteMapBuilderService.cs" />
+    <Compile Include="Services\VirtualPathUtilityService.cs" />
+    <Compile Include="Services\WebConfigModuleInfoStore.cs" />
+    <Compile Include="Services\WebModuleEnumerator.cs" />
+    <Compile Include="SessionStateKeyAttribute.cs" />
+    <Compile Include="StateDependencyAttribute.cs" />
+    <Compile Include="Utility\DataEventArgs.cs" />
+    <Compile Include="Utility\Guard.cs" />
+    <Compile Include="Utility\ListDictionary.cs" />
+    <Compile Include="Utility\OutputValidationUtility.cs" />
+    <Compile Include="ModuleDependencySolverException.cs" />
+    <Compile Include="WebClientApplication.cs" />
+    <Compile Include="Web\HttpContext.cs" />
+    <Compile Include="Web\HttpServerUtility.cs" />
+    <Compile Include="Web\HttpSessionState.cs" />
+    <Compile Include="Web\StateValue.cs" />
+    <Compile Include="Web\UI\MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\UserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)..\Lib\WCSFBlocks"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

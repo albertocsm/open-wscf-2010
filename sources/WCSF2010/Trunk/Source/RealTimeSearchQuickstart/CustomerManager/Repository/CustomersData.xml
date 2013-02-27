@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<CustomersDataSet xmlns="http://tempuri.org/CustomersDataSet.xsd">
+	<States>
+		<Id>AK</Id>
+		<Name>Alaska</Name>
+	</States>
+	<States>
+		<Id>AL</Id>
+		<Name>Alabama</Name>
+	</States>
+	<States>
+		<Id>AR</Id>
+		<Name>Arkansas</Name>
+	</States>
+	<States>
+		<Id>AZ</Id>
+		<Name>Arizona</Name>
+	</States>
+	<States>
+		<Id>CA</Id>
+		<Name>California</Name>
+	</States>
+	<States>
+		<Id>CO</Id>
+		<Name>Colorado</Name>
+	</States>
+	<States>
+		<Id>CT</Id>
+		<Name>Connecticut</Name>
+	</States>
+	<States>
+		<Id>DC</Id>
+		<Name>District of Columbia</Name>
+	</States>
+	<States>
+		<Id>DE</Id>
+		<Name>Delaware</Name>
+	</States>
+	<States>
+		<Id>FL</Id>
+		<Name>Florida</Name>
+	</States>
+	<States>
+		<Id>GA</Id>
+		<Name>Georgia</Name>
+	</States>
+	<States>
+		<Id>HI</Id>
+		<Name>Hawaii</Name>
+	</States>
+	<States>
+		<Id>IA</Id>
+		<Name>Iowa</Name>
+	</States>
+	<States>
+		<Id>ID</Id>
+		<Name>Idaho</Name>
+	</States>
+	<States>
+		<Id>IL</Id>
+		<Name>Illinois</Name>
+	</States>
+	<States>
+		<Id>IN</Id>
+		<Name>Indiana</Name>
+	</States>
+	<States>
+		<Id>KS</Id>
+		<Name>Kansas</Name>
+	</States>
+	<States>
+		<Id>KY</Id>
+		<Name>Kentucky</Name>
+	</States>
+	<States>
+		<Id>LA</Id>
+		<Name>Louisiana</Name>
+	</States>
+	<States>
+		<Id>MA</Id>
+		<Name>Massachusetts</Name>
+	</States>
+	<States>
+		<Id>MD</Id>
+		<Name>Maryland</Name>
+	</States>
+	<States>
+		<Id>ME</Id>
+		<Name>Maine</Name>
+	</States>
+	<States>
+		<Id>MI</Id>
+		<Name>Michigan</Name>
+	</States>
+	<States>
+		<Id>MN</Id>
+		<Name>Minnesota</Name>
+	</States>
+	<States>
+		<Id>MO</Id>
+		<Name>Missouri</Name>
+	</States>
+	<States>
+		<Id>MS</Id>
+		<Name>Mississippi</Name>
+	</States>
+	<States>
+		<Id>MT</Id>
+		<Name>Montana</Name>
+	</States>
+	<States>
+		<Id>NC</Id>
+		<Name>North Carolina</Name>
+	</States>
+	<States>
+		<Id>ND</Id>
+		<Name>North Dakota</Name>
+	</States>
+	<States>
+		<Id>NE</Id>
+		<Name>Nebraska</Name>
+	</States>
+	<States>
+		<Id>NH</Id>
+		<Name>New Hampshire</Name>
+	</States>
+	<States>
+		<Id>NJ</Id>
+		<Name>New Jersey</Name>
+	</States>
+	<States>
+		<Id>NM</Id>
+		<Name>New Mexico</Name>
+	</States>
+	<States>
+		<Id>NV</Id>
+		<Name>Nevada</Name>
+	</States>
+	<States>
+		<Id>NY</Id>
+		<Name>New York</Name>
+	</States>
+	<States>
+		<Id>OH</Id>
+		<Name>Ohio</Name>
+	</States>
+	<States>
+		<Id>OK</Id>
+		<Name>Oklahoma</Name>
+	</States>
+	<States>
+		<Id>OR</Id>
+		<Name>Oregon</Name>
+	</States>
+	<States>
+		<Id>PA</Id>
+		<Name>Pennsylvania</Name>
+	</States>
+	<States>
+		<Id>PR</Id>
+		<Name>Puerto Rico</Name>
+	</States>
+	<States>
+		<Id>RI</Id>
+		<Name>Rhode Island</Name>
+	</States>
+	<States>
+		<Id>SC</Id>
+		<Name>South Carolina</Name>
+	</States>
+	<States>
+		<Id>SD</Id>
+		<Name>South Dakota</Name>
+	</States>
+	<States>
+		<Id>TN</Id>
+		<Name>Tennessee</Name>
+	</States>
+	<States>
+		<Id>TX</Id>
+		<Name>Texas</Name>
+	</States>
+	<States>
+		<Id>UT</Id>
+		<Name>Utah</Name>
+	</States>
+	<States>
+		<Id>VA</Id>
+		<Name>Virginia</Name>
+	</States>
+	<States>
+		<Id>VT</Id>
+		<Name>Vermont</Name>
+	</States>
+	<States>
+		<Id>WA</Id>
+		<Name>Washington</Name>
+	</States>
+	<States>
+		<Id>WI</Id>
+		<Name>Wisconsin</Name>
+	</States>
+	<States>
+		<Id>WV</Id>
+		<Name>West Virginia</Name>
+	</States>
+	<States>
+		<Id>WY</Id>
+		<Name>Wyoming</Name>
+	</States>
+	<Customers>
+		<Id>1</Id>
+		<Name>Alfreds Futterkiste</Name>
+		<Address>2463 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>2</Id>
+		<Name>Ana Trujillo Emparedados y helados</Name>
+		<Address>City Center Plaza 1820 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>3</Id>
+		<Name>Antonio Moreno Taquería</Name>
+		<Address>38 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>4</Id>
+		<Name>Around the Horn</Name>
+		<Address>2190 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>5</Id>
+		<Name>Berglunds snabbköp</Name>
+		<Address>911 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>6</Id>
+		<Name>Blauer See Delikatessen</Name>
+		<Address>1352 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>7</Id>
+		<Name>Blondesddsl père et fils</Name>
+		<Address>73 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>8</Id>
+		<Name>Bólido Comidas preparadas</Name>
+		<Address>1888 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>9</Id>
+		<Name>Bon app'</Name>
+		<Address>P.O. Box 187</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>10</Id>
+		<Name>Bottom-Dollar Markets</Name>
+		<Address>2071 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>11</Id>
+		<Name>B's Beverages</Name>
+		<Address>1671 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>12</Id>
+		<Name>Cactus Comidas para llevar</Name>
+		<Address>191 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>13</Id>
+		<Name>Centro comercial Moctezuma</Name>
+		<Address>1215 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>14</Id>
+		<Name>Chop-suey Chinese</Name>
+		<Address>1520 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>15</Id>
+		<Name>Comércio Mineiro</Name>
+		<Address>City Center Plaza 1455 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>16</Id>
+		<Name>Consolidated Holdings</Name>
+		<Address>2346 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>17</Id>
+		<Name>Drachenblut Delikatessen</Name>
+		<Address>461 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>18</Id>
+		<Name>Du monde entier</Name>
+		<Address>721 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>19</Id>
+		<Name>Eastern Connection</Name>
+		<Address>2043 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>20</Id>
+		<Name>Ernst Handel</Name>
+		<Address>1575 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>21</Id>
+		<Name>Familia Arquibaldo</Name>
+		<Address>1828 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>22</Id>
+		<Name>FISSA Fabrica Inter. Salchichas S.A.</Name>
+		<Address>P.O. Box 1758</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>23</Id>
+		<Name>Folies gourmandes</Name>
+		<Address>260 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>24</Id>
+		<Name>Folk och fä HB</Name>
+		<Address>1306 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>25</Id>
+		<Name>Frankenversand</Name>
+		<Address>1583 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>26</Id>
+		<Name>France restauration</Name>
+		<Address>706 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>27</Id>
+		<Name>Franchi S.p.A.</Name>
+		<Address>2613 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>28</Id>
+		<Name>Furia Bacalhau e Frutos do Mar</Name>
+		<Address>2027 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>29</Id>
+		<Name>Galería del gastrónomo</Name>
+		<Address>City Center Plaza 1736 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>30</Id>
+		<Name>Godos Cocina Típica</Name>
+		<Address>1084 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>31</Id>
+		<Name>Gourmet Lanchonetes</Name>
+		<Address>297 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>32</Id>
+		<Name>Great Lakes Food Market</Name>
+		<Address>2732 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>33</Id>
+		<Name>GROSELLA-Restaurante</Name>
+		<Address>1890 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>34</Id>
+		<Name>Hanari Carnes</Name>
+		<Address>985 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>35</Id>
+		<Name>HILARION-Abastos</Name>
+		<Address>2135 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>36</Id>
+		<Name>Hungry Coyote Import Store</Name>
+		<Address>City Center Plaza 516 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>37</Id>
+		<Name>Hungry Owl All-Night Grocers</Name>
+		<Address>836 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>38</Id>
+		<Name>Island Trading</Name>
+		<Address>P.O. Box 551</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>39</Id>
+		<Name>Königlich Essen</Name>
+		<Address>1758 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>40</Id>
+		<Name>La corne d'abondance</Name>
+		<Address>2078 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>41</Id>
+		<Name>La maison d'Asie</Name>
+		<Address>1459 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>42</Id>
+		<Name>Laughing Bacchus Wine Cellars</Name>
+		<Address>1071 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>43</Id>
+		<Name>Lazy K Kountry Store</Name>
+		<Address>12 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>44</Id>
+		<Name>Lehmanns Marktstand</Name>
+		<Address>782 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>45</Id>
+		<Name>Let's Stop N Shop</Name>
+		<Address>87 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>46</Id>
+		<Name>LILA-Supermercado</Name>
+		<Address>879 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>47</Id>
+		<Name>LINO-Delicateses</Name>
+		<Address>City Center Plaza 1165 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>48</Id>
+		<Name>Lonesome Pine Restaurant</Name>
+		<Address>89 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>49</Id>
+		<Name>Magazzini Alimentari Riuniti</Name>
+		<Address>1300 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>50</Id>
+		<Name>Maison Dewey</Name>
+		<Address>262 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>51</Id>
+		<Name>Mère Paillarde</Name>
+		<Address>1833 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>52</Id>
+		<Name>Morgenstern Gesundkost</Name>
+		<Address>34 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>53</Id>
+		<Name>North/South</Name>
+		<Address>1901 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>54</Id>
+		<Name>Océano Atlántico Ltda.</Name>
+		<Address>867 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>55</Id>
+		<Name>Old World Delicatessen</Name>
+		<Address>2743 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>56</Id>
+		<Name>Ottilies Käseladen</Name>
+		<Address>P.O. Box 757</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>57</Id>
+		<Name>Paris spécialités</Name>
+		<Address>1519 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>58</Id>
+		<Name>Pericles Comidas clásicas</Name>
+		<Address>578 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>59</Id>
+		<Name>Piccolo und mehr</Name>
+		<Address>1635 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>60</Id>
+		<Name>Princesa Isabel Vinhos</Name>
+		<Address>209 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>61</Id>
+		<Name>Que Delícia</Name>
+		<Address>597 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>62</Id>
+		<Name>Queen Cozinha</Name>
+		<Address>1196 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>63</Id>
+		<Name>QUICK-Stop</Name>
+		<Address>City Center Plaza 2389 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>64</Id>
+		<Name>Rancho grande</Name>
+		<Address>2404 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>65</Id>
+		<Name>Rattlesnake Canyon Grocery</Name>
+		<Address>2817 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>66</Id>
+		<Name>Reggiani Caseifici</Name>
+		<Address>817 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>67</Id>
+		<Name>Ricardo Adocicados</Name>
+		<Address>773 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>68</Id>
+		<Name>Richter Supermarkt</Name>
+		<Address>1303 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>69</Id>
+		<Name>Romero y tomillo</Name>
+		<Address>2289 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>70</Id>
+		<Name>Santé Gourmet</Name>
+		<Address>943 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>71</Id>
+		<Name>Save-a-lot Markets</Name>
+		<Address>187 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>72</Id>
+		<Name>Seven Seas Imports</Name>
+		<Address>P.O. Box 844</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>73</Id>
+		<Name>Simons bistro</Name>
+		<Address>2028 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>74</Id>
+		<Name>Spécialités du monde</Name>
+		<Address>1157 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>75</Id>
+		<Name>Split Rail Beer &amp; Ale</Name>
+		<Address>P.O. Box 555</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+	<Customers>
+		<Id>76</Id>
+		<Name>Suprêmes délices</Name>
+		<Address>1275 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>77</Id>
+		<Name>The Big Cheese</Name>
+		<Address>89 Jefferson Way Suite 2</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97201</Zip>
+	</Customers>
+	<Customers>
+		<Id>78</Id>
+		<Name>The Cracker Box</Name>
+		<Address>55 Grizzly Peak Rd.</Address>
+		<City>Butte</City>
+		<State>MT</State>
+		<Zip>59801</Zip>
+	</Customers>
+	<Customers>
+		<Id>79</Id>
+		<Name>Toms Spezialitäten</Name>
+		<Address>2600 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>80</Id>
+		<Name>Tortuga Restaurante</Name>
+		<Address>1136 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>81</Id>
+		<Name>Tradição Hipermercados</Name>
+		<Address>2253 Baker Blvd.</Address>
+		<City>Eugene</City>
+		<State>OR</State>
+		<Zip>97403</Zip>
+	</Customers>
+	<Customers>
+		<Id>82</Id>
+		<Name>Trail's Head Gourmet Provisioners</Name>
+		<Address>722 DaVinci Blvd.</Address>
+		<City>Kirkland</City>
+		<State>WA</State>
+		<Zip>98034</Zip>
+	</Customers>
+	<Customers>
+		<Id>83</Id>
+		<Name>Vaffeljernet</Name>
+		<Address>City Center Plaza 468 Main St.</Address>
+		<City>Elgin</City>
+		<State>OR</State>
+		<Zip>97827</Zip>
+	</Customers>
+	<Customers>
+		<Id>84</Id>
+		<Name>Victuailles en stock</Name>
+		<Address>1837 Orchestra Terrace</Address>
+		<City>Walla Walla</City>
+		<State>WA</State>
+		<Zip>99362</Zip>
+	</Customers>
+	<Customers>
+		<Id>85</Id>
+		<Name>Vins et alcools Chevalier</Name>
+		<Address>360 Polk St. Suite 5</Address>
+		<City>San Francisco</City>
+		<State>CA</State>
+		<Zip>94117</Zip>
+	</Customers>
+	<Customers>
+		<Id>86</Id>
+		<Name>Die Wandernde Kuh</Name>
+		<Address>685 Chiaroscuro Rd.</Address>
+		<City>Portland</City>
+		<State>OR</State>
+		<Zip>97219</Zip>
+	</Customers>
+	<Customers>
+		<Id>87</Id>
+		<Name>Wartian Herkku</Name>
+		<Address>1732 Bering St.</Address>
+		<City>Anchorage</City>
+		<State>AK</State>
+		<Zip>99508</Zip>
+	</Customers>
+	<Customers>
+		<Id>88</Id>
+		<Name>Wellington Importadora</Name>
+		<Address>829 Milton Dr.</Address>
+		<City>Albuquerque</City>
+		<State>NM</State>
+		<Zip>87110</Zip>
+	</Customers>
+	<Customers>
+		<Id>89</Id>
+		<Name>White Clover Markets</Name>
+		<Address>305 - 14th Ave. S. Suite 3B</Address>
+		<City>Seattle</City>
+		<State>WA</State>
+		<Zip>98128</Zip>
+	</Customers>
+	<Customers>
+		<Id>90</Id>
+		<Name>Wilman Kala</Name>
+		<Address>1263 Suffolk Ln.</Address>
+		<City>Boise</City>
+		<State>ID</State>
+		<Zip>83720</Zip>
+	</Customers>
+	<Customers>
+		<Id>91</Id>
+		<Name>Wolski  Zajazd</Name>
+		<Address>P.O. Box 2065</Address>
+		<City>Lander</City>
+		<State>WY</State>
+		<Zip>82520</Zip>
+	</Customers>
+</CustomersDataSet>

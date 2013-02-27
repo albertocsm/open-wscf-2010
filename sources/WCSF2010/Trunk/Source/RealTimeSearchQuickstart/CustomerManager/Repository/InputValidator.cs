@@ -1,0 +1,49 @@
+//===============================================================================
+// Microsoft patterns & practices
+// Web Client Software Factory 2010
+//===============================================================================
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+// The example companies, organizations, products, domain names,
+// e-mail addresses, logos, people, places, and events depicted
+// herein are fictitious.  No association with any real company,
+// organization, product, domain name, email address, logo, person,
+// places, or events is intended or should be inferred.
+//===============================================================================
+//===============================================================================
+// Microsoft patterns & practices
+// Web Client Software Factory
+//-------------------------------------------------------------------------------
+// Copyright (C) Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//-------------------------------------------------------------------------------
+// The example companies, organizations, products, domain names,
+// e-mail addresses, logos, people, places, and events depicted
+// herein are fictitious.  No association with any real company,
+// organization, product, domain name, email address, logo, person,
+// places, or events is intended or should be inferred.
+//===============================================================================
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace RealTimeSearchQuickstart.CustomerManager.Repository {
+    public static class InputValidator {
+        /// <summary>
+        /// Escapes string parameters to use on a SQL query on the dataset
+        /// </summary>
+        /// <param name="inputParameter">The input to validate</param>
+        /// <returns>Safely encoded parameter to use on a SQL query</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:ValidateArgumentsOfPublicMethods", Justification = "Validation done by Guard class.")]
+        public static string EncodeQueryStringParameter(string inputParameter) {
+            return inputParameter.Replace(@"'", @"''");
+        }
+    }
+}

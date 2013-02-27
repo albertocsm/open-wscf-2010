@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4410730B-59A4-4BBA-B8F0-2AB45D4CD880}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharedUserControls.Tests</RootNamespace>
+    <AssemblyName>SharedUserControls.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MockFindCustomerService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchCustomerPresenterFixture.cs" />
+    <Compile Include="SharedUserControlsModuleInitializerFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\CompositeWeb.EnterpriseLibrary.csproj">
+      <Project>{062567D9-73FC-4CD9-BD93-48066699CBB9}</Project>
+      <Name>CompositeWeb.EnterpriseLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\CompositeWeb.csproj">
+      <Project>{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}</Project>
+      <Name>CompositeWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\WebControls\Source\WebControls\WebControls.csproj">
+      <Project>{0F60CA71-9C20-4337-B34D-D837BBC53A54}</Project>
+      <Name>WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\OrdersRepository\Source\Business Logic\OrdersRepository.BusinessEntities\OrdersRepository.BusinessEntities.csproj">
+      <Project>{DDD66A18-EEF8-471A-808A-2231A120B6F6}</Project>
+      <Name>OrdersRepository.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\OrdersRepository\Source\OrdersRepository.Interfaces\OrdersRepository.Interfaces.csproj">
+      <Project>{BA67E83E-035E-45C0-9DEC-4D860D28F9C8}</Project>
+      <Name>OrdersRepository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Customers\Customers.Tests\Customers.Tests.csproj">
+      <Project>{7ECA6F7E-01F6-472E-803B-4918D134AA4C}</Project>
+      <Name>Customers.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedUserControls\SharedUserControls.csproj">
+      <Project>{EDDAC743-673B-4527-AB9D-C4EF77CFD64A}</Project>
+      <Name>SharedUserControls %28Modules\SharedUserControls\SharedUserControls%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

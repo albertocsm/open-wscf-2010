@@ -1,0 +1,780 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.Web.UI.WebControls</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner">
+            <summary>
+            Provides design-time support in a design host for the <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.GetView(System.String)">
+            <summary>
+            Retrieves a <see cref="T:System.Web.UI.Design.DesignerDataSourceView"/> object that is identified by the view name.
+            </summary>
+            <param name="viewName">The name of the view.</param>
+            <returns>The <see cref="T:System.Web.UI.Design.DesignerDataSourceView"/> identified by the view name.</returns>
+            <exception cref="T:System.ArgumentException">The view name is equal to the default view name.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.Configure">
+            <summary>
+            Launches the data source configuration utility in the design host.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.RefreshSchema(System.Boolean)">
+            <summary>
+            Indicates whether to allow events when refreshing the schema.
+            </summary>
+            <param name="preferSilent"><see langword=" true"/> to allow events when refreshing the schema; 
+            <see langword=" false"/> to disable the DataSourceChanged and SchemaRefreshed events when refreshing the schema.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.GetViewNames">
+            <summary>
+            Retrieves the view names that are available in this data source.
+            </summary>
+            <returns>An array of <see langword="string"/>.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.CanRefreshSchema">
+            <summary>
+            Indicates whether the <see cref="M:System.Web.UI.Design.DataSourceDesigner.RefreshSchema(System.Boolean)"/> method can be called.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner.CanConfigure">
+            <summary>
+            Indicates whether the <see cref="M:System.Web.UI.Design.DataSourceDesigner.Configure"/> method can be called.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView">
+            <summary>
+            Provides design-time view for the <see cref="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner"/> designer.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.#ctor(Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView"/>.
+            </summary>
+            <param name="owner">The <see cref="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner"/> owning this view.</param>
+            <param name="viewName">The name of the view.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.Schema">
+            <summary>
+            Gets a schema that describes the data source view that is represented by this view object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanDelete">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            the <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)"/> method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanInsert">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            the <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)"/> method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanUpdate">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            the <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)"/>
+            method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanSort">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            a sorted view on the underlying data source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanPage">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            paging through the data that is retrieved by the <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)"/>
+            method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesignerView.CanRetrieveTotalRowCount">
+            <summary>
+            Indicates whether the <see cref="T:System.Web.UI.DataSourceView"/> object that
+            is associated with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports
+            retrieving the total number of data rows, instead of the data.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm">
+            <summary>
+            Provides design-time support for the <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm.#ctor(Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceDesigner)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm"/>.
+            </summary>
+            <param name="objectContainerDataSourceDesigner">The <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> designer.</param>
+        </member>
+        <member name="F:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Design.ObjectContainerDataSourceWizardForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource">
+            <summary>
+            Implements data binding in a way that easily integrates with the View-Presenter pattern.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.GetViewNames">
+            <summary>
+            Gets a collection of names, representing the list of <see cref="T:System.Web.UI.DataSourceView"/> objects associated with the <see cref="T:System.Web.UI.DataSourceControl"/> control. 
+            </summary>
+            <returns>An ICollection that contains the names of the <see cref="T:System.Web.UI.DataSourceView"/> objects associated with the <see cref="T:System.Web.UI.DataSourceControl"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.GetView(System.String)">
+            <summary>
+            Gets the named data source view associated with the data source control. 
+            </summary>
+            <param name="viewName">The name of the <see cref="T:System.Web.UI.DataSourceView"/> to retrieve</param>
+            <returns>Returns the named <see cref="T:System.Web.UI.DataSourceView"/> associated with the <see cref="T:System.Web.UI.DataSourceControl"/>.</returns>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Deleted">
+            <summary>
+            This event occurs after an object is deleted. Handle this event to update your data store.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Updated">
+            <summary>
+            This event occurs after an object is deleted. Handle this event to update your data store.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Inserted">
+            <summary>
+            This event occurs after an object is inserted. Handle this event to update your data store.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Deleting">
+            <summary>
+            This event occurs before an object is deleted. Handle this event to validate and/or modify the input parameters.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Updating">
+            <summary>
+            This event occurs before an object is updated. Handle this event to validate and/or modify the input parameters.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Inserting">
+            <summary>
+            This event occurs before an object is inserted. Handle this event to validate and/or modify the input parameters.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Selecting">
+            <summary>
+            This event occurs before performing a select operation. Handle this event to set the DataSource property when using server paging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Items">
+            <summary>
+            Gets a <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> of the items in the Data Source View.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.DataSource">
+            <summary>
+            Sets the View Data Source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.DataObjectTypeName">
+            <summary>
+            Gets or sets the full name of the type of objects that will be stored in the control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.UsingServerSorting">
+            <summary>
+            Gets or sets whether to use server sorting. If enabled, you must perform sorting manually.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.UsingServerPaging">
+            <summary>
+            Gets or sets whether to use server paging. If enabled, you must perform paging manually.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.TotalRowCount">
+            <summary>
+            Sets the number of rows retrieved during a data retrieval operation
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.View">
+            <summary>
+            Gets the default <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView"/> associated with the data source control.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Deleting"/> event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs.#ctor(System.Collections.IDictionary,System.Collections.IDictionary)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs"/>.
+            </summary>
+            <param name="keys">An <see cref="T:System.Collections.IDictionary"/> object with the affected keys.</param>
+            <param name="oldValues">An <see cref="T:System.Collections.IDictionary"/> object with the old values.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs.Keys">
+            <summary>
+            Gets the affected keys <see cref="T:System.Collections.IDictionary"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs.OldValues">
+            <summary>
+            Gets the old values <see cref="T:System.Collections.IDictionary"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceInsertingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Inserting"/> event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceInsertingEventArgs.#ctor(System.Collections.IDictionary)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceInsertingEventArgs"/>.
+            </summary>
+            <param name="newValues">An <see cref="T:System.Collections.IDictionary"/> object with the values being inserted.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceInsertingEventArgs.NewValues">
+            <summary>
+            Gets an <see cref="T:System.Collections.IDictionary"/> object with the values being inserted.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceSelectingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Selecting"/> event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceSelectingEventArgs.#ctor(System.Web.UI.DataSourceSelectArguments)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceSelectingEventArgs"/>.
+            </summary>
+            <param name="arguments">The <see cref="T:System.Web.UI.DataSourceSelectArguments"/> with the select arguments.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceSelectingEventArgs.Arguments">
+            <summary>
+            Gets the <see cref="T:System.Web.UI.DataSourceSelectArguments"/> with the select arguments.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs">
+            <summary>
+            Provides data for <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Updated"/>, <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Deleted"/>
+            and <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Inserted"/> events of the the <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs.#ctor(System.Object,System.Int32)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs"/>.
+            </summary>
+            <param name="instance">The object instance affected by the data operation.</param>
+            <param name="affectedRows">The number of rows that are affected by the data operation.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs.AffectedRows">
+            <summary>
+            Gets the number of rows that are affected by the data operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs.Instance">
+            <summary>
+            Gets the object instance affected by the data operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs">
+            <summary>
+            Provides data fr the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource.Updating"/> event..
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs.#ctor(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs"/>.
+            </summary>
+            <param name="keys">An <see cref="T:System.Collections.IDictionary"/> with the keys affected by the data operation.</param>
+            <param name="newValues">An <see cref="T:System.Collections.IDictionary"/> with the values previous to the data operation.</param>
+            <param name="oldValues">An <see cref="T:System.Collections.IDictionary"/> with the values after the data operation.</param>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.IDictionary"/> with the keys affected by the data operation
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs.NewValues">
+            <summary>
+            Gets an <see cref="T:System.Collections.IDictionary"/> with the values previous to the data operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs.OldValues">
+            <summary>
+            Gets an <see cref="T:System.Collections.IDictionary"/> with the values after the data operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView">
+            <summary>
+            Defnies a data source view to be used with the <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.#ctor(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView"/>.
+            </summary>
+            <param name="owner">The <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> owner of this view.</param>
+            <param name="name">The name of this view.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnDeleted(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Deleted"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnUpdated(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Updated"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnInserted(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceStatusEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Inserted"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnDeleting(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceDeletingEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Deleting"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnInserting(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceInsertingEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Inserting"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnUpdating(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceUpdatingEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Updating"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.OnSelecting(Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceSelectingEventArgs)">
+            <summary>
+            Fires the <see cref="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Selecting"/> event.
+            </summary>
+            <param name="e">The event associated data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Insert(System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)">
+            <summary>
+            Performs an asynchronous insert operation on the list of data that the <see cref="T:System.Web.UI.DataSourceView"/> object represents.
+            </summary>
+            <param name="values">An <see cref="T:System.Collections.IDictionary"/> of name/value pairs used during an insert operation.</param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)">
+            <summary>
+            Gets a list of data from the underlying data storage.
+            </summary>
+            <param name="arguments">A <see cref="T:System.Web.UI.DataSourceSelectArguments"/> that is used to request operations on the data 
+            beyond basic data retrieval.</param>
+            <returns>An <see cref="T:System.Collections.IEnumerable"/> list of data from the underlying data storage.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.ExecuteInsert(System.Collections.IDictionary)">
+            <summary>
+            Performs an insert operation on the list of data that the <see cref="T:System.Web.UI.DataSourceView"/> object represents.
+            </summary>
+            <param name="values">An <see cref="T:System.Collections.IDictionary"/> of name/value pairs used during an insert operation.</param>
+            <returns>The number of items that were inserted into the underlying data storage.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)">
+            <summary>
+            Performs a delete operation on the list of data that the <see cref="T:System.Web.UI.DataSourceView"/> object represents.
+            </summary>
+            <param name="keys">An <see cref="T:System.Collections.IDictionary"/> of object or row keys to be deleted by
+            the <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)"/>
+            operation.</param>
+            <param name="oldValues">An <see cref="T:System.Collections.IDictionary"/> of name/value pairs that represent data elements and their original values.</param>
+            <returns>The number of items that were deleted from the underlying data storage.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)">
+            <summary>
+            Performs an update operation on the list of data that the <see cref="T:System.Web.UI.DataSourceView"/> object represents.
+            </summary>
+            <param name="keys">An <see cref="T:System.Collections.IDictionary"/> of object or row keys to be updated by the update operation.</param>
+            <param name="values">An <see cref="T:System.Collections.IDictionary"/> of name/value pairs that represent data elements and their new values.</param>
+            <param name="oldValues">An <see cref="T:System.Collections.IDictionary"/> of name/value pairs that represent data elements and their original values.</param>
+            <returns>The number of items that were updated in the underlying data storage.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Items">
+            <summary>
+            Gets a <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> with the data maanged by this view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.DataSource">
+            <summary>
+            Sets the data source for this view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanDelete">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports the <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)"/>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanUpdate">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports the <see cref="M:System.Web.UI.DataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)"/>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanInsert">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports the <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)"/>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanRetrieveTotalRowCount">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports retrieving
+            the total number of data rows, instead of the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanSort">
+            <summary>
+             Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports a sorted
+            view on the underlying data source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.CanPage">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object supports paging through
+            the data retrieved by the <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)"/>
+            method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.UsingServerSorting">
+            <summary>
+            Gets or sets a value indicating if the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object uses sorting on the server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.UsingServerPaging">
+            <summary>
+            Gets or sets a value indicating if the <see cref="T:System.Web.UI.DataSourceView"/> object associated
+            with the current <see cref="T:System.Web.UI.DataSourceControl"/> object uses paging on the server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.TotalRowCount">
+            <summary>
+            Gets or sets the total number of rows retrieved in a data retrieval operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.DataObjectTypeName">
+            <summary>
+            Gets or sets the data type name of the data objects.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Data">
+            <summary>
+            Gets the list of data objects managed by this view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Owner">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSource"/> owner of this view.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Deleted">
+            <summary>
+            Occurs after a delete operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Updated">
+            <summary>
+            Occurs after an update operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Inserted">
+            <summary>
+            Occurs after an insert operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Deleting">
+            <summary>
+            Cancelable event that occurs before a delete operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Updating">
+            <summary>
+            Cancelable event that occurs before an update operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Inserting">
+            <summary>
+            Cancelable event that occurs before an insert operation.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView.Selecting">
+            <summary>
+            Cancelabe event that occurs before a select operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.CannotBeNegative">
+            <summary>
+              Looks up a localized string similar to The argument &apos;{0}&apos; cannot be negative.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.CannotConvertType">
+            <summary>
+              Looks up a localized string similar to Cannot convert value of parameter &apos;{0}&apos; from &apos;{1}&apos; to &apos;{2}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.CannotGetType">
+            <summary>
+              Looks up a localized string similar to Cannot get type. Error: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.CannotRefreshSchema">
+            <summary>
+              Looks up a localized string similar to Cannot refresh schema. Error: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.DataObjectTypeNameNotSet">
+            <summary>
+              Looks up a localized string similar to The DataObjectTypeName was not set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.DataObjectTypeNotFound">
+            <summary>
+              Looks up a localized string similar to Data object type with name &apos;{0}&apos; was not found.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.DefaultConstructorMissing">
+            <summary>
+              Looks up a localized string similar to Cannot create an instance of the type &apos;{0}&apos; because it does not provide a public parameterless constructor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.DefaultViewName">
+            <summary>
+              Looks up a localized string similar to DefaultView.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.FormTitle">
+            <summary>
+              Looks up a localized string similar to Configure Data Source: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidObjectType">
+            <summary>
+              Looks up a localized string similar to Invalid object type. Expected &apos;{0}&apos; but got &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidPropertyInSortingExpression">
+            <summary>
+              Looks up a localized string similar to Invalid sorting expression. No property found with the name &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidServerPagingSettings">
+            <summary>
+              Looks up a localized string similar to Using server paging but the TotalRowCount property was not set. Please set the TotalRowCount property before executing a select operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidSortingExpression">
+            <summary>
+              Looks up a localized string similar to Invalid sorting expression &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidStartRowIndex">
+            <summary>
+              Looks up a localized string similar to Invalid StartRowIndex: &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.InvalidViewName">
+            <summary>
+              Looks up a localized string similar to Invalid view name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.NoKeysSpecified">
+            <summary>
+              Looks up a localized string similar to No keys specified for the current object data type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.PropertyDoesNotImplementIComparable">
+            <summary>
+              Looks up a localized string similar to Property &apos;{0}&apos; does not implement IComparable.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.PropertyIsReadOnly">
+            <summary>
+              Looks up a localized string similar to The property &apos;{0}&apos; is read only.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.PropertyNotFoundInType">
+            <summary>
+              Looks up a localized string similar to The property &apos;{0}&apos; was not found in the object data type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.SelectDataObjectTypeLabelText">
+            <summary>
+              Looks up a localized string similar to Please select the Data Object Type:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.StartRowIndexOutOfRange">
+            <summary>
+              Looks up a localized string similar to The StartRowIndex &apos;{0}&apos; is out of range. Current item count is &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Web.UI.WebControls.Properties.Resources.UsingServerPagingAndSelectingEventNotHandled">
+            <summary>
+              Looks up a localized string similar to Using server paging but Selecting event was not handled. To use server paging please handle the Selecting event to set the &apos;DataSource&apos; property..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Utility.DictionaryHelper">
+            <summary>
+            An utility class to operate with <see cref="T:System.Collections.IDictionary"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.DictionaryHelper.MergeNameValueDictionaries(System.Collections.IDictionary,System.Collections.IDictionary)">
+            <summary>
+            Merges two <see cref="T:System.Collections.IDictionary"/> objects.
+            </summary>
+            <param name="dictionary1">An <see cref="T:System.Collections.IDictionary"/> object to merge.</param>
+            <param name="dictionary2">An <see cref="T:System.Collections.IDictionary"/> object to merge.</param>
+            <returns>An <see cref="T:System.Collections.Specialized.OrderedDictionary"/> with the result of the merge operation.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.DictionaryHelper.GetReadOnlyDictionary(System.Collections.IDictionary)">
+            <summary>
+            Creates a read-only dictionary from the specified <see cref="T:System.Collections.IDictionary"/> object.
+            </summary>
+            <param name="dictionary">An <see cref="T:System.Collections.IDictionary"/> object from which to create the read-oly dictionary.</param>
+            <returns>A read-only <see cref="T:System.Collections.Specialized.OrderedDictionary"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Utility.Guard">
+            <summary>
+            An utility class to check for exceptions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.Guard.PropertyNotNull(System.ComponentModel.PropertyDescriptor,System.String)">
+            <summary>
+            Checks that a property is not <see langword="null"/>.
+            </summary>
+            <param name="property">The property <see cref="T:System.ComponentModel.PropertyDescriptor"/>.</param>
+            <param name="propertyName">The property name.</param>
+            <exception cref="T:System.InvalidOperationException">The property is null.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.Guard.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Checks that the value of an argument is not <see langword="null"/>.
+            </summary>
+            <param name="argumentValue">The value of the argument to check.</param>
+            <param name="argumentName">The name of the argument.</param>
+            <exception cref="T:System.ArgumentNullException">The argument value is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.Guard.CollectionNotNullNorEmpty(System.Collections.ICollection,System.String,System.String)">
+            <summary>
+            Checks a collection to be not empty nor <see langword="null"/>.
+            </summary>
+            <param name="collection">The <see cref="T:System.Collections.ICollection"/> object to check.</param>
+            <param name="message">The exception message when the collection is empty.</param>
+            <param name="argumentName">The name of the argument referencing the collection.</param>
+            <exception cref="T:System.ArgumentNullException">The collection is <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">The collection is empty.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.Guard.ArgumentNonNegative(System.Int32,System.String)">
+            <summary>
+            Check an <see langword="int"/> value to be positive.
+            </summary>
+            <param name="value">The value to check.</param>
+            <param name="argumentName">The name of the argument containing the value.</param>
+            <exception cref="T:System.ArgumentException">The value is negative.</exception>
+        </member>
+        <member name="T:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper">
+            <summary>
+            Utility class to support reflection operations used by <see cref="T:Microsoft.Practices.Web.UI.WebControls.ObjectContainerDataSourceView"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper.GetValidProperty(System.ComponentModel.PropertyDescriptorCollection,System.String)">
+            <summary>
+            Searches for a valid property.
+            </summary>
+            <param name="properties">The <see cref="T:System.ComponentModel.PropertyDescriptorCollection"/> to search.</param>
+            <param name="propertyName">The name of the property to look for.</param>
+            <returns>A valid <see cref="T:System.ComponentModel.PropertyDescriptor"/> for the requested property name.</returns>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="propertyName"/> is null.</exception>
+            <exception cref="T:System.InvalidOperationException">The property is not present in the collection.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper.BuildInstance(System.Collections.IDictionary,System.Object)">
+            <summary>
+            Sets the properties values on the <paramref name="existing"/> object from the specified values <see cref="T:System.Collections.IDictionary"/>.
+            </summary>
+            <param name="values">An <see cref="T:System.Collections.IDictionary"/> object with the name/value pairs for the properties.</param>
+            <param name="existing">The object to set the properties to.</param>
+            <exception cref="T:System.InvalidOperationException">Cannot set the value of a read-only property.</exception>
+            <exception cref="T:System.ArgumentNullException">Either the <paramref name="values"/> or <paramref name="existing"/> arguments are null.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper.ThrowIfInvalidType(System.Object,System.Type)">
+            <summary>
+            Checks that the type <paramref name="item"/> object is the same as the type specified by <paramref name="expectedType"/>.
+            </summary>
+            <param name="item">An object to check its type.</param>
+            <param name="expectedType">The expected type for the object.</param>
+            <exception cref="T:System.InvalidOperationException">The type of the item object is not the expected type.</exception>
+            <exception cref="T:System.ArgumentNullException">Either the <paramref name="item"/> or the <paramref name="expectedType"/> arguments ares null.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper.ThrowIfNoDefaultConstructor(System.Type)">
+            <summary>
+            Checks that the specified type has a default constructor.
+            </summary>
+            <param name="type">The type to check for.</param>
+            <exception cref="T:System.InvalidOperationException">The specified type has not a default constructor.</exception>
+        </member>
+        <member name="M:Microsoft.Practices.Web.UI.WebControls.Utility.TypeDescriptionHelper.GetObjectValue(System.Object,System.Type,System.String)">
+            <summary>
+            Converts an object value to the specified type.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <param name="targetType">The type to convert the value to.</param>
+            <param name="paramName">The name of the parameter holding the value.</param>
+            <returns>The converted value.</returns>
+        </member>
+    </members>
+</doc>

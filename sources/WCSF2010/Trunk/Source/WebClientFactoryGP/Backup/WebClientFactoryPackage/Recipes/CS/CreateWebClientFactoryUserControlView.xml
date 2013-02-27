@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateUserControlViewCS" Bound="false" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Add User Control (with presenter) (C#)</Caption>
+  <Description>Add User Control (with presenter) (C#)</Description>
+  <HostData>
+    <Icon ID="689" />
+	  <CommandBar Menu="WCSFWebProjectFolderItem" />
+	  <CommandBar Menu="WCSFWebProject" />
+	  <CommandBar Menu="WCSFWebApplicationProject" />
+	  <CommandBar Menu="WCSFWebApplicationProjectFolder" />
+  </HostData>
+  <Arguments>
+
+    <Argument Name="RecipeLanguage" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="cs" />
+    </Argument>
+    <Argument Name="ViewFileExtension" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="ascx" />
+    </Argument>
+
+    <Argument Name="ViewsFolder" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="Views" />
+    </Argument>
+
+    <xi:include href="../Common/CreateWebClientFactoryViewCommon.xml"
+         xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Arguments/gax:Argument)" />
+
+
+  </Arguments>
+  <GatheringServiceData>
+	  <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/9190cbaa-299c-44f7-bc73-fd5033bef9c9.html">
+		  <Pages>
+			  <Page Type="Microsoft.Practices.WebClientFactory.CustomWizardPages.CreateUserControlViewPage, Microsoft.Practices.WebClientFactory.GuidancePackage">
+				  <Title>Add User Control (with presenter)</Title>
+				  <LinkTitle>User Control properties</LinkTitle>
+			  </Page>
+		  </Pages>
+	  </Wizard>
+  </GatheringServiceData>
+  <Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.ConditionalCoordinator, Microsoft.Practices.RecipeFramework.Extensions">
+
+    <xi:include href="../Common/CreateWebClientFactoryViewCommon.xml"
+             xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Actions/gax:Action)" />
+
+    <Action Name="ShowCreateModuleHelpVS2008" Type="Microsoft.Practices.WebClientFactory.Actions.ShowUrlAction, Microsoft.Practices.WebClientFactory.GuidancePackage"
+      RawUrl="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/e71c5e4b-430c-46de-bde5-86d0042a50be.html" >
+      <Input Name="ShowDocumentation" RecipeArgument="ShowDocumentation"/>
+    </Action>
+  </Actions>
+</Recipe>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12743801-983E-4D40-A30F-13AE47F956F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OrdersRepository.Services.Tests</RootNamespace>
+    <AssemblyName>OrdersRepository.Services.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation><TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerServiceFixture.cs" />
+    <Compile Include="EmployeeServiceFixture.cs" />
+    <Compile Include="Fakes\FakeEmployeeService.cs" />
+    <Compile Include="Fakes\FakeProductService.cs" />
+    <Compile Include="Utility\InputValidatorFixture.cs" />
+    <Compile Include="RepositoryMembershipProviderFixture.cs" />
+    <Compile Include="PostalInfoLookupServiceFixture.cs" />
+    <Compile Include="ProductServiceFixture.cs" />
+    <Compile Include="OrdersServiceFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryRoleProviderFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\Business Logic\OrdersRepository.BusinessEntities\OrdersRepository.BusinessEntities.csproj">
+      <Project>{DDD66A18-EEF8-471A-808A-2231A120B6F6}</Project>
+      <Name>OrdersRepository.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\OrdersRepository.Interfaces\OrdersRepository.Interfaces.csproj">
+      <Project>{BA67E83E-035E-45C0-9DEC-4D860D28F9C8}</Project>
+      <Name>OrdersRepository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\OrdersRepository.Services\OrdersRepository.Services.csproj">
+      <Project>{240BF05D-BCFA-4F80-B883-6F27155CE7CA}</Project>
+      <Name>OrdersRepository.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

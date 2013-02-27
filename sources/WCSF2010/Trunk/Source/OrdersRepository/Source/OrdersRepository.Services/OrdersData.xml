@@ -1,0 +1,357 @@
+<?xml version="1.0" standalone="yes"?>
+<OrdersManagementDataSet xmlns="http://tempuri.org/OrdersManagementDataSet.xsd">
+  <Order_x0020_Details>
+    <OrderId>1</OrderId>
+    <ProductId>1</ProductId>
+    <Quantity>3</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>1</OrderId>
+    <ProductId>2</ProductId>
+    <Quantity>5</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>3</OrderId>
+    <ProductId>3</ProductId>
+    <Quantity>3</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>3</OrderId>
+    <ProductId>4</ProductId>
+    <Quantity>100</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>4</OrderId>
+    <ProductId>4</ProductId>
+    <Quantity>3</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>5</OrderId>
+    <ProductId>5</ProductId>
+    <Quantity>1</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>6</OrderId>
+    <ProductId>5</ProductId>
+    <Quantity>30</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>7</OrderId>
+    <ProductId>6</ProductId>
+    <Quantity>9</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>8</OrderId>
+    <ProductId>7</ProductId>
+    <Quantity>67</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>9</OrderId>
+    <ProductId>8</ProductId>
+    <Quantity>3</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>9</OrderId>
+    <ProductId>9</ProductId>
+    <Quantity>50</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>9</OrderId>
+    <ProductId>10</ProductId>
+    <Quantity>2</Quantity>
+  </Order_x0020_Details>
+  <Order_x0020_Details>
+    <OrderId>10</OrderId>
+    <ProductId>10</ProductId>
+    <Quantity>30</Quantity>
+  </Order_x0020_Details>
+  <Orders>
+    <OrderId>1</OrderId>
+    <OrderName>Order 1</OrderName>
+    <CustomerId>21</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>jblack</Creator>
+    <OrderStatus>1</OrderStatus>
+    <ShipAddress>2817 Milton Dr.</ShipAddress>
+    <ShipCity>Albuquerque</ShipCity>
+    <ShipRegion>NM</ShipRegion>
+    <ShipPostalCode>87110</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>2</OrderId>
+    <OrderName>Order 2</OrderName>
+    <CustomerId>22</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>jblack</Creator>
+    <OrderStatus>1</OrderStatus>
+    <ShipAddress>1029 - 12th Ave. S.</ShipAddress>
+    <ShipCity>Seattle</ShipCity>
+    <ShipRegion>WA</ShipRegion>
+    <ShipPostalCode>98124</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>3</OrderId>
+    <OrderName>Order 3</OrderName>
+    <CustomerId>21</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>jblack</Creator>
+    <OrderStatus>2</OrderStatus>
+    <ShipAddress>P.O. Box 555</ShipAddress>
+    <ShipCity>Lander</ShipCity>
+    <ShipRegion>WY</ShipRegion>
+    <ShipPostalCode>82520</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>4</OrderId>
+    <OrderName>Order 4</OrderName>
+    <CustomerId>22</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>a-jdoe</Creator>
+    <OrderStatus>2</OrderStatus>
+    <ShipAddress>2817 Milton Dr.</ShipAddress>
+    <ShipCity>Albuquerque</ShipCity>
+    <ShipRegion>NM</ShipRegion>
+    <ShipPostalCode>87110</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>5</OrderId>
+    <OrderName>Order 5</OrderName>
+    <CustomerId>23</CustomerId>
+    <Approver>a-lcal</Approver>
+    <Creator>a-jdoe</Creator>
+    <OrderStatus>2</OrderStatus>
+    <ShipAddress>2743 Bering St.</ShipAddress>
+    <ShipCity>Anchorage</ShipCity>
+    <ShipRegion>AK</ShipRegion>
+    <ShipPostalCode>99508</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>6</OrderId>
+    <OrderName>Order 6</OrderName>
+    <CustomerId>23</CustomerId>
+    <Approver>a-lcal</Approver>
+    <Creator>sbuch</Creator>
+    <OrderStatus>2</OrderStatus>
+    <ShipAddress>89 Chiaroscuro Rd.</ShipAddress>
+    <ShipCity>Portland</ShipCity>
+    <ShipRegion>OR</ShipRegion>
+    <ShipPostalCode>97219</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>7</OrderId>
+    <OrderName>Order 7</OrderName>
+    <CustomerId>23</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>sbuch</Creator>
+    <OrderStatus>2</OrderStatus>
+    <ShipAddress>187 Suffolk Ln.</ShipAddress>
+    <ShipCity>Boise</ShipCity>
+    <ShipRegion>ID</ShipRegion>
+    <ShipPostalCode>83720</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>8</OrderId>
+    <OrderName>Order 8</OrderName>
+    <CustomerId>24</CustomerId>
+    <Approver>a-lcal</Approver>
+    <Creator>msuya</Creator>
+    <OrderStatus>3</OrderStatus>
+    <ShipAddress>1029 - 12th Ave. S.</ShipAddress>
+    <ShipCity>Seattle</ShipCity>
+    <ShipRegion>WA</ShipRegion>
+    <ShipPostalCode>98124</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>9</OrderId>
+    <OrderName>Order 9</OrderName>
+    <CustomerId>25</CustomerId>
+    <Approver>a-jdoe</Approver>
+    <Creator>msuya</Creator>
+    <OrderStatus>3</OrderStatus>
+    <ShipAddress>P.O. Box 555</ShipAddress>
+    <ShipCity>Lander</ShipCity>
+    <ShipRegion>WY</ShipRegion>
+    <ShipPostalCode>82520</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Orders>
+    <OrderId>10</OrderId>
+    <OrderName>Order 10</OrderName>
+    <CustomerId>26</CustomerId>
+    <Approver>a-lcal</Approver>
+    <Creator>msuya</Creator>
+    <OrderStatus>3</OrderStatus>
+    <ShipAddress>City Center Plaza 516 Main St.</ShipAddress>
+    <ShipCity>Elgin</ShipCity>
+    <ShipRegion>OR</ShipRegion>
+    <ShipPostalCode>97827</ShipPostalCode>
+    <Description>Description of the Order</Description>
+  </Orders>
+  <Products>
+    <ProductId>1</ProductId>
+    <ProductName>Product A</ProductName>
+    <ProductSKU>1234-56789</ProductSKU>
+    <Description>Description of Product A</Description>
+    <UnitPrice>1.00</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>2</ProductId>
+    <ProductName>Product B</ProductName>
+    <ProductSKU>2222-33333</ProductSKU>
+    <Description>Description of Product B</Description>
+    <UnitPrice>5.95</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>3</ProductId>
+    <ProductName>Product C</ProductName>
+    <ProductSKU>3333-44444</ProductSKU>
+    <Description>This is Product C</Description>
+    <UnitPrice>2.75</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>4</ProductId>
+    <ProductName>Teatime Chocolate Biscuits</ProductName>
+    <ProductSKU>4A4A-5B5B5</ProductSKU>
+    <Description>This is Product D</Description>
+    <UnitPrice>9.2</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>5</ProductId>
+    <ProductName>Thüringer Rostbratwurst</ProductName>
+    <ProductSKU>B5B5-C6C6C</ProductSKU>
+    <Description>This is Product E</Description>
+    <UnitPrice>123.7900</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>6</ProductId>
+    <ProductName>Côte de Blaye</ProductName>
+    <ProductSKU>6C6C-7D7D7</ProductSKU>
+    <Description>This is Product F</Description>
+    <UnitPrice>263.5</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>7</ProductId>
+    <ProductName>Manjimup Dried Apples</ProductName>
+    <ProductSKU>D7D7-E8E8E</ProductSKU>
+    <Description>This is Product G</Description>
+    <UnitPrice>53.00</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>8</ProductId>
+    <ProductName>Ravioli Angelo</ProductName>
+    <ProductSKU>8E8E-9F9F9</ProductSKU>
+    <Description>This is Product H</Description>
+    <UnitPrice>12.50</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>9</ProductId>
+    <ProductName>Wimmers gute Semmelknödel</ProductName>
+    <ProductSKU>F9F9-10G10</ProductSKU>
+    <Description>This is Product I</Description>
+    <UnitPrice>33.25</UnitPrice>
+  </Products>
+  <Products>
+    <ProductId>10</ProductId>
+    <ProductName>Scottish Longbreads</ProductName>
+    <ProductSKU>G10G-11F11</ProductSKU>
+    <Description>This is Product J</Description>
+    <UnitPrice>0.75</UnitPrice>
+  </Products>
+  <OrderStatus>
+    <StatusID>1</StatusID>
+    <StatusName>Draft</StatusName>
+  </OrderStatus>
+  <OrderStatus>
+    <StatusID>2</StatusID>
+    <StatusName>Submitted</StatusName>
+  </OrderStatus>
+  <OrderStatus>
+    <StatusID>3</StatusID>
+    <StatusName>Approved</StatusName>
+  </OrderStatus>
+  <OrderStatus>
+    <StatusID>4</StatusID>
+    <StatusName>Rejected</StatusName>
+  </OrderStatus>
+  <Employees>
+    <EmployeeId>jblack</EmployeeId>
+    <LastName>Black</LastName>
+    <FirstName>Joe</FirstName>
+  </Employees>
+  <Employees>
+    <EmployeeId>a-jdoe</EmployeeId>
+    <LastName>Doe</LastName>
+    <FirstName>John</FirstName>
+  </Employees>
+  <Employees>
+    <EmployeeId>sbuch</EmployeeId>
+    <LastName>Buchanan</LastName>
+    <FirstName>Steven</FirstName>
+  </Employees>
+  <Employees>
+    <EmployeeId>msuya</EmployeeId>
+    <LastName>Suyama</LastName>
+    <FirstName>Michael</FirstName>
+  </Employees>
+  <Employees>
+    <EmployeeId>a-lcal</EmployeeId>
+    <LastName>Callahan</LastName>
+    <FirstName>Laura</FirstName>
+  </Employees>
+  <Customers>
+    <CustomerId>21</CustomerId>
+    <CompanyName>Old World Delicatessen</CompanyName>
+    <Address>2743 Bering St.</Address>
+    <City>Anchorage</City>
+    <Region>AK</Region>
+    <PostalCode>99508</PostalCode>
+  </Customers>
+  <Customers>
+    <CustomerId>22</CustomerId>
+    <CompanyName>Lonesome Pine Restaurant</CompanyName>
+    <Address>89 Chiaroscuro Rd.</Address>
+    <City>Portland</City>
+    <Region>OR</Region>
+    <PostalCode>97219</PostalCode>
+  </Customers>
+  <Customers>
+    <CustomerId>23</CustomerId>
+    <CompanyName>Let's Stop N Shop</CompanyName>
+    <Address>87 Polk St. Suite 5</Address>
+    <City>San Francisco</City>
+    <Region>CA</Region>
+    <PostalCode>94117</PostalCode>
+  </Customers>
+  <Customers>
+    <CustomerId>24</CustomerId>
+    <CompanyName>Lazy K Kountry Store</CompanyName>
+    <Address>12 Orchestra Terrace</Address>
+    <City>Walla Walla</City>
+    <Region>WA</Region>
+    <PostalCode>99362</PostalCode>
+  </Customers>
+  <Customers>
+    <CustomerId>25</CustomerId>
+    <CompanyName>Hungry Coyote Import Store</CompanyName>
+    <Address>City Center Plaza 516 Main St.</Address>
+    <City>Elgin</City>
+    <Region>OR</Region>
+    <PostalCode>97827</PostalCode>
+  </Customers>
+  <Customers>
+    <CustomerId>26</CustomerId>
+    <CompanyName>Great Lakes Food Market</CompanyName>
+    <Address>2732 Baker Blvd.</Address>
+    <City>Eugene</City>
+    <Region>OR</Region>
+    <PostalCode>97403</PostalCode>
+  </Customers>
+</OrdersManagementDataSet>

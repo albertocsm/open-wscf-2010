@@ -1,0 +1,33 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ Import Namespace="System.Web" #>
+<#@ property processor="PropertyProcessor" name="ModuleName" #>
+<#@ property processor="PropertyProcessor" name="IsWCSFSolutionWAP" #>
+<#@ property processor="PropertyProcessor" name="ModuleWebsiteName" #>
+<#@ property processor="PropertyProcessor" name="ModuleWebsiteNamespace" #>
+<#@ property processor="PropertyProcessor" name="CreateAsFolderInWebsite" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+<%@ Page Language="VB" AutoEventWireup="false" <#= (this.IsWCSFSolutionWAP)?"Codebehind":"CodeFile" #>="Default.aspx.vb" Inherits="<#
+ if(this.IsWCSFSolutionWAP) 
+ { 
+	if (this.CreateAsFolderInWebsite)
+	{
+		
+           string rootNS = this.ModuleWebsiteNamespace;
+           string[] rootNS1 = rootNS.Split('.');
+	   string rootNS2 = rootNS1[0]; 
+
+#><#= rootNS2 #><#
+	}
+	else
+	{
+		#><#= this.ModuleWebsiteNamespace #><#
+	}
+	#>.<# 
+  }
+#><#= this.ModuleNamespace #>.Views.<#= this.ModuleName #>Default"
+    Title="Default" MasterPageFile="~/Shared/DefaultMaster.master" %>
+<asp:Content ID="content" ContentPlaceHolderID="DefaultContent" Runat="Server">
+		<h1><#= this.ModuleName #> Default View</h1>
+</asp:Content>

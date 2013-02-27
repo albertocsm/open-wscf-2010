@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateModuleCommon">
+	<Arguments xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+		<xi:include href="../Common/CommonArguments.xml"
+							 xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+
+		<Argument Name="SelectedSolutionFolder" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.FirstSelectedProjectProvider, Microsoft.Practices.RecipeFramework.Extensions" />
+		</Argument>
+		<Argument Name="TestProjectContainerSolutionFolder" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.ContainerSolutionFolderForActiveItemProvider, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+		</Argument>
+		<Argument Name="ModuleProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.FirstSelectedProjectProvider, Microsoft.Practices.RecipeFramework.Extensions" />
+		</Argument>
+		<Argument Name="ModuleProjectName">
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.ItemNameProvider, Microsoft.Practices.RecipeFramework.Extensions"
+						   Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="ModuleName" >
+			<ValueProvider Type="StringToIdentifier" Expression="$(ModuleProjectName)" Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="WebUIProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter
+					Type="Microsoft.Practices.RecipeFramework.Extensions.Converters.ProjectWithResponsibilityConverter, Microsoft.Practices.RecipeFramework.Extensions"
+					ResponsibilityArgument="IsWebProject"/>
+		</Argument>
+		<Argument Name="CreateTestProject" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="false" />
+		</Argument>
+    <Argument Name="CreateModuleInterfaceLibrary" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="true" />
+    </Argument>
+		<Argument Name="CreateAsFolderInWebsite" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="true" />
+		</Argument>
+		<Argument Name="NotCreateAsFolderInWebsite" Type="System.Boolean">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.NegateValueProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+							   ValueToNegate="$(CreateAsFolderInWebsite)"
+							   Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="WebSitesSolutionFolder" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.SolutionFolderFromProject, Microsoft.Practices.WebClientFactory.GuidancePackage"
+							   Project="$(WebUIProject)"
+							   Stage="OnBeforeActions">
+				<MonitorArgument Name="WebUIProject" />
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="RootNamespace" Type="System.String">
+			<ValueProvider Type="GlobalValueProvider" Key="RootNamespace" />
+		</Argument>
+
+		<!-- this should get the DevelopmentServerPort from the main web project -->
+		<Argument Name="ModuleWebsiteDevelopmentPort" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="3801" />
+		</Argument>
+		<Argument Name="ModuleWebsiteVirtualPath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="http://localhost:$(ModuleWebsiteDevelopmentPort)/WebApplication/$(ModuleFolderNameOnWebSite)" Stage="OnBeforeActions" />
+		</Argument>
+
+		<Argument Name="ModuleNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName)">
+				<!--<MonitorArgument Name="RootNamespace"/>-->
+				<!--<MonitorArgument Name="ModuleName"/>-->
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="ModuleMainProjectName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleProjectName)">
+				<!--<MonitorArgument Name="ModuleName"/>-->
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="ModuleTestProjectNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName).Tests">
+				<!--<MonitorArgument Name="RootNamespace"/>-->
+				<!--<MonitorArgument Name="ModuleName"/>-->
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="ModuleTestProjectName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleMainProjectName).Tests">
+				<!--<MonitorArgument Name="ModuleName"/>-->
+			</ValueProvider>
+		</Argument>
+
+    <Argument Name="ModuleInterfaceProjectNamespace" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName).Interface">
+        <!--<MonitorArgument Name="ModuleName"/>-->
+      </ValueProvider>
+    </Argument>
+
+    <Argument Name="ModuleInterfaceProjectName" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(ModuleMainProjectName).Interface">
+        <!--<MonitorArgument Name="ModuleName"/>-->
+      </ValueProvider>
+    </Argument>
+
+		<Argument Name="ModuleWebsiteName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleMainProjectName).Web">
+				<!--<MonitorArgument Name="ModuleMainProjectName"/>-->
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleWebsiteNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName).Web">
+				<!--<MonitorArgument Name="ModuleMainProjectName"/>-->
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ShowDocumentation" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="false" />
+		</Argument>
+
+		<!-- The following arguments defines folder names, namespaces, assembly names, etc. -->
+		<Argument Name="ModuleFolderParentOnWebSite" Type="System.String" Required="false">
+			<ValueProvider Type="Evaluator" Expression="" />
+		</Argument>
+		<Argument Name="ModuleFolderNameOnWebSite" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleName)" />
+		</Argument>
+
+
+		<Argument Name="ModulesContainerFolder" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="Modules" />
+		</Argument>
+		<Argument Name="ModuleContainerPath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleProject.Properties.Item('FullPath').Value.ToString())"
+							   Stage="OnBeforeActions"/>
+			<!--<MonitorArgument Name="ModuleProject"/>-->
+		</Argument>
+		<Argument Name="RootWebsitePath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(WebUIProject.Properties.Item('FullPath').Value.ToString())"
+							   Stage="OnBeforeActions">
+				<!--<MonitorArgument Name="WebUIProject"/>-->
+			</ValueProvider>
+		</Argument>
+		<Argument Name="SubWebsitePath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootWebsitePath)$(ModuleFolderNameOnWebSite)"
+						   Stage="OnBeforeActions" />
+		</Argument>
+		<Argument Name="ModuleTestProjectRelativePath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleContainerPath)..\$(ModuleTestProjectName)"
+						   Stage="OnBeforeActions">
+				<!--<MonitorArgument Name="ModuleContainerPath"/>-->
+				<!--<MonitorArgument Name="ModuleTestProjectName"/>-->
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleTestProjectPath" Type="System.String">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.RelativePathResolverProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+							   FolderExpression="$(ModuleTestProjectRelativePath)"
+							   Stage="OnBeforeActions">
+				<!--<MonitorArgument Name="ModuleTestProjectRelativePath"/>-->
+			</ValueProvider>
+		</Argument>
+    <Argument Name="ModuleInterfaceProjectRelativePath" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(ModuleContainerPath)..\$(ModuleInterfaceProjectName)">
+        <!--<MonitorArgument Name="ModuleContainerPath"/>-->
+        <!--<MonitorArgument Name="ModuleInterfaceProjectName"/>-->
+      </ValueProvider>
+    </Argument>
+    <Argument Name="ModuleInterfaceProjectPath" Type="System.String">
+      <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.RelativePathResolverProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+						   FolderExpression="$(ModuleInterfaceProjectRelativePath)"
+						   Stage="OnBeforeActions">
+        <!--<MonitorArgument Name="ModuleInterfaceProjectRelativePath"/>-->
+      </ValueProvider>
+    </Argument>
+		<Argument Name="IsWCSFSolutionWAP_Attribute" Type="System.String" Required="false">
+			<ValueProvider Type="GlobalValueProvider" Key="IsWCSFSolutionWAP" />
+		</Argument>
+		<Argument Name="IsWCSFSolutionWAP" Type="System.Boolean">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.IsValidExpressionProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+							   ValueExpression="$(IsWCSFSolutionWAP_Attribute)">
+				<MonitorArgument Name="IsWCSFSolutionWAP_Attribute" />
+			</ValueProvider>
+		</Argument>
+		<Argument Name="IsWCSFWAPAndWebFolder" Type="System.Boolean">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.AndOperatorValueProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+								FirstOperand="$(IsWCSFSolutionWAP)"
+								SecondOperand="$(CreateAsFolderInWebsite)"
+								Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+
+		<!-- This returns "cs" or "vb" if the web project is C# or VB -->
+		<Argument Name="WebProjectLanguage" Type="System.String">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.WebsiteLanguageProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+									   Stage="OnBeforeActions"
+						   ProjectExpression="$(WebUIProject)"
+						   CreateAsFolderInWebsite="$(CreateAsFolderInWebsite)"
+						   IsWCSFSolutionWAP="$(IsWCSFSolutionWAP)"
+						   ModuleProjectLanguage="$(RecipeLanguage)">
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="ModuleWebsiteTemplatePath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="Projects\Module.$(WebProjectLanguage)\ModuleWebsite.vstemplate">
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="T4DefaultViewPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\Module.$(WebProjectLanguage)\Default.aspx.t4">
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="T4DefaultViewCodebehindPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\Module.$(WebProjectLanguage)\Default.aspx.$(WebProjectLanguage).t4">
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="T4DefaultViewDesignerPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\Module.$(WebProjectLanguage)\Default.aspx.d.$(WebProjectLanguage).t4">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4WebConfigPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\Module.$(WebProjectLanguage)\Web.config.t4">
+			</ValueProvider>
+		</Argument>
+
+		<Argument Name="ViewAspxFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="Default.aspx" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewCodebehindFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="Default.aspx.$(WebProjectLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewDesignerFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="Default.aspx.designer.$(WebProjectLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+
+    <Argument Name="UnitTestFrameworkVersion" Type="System.String">
+      <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.UnitTestFrameworkVersionProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+                     Stage="OnBeginRecipe">
+      </ValueProvider>
+    </Argument>
+	</Arguments>
+
+
+
+	<Actions xmlns="http://schemas.microsoft.com/pag/gax-core">
+		<!-- Generates web.config, default.aspx and default.aspx codebehind and designer codebehind if needed -->
+		<Action Name="GenerateWebConfig"
+				Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4WebConfigPath"/>
+			<Input Name="ModuleAssemblyName" RecipeArgument="ModuleMainProjectName"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="ModuleFolderNameOnWebSite" RecipeArgument="ModuleFolderNameOnWebSite"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateDefaultPage"
+				Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4DefaultViewPath"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="IsWCSFSolutionWAP" RecipeArgument="IsWCSFSolutionWAP"/>
+			<Input Name="ModuleWebsiteName" RecipeArgument="ModuleWebsiteName"/>
+			<Input Name="ModuleWebsiteNamespace" RecipeArgument="ModuleWebsiteNamespace"/>
+			<Input Name="CreateAsFolderInWebsite" RecipeArgument="CreateAsFolderInWebsite"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateDefaultCodebehind"
+				Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4DefaultViewCodebehindPath"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateDefaultDesigner"
+				  Type="TextTemplateAction"
+					Condition="$(IsWCSFSolutionWAP)">
+			<Input Name="Template" RecipeArgument="T4DefaultViewDesignerPath"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Output Name="Content" />
+		</Action>
+
+		<!-- Add references to CWAB in Module project -->
+		<Action Name="AddCompositeWebAssemblyReferencesToModule"
+				 Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+		<!-- Add references to EntLib in Module project -->
+		<Action Name="AddEnterpriseLibraryAssemblyReferencesToModule"
+				 Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+
+
+
+
+		<!-- THIS SECTION IS EXECUTED ONLY IF CREATE AS FOLDER WAS SELECTED -->
+
+		<!-- Creates the %modulename% folder -->
+		<Action Name="AddModuleFolderOnWebSiteProject"
+				Type="AddItemToProjectItemByNameAction"
+				Open="false"
+				Condition="$(CreateAsFolderInWebsite)">
+			<Input Name="TargetFolderName" RecipeArgument="ModuleFolderNameOnWebSite"/>
+			<Input Name="ParentItem" RecipeArgument="ModuleFolderParentOnWebSite"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<!-- Adds Web.config, default.aspx , default.aspx codebehind and default.aspx designer to the project -->
+		<Action Name="AddWebConfig"
+			  Type="AddItemFromStringToProjectItemByNameAction"
+			  Open="false"
+			  TargetFileName="Web.config"
+			  Condition="$(CreateAsFolderInWebsite)">
+			<Input Name="Content" ActionOutput="GenerateWebConfig.Content" />
+			<Input Name="ItemName" RecipeArgument="ModuleFolderNameOnWebSite"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<Action Name="AddDefaultPage"
+			  Type="AddItemFromStringToProjectItemByNameAction"
+			  Open="true"
+			  Condition="$(CreateAsFolderInWebsite)">
+			<Input Name="TargetFileName" RecipeArgument="ViewAspxFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultPage.Content" />
+			<Input Name="ItemName" RecipeArgument="ModuleFolderNameOnWebSite"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<Action Name="AddDefaultCodebehind"
+			  Type="AddItemFromStringToProjectItemByNameAction"
+			  Open="false"
+			  Condition="$(CreateAsFolderInWebsite)">
+			<Input Name="TargetFileName" RecipeArgument="ViewCodebehindFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultCodebehind.Content" />
+			<Input Name="ItemName" RecipeArgument="ModuleFolderNameOnWebSite"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<!-- Add Default designer to project if needed-->
+		<Action Name="AddDefaultDesigner"
+				  Type="AddItemFromStringToProjectItemByNameAction"
+				  Open="false"
+				  Condition="$(IsWCSFWAPAndWebFolder)">
+			<Input Name="TargetFileName" RecipeArgument="ViewDesignerFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultDesigner.Content" />
+			<Input Name="ItemName" RecipeArgument="ModuleFolderNameOnWebSite" />
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<!-- Add references to Module in WebSite project -->
+		<Action Name="AddReferenceModuleToWebProject"
+				 Type="Referencer"
+				  Condition="$(CreateAsFolderInWebsite)">
+			<Input Name="ReferringProject" RecipeArgument="WebUIProject"/>
+			<Input Name="ReferencedProject" RecipeArgument="ModuleProject"/>
+		</Action>
+
+
+
+
+
+		<!-- THIS SECTION IS EXECUTED ONLY IF CREATE AS SUB WAP WAS SELECTED -->
+
+		<!-- Unfold the website subproject template -->
+		<Action Name="UnfoldModuleWebsiteTemplate"
+			  Type="UnfoldTemplateAction"
+				  Condition="$(NotCreateAsFolderInWebsite)" >
+			<Input Name="Template" RecipeArgument="ModuleWebsiteTemplatePath" />
+			<Input Name="Root" RecipeArgument="WebSitesSolutionFolder" />
+			<Input Name="ItemName" RecipeArgument="ModuleWebsiteName" />
+			<Input Name="DestinationFolder" RecipeArgument="SubWebsitePath" />
+			<!--<Input Name="Path" RecipeArgument="SubWebsitePath" />-->
+			<Output Name="NewItem" />
+		</Action>
+
+		<!-- Adds Web.config, default.aspx , default.aspx codebehind and default.aspx designer to the subproject -->
+		<Action Name="AddWebConfigToWebSubProject"
+				Type="AddItemFromStringToProjectItemByNameAction"
+				Open="false"
+				TargetFileName="Web.config"
+				Condition="$(NotCreateAsFolderInWebsite)">
+			<Input Name="Content" ActionOutput="GenerateWebConfig.Content" />
+			<Input Name="Project" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem" />
+		</Action>
+		<Action Name="AddDefaultPageToWebSubProject"
+				Type="AddItemFromStringToProjectItemByNameAction"
+				Open="true"
+				Condition="$(NotCreateAsFolderInWebsite)" >
+			<Input Name="TargetFileName" RecipeArgument="ViewAspxFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultPage.Content" />
+			<Input Name="Project" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem" />
+		</Action>
+		<Action Name="AddDefaultCodebehindToWebSubProject"
+				Type="AddItemFromStringToProjectItemByNameAction"
+		Open="false"
+		Condition="$(NotCreateAsFolderInWebsite)" >
+			<Input Name="TargetFileName" RecipeArgument="ViewCodebehindFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultCodebehind.Content" />
+			<Input Name="Project" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem" />
+		</Action>
+		<!-- Add Default designer to project if needed-->
+		<Action Name="AddDefaultDesignerToWebSubProject"
+				  Type="AddItemFromStringToProjectItemByNameAction"
+				  Open="false"
+				  Condition="$(NotCreateAsFolderInWebsite)">
+			<Input Name="TargetFileName" RecipeArgument="ViewDesignerFileName" />
+			<Input Name="Content" ActionOutput="GenerateDefaultDesigner.Content" />
+			<Input Name="Project" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem" />
+		</Action>
+
+		<!-- Add references to Module in SubWebSite project -->
+		<Action Name="AddReferenceModuleToWebSubProject"
+				  Type="Referencer"
+			  Condition="$(NotCreateAsFolderInWebsite)">
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem"/>
+			<Input Name="ReferencedProject" RecipeArgument="ModuleProject"/>
+		</Action>
+		<!-- Add references to CWAB in SubWebSite project -->
+		<Action Name="AddCompositeWebAssemblyReferencesToWebSubProject"
+				  Type="AddAssembliesReferenceAction"
+				  Condition="$(NotCreateAsFolderInWebsite)">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+		<!-- Add references to EntLib in SubWebSite project -->
+		<Action Name="AddEnterpriseLibraryAssemblyReferencesToWebSubProject"
+				  Type="AddAssembliesReferenceAction"
+				  Condition="$(NotCreateAsFolderInWebsite)">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleWebsiteTemplate.NewItem"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+
+
+
+
+		<!-- END OF CONDITIONAL EXECUTION -->
+
+
+		<!-- Unfold the test project template if needed -->
+		<Action Condition="$(CreateTestProject)" Name="UnfoldModuleTestProjectTemplate"
+			  Type="UnfoldTemplateAction">
+			<Input Name="Template" RecipeArgument="TestsTemplatePath" />
+			<Input Name="Root" RecipeArgument="TestProjectContainerSolutionFolder" />
+			<Input Name="ItemName" RecipeArgument="ModuleTestProjectName" />
+			<Input Name="DestinationFolder" RecipeArgument="ModuleTestProjectPath" />
+			<Output Name="NewItem" />
+		</Action>
+		<!-- Add references to Module project and CWAB in the Test project -->
+		<Action Condition="$(CreateTestProject)" Name="AddReferenceModuleToTestProject" Type="Referencer">
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleTestProjectTemplate.NewItem"/>
+			<Input Name="ReferencedProject" RecipeArgument="ModuleProject"/>
+		</Action>
+		<Action Condition="$(CreateTestProject)" Name="AddCompositeWebAssemblyReferencesToTestProject"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleTestProjectTemplate.NewItem"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+    <!-- Unfold the interface project template if needed -->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="UnfoldModuleInterfaceProjectTemplate"
+          Type="UnfoldTemplateAction">
+      <Input Name="Template" RecipeArgument="InterfaceTemplatePath" />
+      <Input Name="Root" RecipeArgument="TestProjectContainerSolutionFolder" />
+      <Input Name="ItemName" RecipeArgument="ModuleInterfaceProjectName" />
+      <Input Name="DestinationFolder" RecipeArgument="ModuleInterfaceProjectPath" />
+      <Output Name="NewItem" />
+    </Action>
+    <!-- Add reference to Interface project in Module project-->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="AddReferenceInterfaceToModuleProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+      <Input Name="ReferencedProject" ActionOutput="UnfoldModuleInterfaceProjectTemplate.NewItem"/>
+    </Action>
+    <!-- Add refences to CWAB in the Interface project -->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="AddCompositeWebAssemblyReferencesToInterfaceProject"
+			   Type="AddAssembliesReferenceAction">
+      <Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+      <Input Name="ReferringProject" ActionOutput="UnfoldModuleInterfaceProjectTemplate.NewItem"/>
+      <Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+    </Action>
+
+    <Action Name="ShowCreateModuleHelpVS2008" Type="Microsoft.Practices.WebClientFactory.Actions.ShowUrlAction, Microsoft.Practices.WebClientFactory.GuidancePackage"
+      RawUrl="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/d172bf9d-2ec3-44c0-a84d-01ee0096738e.html" >
+      <Input Name="ShowDocumentation" RecipeArgument="ShowDocumentation"/>
+    </Action>
+	</Actions>
+</Recipe>

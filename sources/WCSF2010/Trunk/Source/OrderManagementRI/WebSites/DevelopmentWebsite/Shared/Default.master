@@ -1,0 +1,60 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Default.master.cs"
+    Inherits="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server">
+    <title />
+</head>
+<body>
+    <form id="mainForm" runat="server">
+        <asp:ScriptManager ID="ApplicationScriptManager" runat="server">
+        </asp:ScriptManager>
+        &nbsp;
+        <div id="mainwrapper">
+            <div id="header">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            Order Management<div id="header-bottom">
+                                Created with the Web Client Software Factory</div>
+                        </td>
+                        <td>
+                            <div id="login">
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                                <asp:LoginStatus ID="LoginStatus1" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table id="content" border="0" width="100%">
+                <tr>
+                    <td id="content-left" valign="top">
+                        <asp:TreeView ID="NavigationTreeView" runat="server" ExpandDepth="2" DataSourceID="ApplicationSiteMap" />
+                    </td>
+                    <td id="content-right">
+                        <div id="breadcrumb">
+                            <asp:SiteMapPath ID="DefaultBreadCrumb" SiteMapProvider="DefaultSiteMapProvider"
+                                runat="server" />
+                        </div>
+                        <asp:ContentPlaceHolder ID="DefaultContent" runat="server" />
+                    </td>
+                </tr>
+            </table>
+            <div id="footer">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <a href="http://www.codeplex.com/websf">Web Client Software Factory </a> - a patterns &amp; practices initiative</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <asp:SiteMapDataSource ID="ApplicationSiteMap" runat="server" SiteMapProvider="DefaultSiteMapProvider"
+            ShowStartingNode="False" />
+        &nbsp;
+    </form>
+</body>
+</html>

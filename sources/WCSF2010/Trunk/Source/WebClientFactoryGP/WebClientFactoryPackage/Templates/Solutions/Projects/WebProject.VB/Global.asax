@@ -1,0 +1,1 @@
+<%@ Application Language="VB" Inherits="Microsoft.Practices.CompositeWeb.WebClientApplication" %>

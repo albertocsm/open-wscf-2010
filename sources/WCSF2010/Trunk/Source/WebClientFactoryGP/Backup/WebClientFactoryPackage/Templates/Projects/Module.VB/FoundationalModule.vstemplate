@@ -1,0 +1,32 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <Name>Add Foundational Module (Visual Basic)</Name>
+    <Description>Web Client Software Factory Foundational Module</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>31</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Module</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="FoundationalModule.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ModuleName$ModuleInitializer.vb">FoundationalModuleInitializer.vb</ProjectItem>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services" />      
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0"
+              Recipe="CreateFoundationalModuleVB">
+    </Template>
+  </WizardData>
+</VSTemplate>

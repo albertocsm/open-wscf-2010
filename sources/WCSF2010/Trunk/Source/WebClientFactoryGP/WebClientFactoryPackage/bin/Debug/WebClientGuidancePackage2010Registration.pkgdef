@@ -1,0 +1,51 @@
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{74716806-2E8D-4d21-9798-D9FEC7A5A078}\/1]
+@="Web Client Software Factory 2010"
+"SortPriority"=dword:000000C8
+"TemplatesDir"="$PackageFolder$\Templates\Solutions.Cache"
+"NewProjectDialogOnly"=dword:00000001
+"Folder"="{c72b8446-b872-4d94-bd13-b0891cbcb4ff}"
+"Package"="{77d93a80-73fc-40f8-87db-acd3482964b2}"
+[$RootKey$\NewProjectTemplates\TemplateDirs\{74716806-2E8D-4d21-9798-D9FEC7A5A078}\/2]
+@="Web Client Software Factory 2010"
+"SortPriority"=dword:000000C8
+"TemplatesDir"="$PackageFolder$\Templates\Projects.Cache"
+"Folder"="{c72b8446-b872-4d94-bd13-b0891cbcb4ff}"
+"Package"="{77d93a80-73fc-40f8-87db-acd3482964b2}"
+[$RootKey$\AutoLoadPackages\{adfc4e64-0397-11d1-9f4e-00a0c911004f}\Packages]
+[$RootKey$\AutoLoadPackages\{adfc4e64-0397-11d1-9f4e-00a0c911004f}\Packages\{74716806-2E8D-4d21-9798-D9FEC7A5A078}]
+[$RootKey$\Packages\{74716806-2E8D-4d21-9798-D9FEC7A5A078}]
+@="WebClientGuidancePackage2010"
+[$RootKey$\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}\Packages]
+[$RootKey$\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}\Packages\{74716806-2E8D-4d21-9798-D9FEC7A5A078}]
+[$RootKey$\Languages\CodeExpansions\Basic\Paths]
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+[$RootKey$\Languages\CodeExpansions\XML\Paths]
+[$RootKey$\Menus]
+"WebClientGuidancePackage2010"="$PackageFolder$\WebClientGuidancePackage2010UI.dll,1000,1"
+[$RootKey$\Packages\{77d93a80-73fc-40f8-87db-acd3482964b2}\Templates\{74716806-2E8D-4d21-9798-D9FEC7A5A078}]
+"1"="$PackageFolder$\Templates\Projects\Module.CS\BusinessModule.vstemplate"
+"2"="$PackageFolder$\Templates\Projects\Module.CS\FoundationalModule.vstemplate"
+"3"="$PackageFolder$\Templates\Projects\Module.CS\ModuleWebsite.vstemplate"
+"4"="$PackageFolder$\Templates\Projects\Module.Interface.CS\Module.Interface.vstemplate"
+"5"="$PackageFolder$\Templates\Projects\Module.Interface.VB\Module.Interface.vstemplate"
+"6"="$PackageFolder$\Templates\Projects\Module.Tests.CS\BusinessModule.Tests.vstemplate"
+"7"="$PackageFolder$\Templates\Projects\Module.Tests.CS\FoundationalModule.Tests.vstemplate"
+"8"="$PackageFolder$\Templates\Projects\Module.Tests.VB\BusinessModule.Tests.vstemplate"
+"9"="$PackageFolder$\Templates\Projects\Module.Tests.VB\FoundationalModule.Tests.vstemplate"
+"10"="$PackageFolder$\Templates\Projects\Module.VB\BusinessModule.vstemplate"
+"11"="$PackageFolder$\Templates\Projects\Module.VB\FoundationalModule.vstemplate"
+"12"="$PackageFolder$\Templates\Projects\Module.VB\ModuleWebsite.vstemplate"
+"13"="$PackageFolder$\Templates\Solutions\WCSF Guidance Package CS.vstemplate"
+"14"="$PackageFolder$\Templates\Solutions\WCSF Guidance Package VB.vstemplate"
+"15"="$PackageFolder$\Templates\Solutions\WCSF Guidance Package WAP CS.vstemplate"
+"16"="$PackageFolder$\Templates\Solutions\WCSF Guidance Package WAP VB.vstemplate"
+"17"="$PackageFolder$\Templates\Solutions\Projects\Shell.CS\Shell.vstemplate"
+"18"="$PackageFolder$\Templates\Solutions\Projects\Shell.VB\Shell.vstemplate"
+"19"="$PackageFolder$\Templates\Solutions\Projects\WebProject.CS\WebUI.vstemplate"
+"20"="$PackageFolder$\Templates\Solutions\Projects\WebProject.CS\WebUI_WAP.vstemplate"
+"21"="$PackageFolder$\Templates\Solutions\Projects\WebProject.VB\WebUI.vstemplate"
+"22"="$PackageFolder$\Templates\Solutions\Projects\WebProject.VB\WebUI_WAP.vstemplate"
+"LastTemplate"=dword:00000022
+"PackageName"="WebClientGuidancePackage2010"
+

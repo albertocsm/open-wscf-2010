@@ -1,0 +1,46 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="QuickStarts.master.cs"
+    Inherits="QuickStartMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Module Quickstart</title>
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+</head>
+<body>
+    <form id="mainForm" runat="server">
+        &nbsp;
+        <div id="mainwrapper">
+            <div id="header">
+                <div id="topHeader">
+                    &nbsp;<%-- Leave blank. --%></div>
+                <div id="quickStartName">
+                    <asp:Label ID="QuickStartNameLabel" runat="server" /></div>
+                <div id="quickStartDescription">
+                    <asp:Label ID="QuickStartDescriptionLabel" runat="server" /></div>
+                <div id="bottomHeader">
+                    &nbsp;<%-- Leave blank. --%></div>
+            </div>
+            <br />
+            <div id="topContent">
+                &nbsp;<%-- Leave blank. --%></div>
+            <div id="content" class="clearfix">
+                <div class="content-left">
+                    <asp:TreeView ID="TreeView1" runat="server" ExpandDepth="1" DataSourceID="SiteMapDataSource1"
+                        MaxDataBindDepth="1" />
+                </div>
+                <div class="content-right">
+                    <div id="copy">
+                        <asp:ContentPlaceHolder ID="mainContent" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <div id="bottomContent">
+                &nbsp;<%-- Leave blank. --%></div>
+        </div>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="DefaultSiteMapProvider"
+            ShowStartingNode="False" />
+    </form>
+</body>
+</html>

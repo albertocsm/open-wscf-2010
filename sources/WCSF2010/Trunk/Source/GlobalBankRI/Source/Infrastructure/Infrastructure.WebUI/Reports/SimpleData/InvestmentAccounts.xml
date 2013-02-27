@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Accounts>
+  <Account Type="High risk fund" Shares="12,000" Quote="12.01" />
+  <Account Type="Medium risk fund" Shares="1,010" Quote="25.42" />
+  <Account Type="Low risk fund" Shares="910" Quote="17.02" />
+</Accounts>

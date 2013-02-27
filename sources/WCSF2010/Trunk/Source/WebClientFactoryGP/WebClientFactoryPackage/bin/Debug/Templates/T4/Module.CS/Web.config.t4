@@ -1,0 +1,32 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ModuleAssemblyName" #>
+<#@ property processor="PropertyProcessor" name="ModuleName" #>
+<#@ property processor="PropertyProcessor" name="ModuleFolderNameOnWebSite" #>
+<configuration>
+  <configSections>
+    <sectionGroup name="compositeWeb">
+	  <section name="modules" type="Microsoft.Practices.CompositeWeb.Configuration.ModulesConfigurationSection, Microsoft.Practices.CompositeWeb"/>
+	  <section name="authorization" type="Microsoft.Practices.CompositeWeb.Configuration.AuthorizationConfigurationSection, Microsoft.Practices.CompositeWeb"/>
+	</sectionGroup>
+  </configSections>
+  <compositeWeb>
+    <modules>
+      <module name="<#= this.ModuleName #>" assemblyName="<#= this.ModuleAssemblyName #>" virtualPath="~/<#= this.ModuleFolderNameOnWebSite #>">
+		<dependencies>
+          <dependency module="Shell" />
+        </dependencies>
+      </module>
+    </modules>
+    <authorization>
+		<!-- Add your own view-rule mappings here:
+          e.g.:
+              <rule Url="~/<#= this.ModuleFolderNameOnWebSite #>/Default.aspx" Rule="AllowAccess<#= this.ModuleName #>DefaultView" />
+          -->
+	</authorization>
+  </compositeWeb>
+  <appSettings/>
+  <connectionStrings/>
+  <system.web />  
+</configuration>

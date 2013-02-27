@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GuidancePackage xmlns="http://schemas.microsoft.com/pag/gax-core"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
+    Name="WebClientGuidancePackage2010" 
+    Caption="Web Client Software Factory 2010 for Visual Studio 2012"
+    Description="The Web Client Software Factory is an integrated set of automation and guidance for building Web applications."
+    BindingRecipe="BindingRecipe"
+    Guid="74716806-2E8D-4d21-9798-D9FEC7A5A078" 
+    SchemaVersion="1.0"
+    Version="2.0">
+  <Overview Url="Templates\Overview\intro.htm" />
+  <HostData>
+    <Menu Name="WCSFSolution" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Solution"/>
+    </Menu>
+    <Menu Name="WCSFProject" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Project"/>
+    </Menu>
+    <Menu Name="WCSFItem" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Item"/>
+    </Menu>
+    <Menu Name="WCSFFolder" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Solution Folder"/>
+    </Menu>
+    <Menu Name="WCSFWebProject" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Web Project"/>
+    </Menu>
+    <Menu Name="WCSFWebProjectItem" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Web Item"/>
+    </Menu>
+    <Menu Name="WCSFWebProjectFolderItem" Text="Web Client Factory" Priority="1">
+      <CommandBar Name="Web Folder"/>
+    </Menu>
+  <Menu Name="WCSFWebApplicationProject" Text="Web Client Factory" Priority="1">
+	  <CommandBar Guid="D309F791-903F-11D0-9EFC-00A0C911004F" ID="1026"/>
+  </Menu>
+  <Menu Name="WCSFWebApplicationProjectFolder" Text="Web Client Factory" Priority="1">
+	  <CommandBar Guid="D309F791-903F-11D0-9EFC-00A0C911004F" ID="1073"/>
+  </Menu>
+  </HostData>
+  <Recipes>
+	  
+	  <!--WCSF C# Recipes-->
+	  <xi:include href="Recipes/CS/CreateWebClientFactorySolution.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactorySolutionWAP.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactoryModule.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactoryFoundationalModule.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactoryView.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactoryUserControlView.xml"/>
+	  <xi:include href="Recipes/CS/CreateWebClientFactoryMasterView.xml"/>
+
+	  <!--WCSF VB Recipes-->
+	  <xi:include href="Recipes/VB/CreateWebClientFactorySolution.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactorySolutionWAP.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactoryModule.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactoryFoundationalModule.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactoryView.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactoryUserControlView.xml"/>
+	  <xi:include href="Recipes/VB/CreateWebClientFactoryMasterView.xml"/>
+
+	  <!--Common Recipes-->
+	  <xi:include href="Recipes/Binding.xml"/>
+  </Recipes>
+</GuidancePackage>

@@ -1,0 +1,49 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ModuleName" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+
+Imports System
+Imports System.Data
+Imports System.Configuration
+Imports System.Collections
+Imports System.Web
+Imports System.Web.Security
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+Imports System.Web.UI.WebControls.WebParts
+Imports System.Web.UI.HtmlControls
+Imports <#= this.ModuleNamespace #>.Views
+Imports Microsoft.Practices.ObjectBuilder
+
+Namespace <#= this.ModuleNamespace #>.Views
+	Partial Public Class <#= this.ModuleName #>Default
+		Inherits Microsoft.Practices.CompositeWeb.Web.UI.Page
+		Implements IDefaultView
+
+		Private _presenter As DefaultViewPresenter
+
+		Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+
+			If (Not Me.IsPostBack) Then
+				Me._presenter.OnViewInitialized()
+			End If
+
+			Me._presenter.OnViewLoaded()
+
+		End Sub
+
+		<CreateNew()> _
+		Public WriteOnly Property Presenter() As DefaultViewPresenter
+			Set(ByVal value As DefaultViewPresenter)
+				If value Is Nothing Then
+					Throw New ArgumentNullException("value")
+				End If
+				Me._presenter = value
+				Me._presenter.View = Me
+			End Set
+		End Property
+
+	End Class
+End Namespace

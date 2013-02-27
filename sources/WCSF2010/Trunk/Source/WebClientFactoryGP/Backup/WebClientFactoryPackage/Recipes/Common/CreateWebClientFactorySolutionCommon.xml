@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateWebClientFactorySolutionCommon">
+	<Arguments xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+		<xi:include href="../Common/CommonArguments.xml"
+						  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+		<Argument Name="WebUIProjectName">
+			<ValueProvider Type="Evaluator" Expression="$(ApplicationNameArgument)">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="WebUIProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="WebSites\$(WebUIProjectName)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ShellProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Modules\Shell" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="SupportLibrariesRegistryPath" Type="System.String" Required="false">
+			<ValueProvider Type="RetrieveBlocksPath" />
+		</Argument>
+		<Argument Name="SupportLibrariesPath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(SupportLibrariesRegistryPath)" Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="RootNamespace"  Required="true" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ApplicationNameArgument)" />
+		</Argument>
+		<Argument Name="ShellNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).Shell">
+				<MonitorArgument Name="RootNamespace"/>
+			</ValueProvider>
+		</Argument>
+		<Argument Name="WebExtensionsAssemblyPath" Type="System.String" Required="false">
+			<ValueProvider Type="RegistrySearch" RegistryPath="SOFTWARE\Microsoft\.NETFramework\AssemblyFolders\Microsoft .NET Framework 3.5 Reference Assemblies\" RegistryEntry="" Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="WebExtensionsAssembly" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="System.Web.Extensions.dll" Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="EnableAjaxSupport" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="true"></ValueProvider>
+		</Argument>
+		<Argument Name="ShowDocumentation" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="false" />
+		</Argument>
+		<!-- Arguments for Add default Masterpage -->
+		<Argument Name="ModuleName" Type="System.String" Stage="OnBeforeActions">
+			<ValueProvider Type="Evaluator" Expression="$(ShellProject.Name)">
+				<MonitorArgument Name="ShellProject" />
+			</ValueProvider>
+		</Argument>
+		<Argument Name="WebsiteNamespace" Type="System.String" Stage="OnBeforeActions">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.WebsiteNamespaceProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+					 Stage="OnBeforeActions"
+					 ProjectExpression="$(WebUIProject)">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleNamespace" Type="System.String" Stage="OnBeforeActions">
+			<ValueProvider Type="Evaluator" Expression="$(ShellNamespace)">
+				<MonitorArgument Name="ShellNamespace" />
+			</ValueProvider>
+		</Argument>
+		<Argument Name="SharedFolderName" Type="System.String">
+			<ValueProvider Type="Evaluator"
+                     Expression="Shared"/>
+		</Argument>
+		<Argument Name="ViewName">
+			<ValueProvider Type="Evaluator" Expression="DefaultMaster" />
+		</Argument>
+		<Argument Name="ViewsFolder" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="MasterPages" />
+		</Argument>
+		<Argument Name="ViewFileExtension" Type="System.String" Stage="OnBeforeActions">
+			<ValueProvider Type="Evaluator" Expression="master" />
+		</Argument>
+		<Argument Name="ViewWebFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ViewName).$(ViewFileExtension)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewCodebehindFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ViewName).$(ViewFileExtension).$(RecipeLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewDesignerFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ViewName).$(ViewFileExtension).designer.$(RecipeLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewPresenterFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ViewName)Presenter.$(RecipeLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ViewInterfaceFileName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="I$(ViewName)View.$(RecipeLanguage)" Stage="OnBeforeActions">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4ViewPresenterPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\View.$(RecipeLanguage)\ViewPresenter.$(RecipeLanguage).t4">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4ViewInterfacePath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\View.$(RecipeLanguage)\IView.$(RecipeLanguage).t4">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4ViewPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\View.$(RecipeLanguage)\Default.$(ViewFileExtension).t4">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4ViewCodebehindPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\View.$(RecipeLanguage)\View.$(ViewFileExtension).$(RecipeLanguage).t4">
+			</ValueProvider>
+		</Argument>
+		<Argument Name="T4ViewDesignerPath" Type="System.String">
+			<ValueProvider Type="Evaluator"
+						   Stage="OnBeforeActions"
+						   Expression="T4\View.$(RecipeLanguage)\View.$(ViewFileExtension).designer.$(RecipeLanguage).t4">
+			</ValueProvider>
+		</Argument>
+	</Arguments>
+	<Actions xmlns="http://schemas.microsoft.com/pag/gax-core">
+		<!-- Folder creation & library files copy -->
+		<Action Name="CreateLibraryDirectory" Type="CreateDirectoryAction" DirectoryName="Library">
+			<Output Name="FullPath"/>
+		</Action>
+		<Action Name="CopyCompositeWebDlls"
+				Type="CopyFilesAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="SourceDir" RecipeArgument="SupportLibrariesPath"/>
+			<Input Name="TargetDir" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<Action Name="CopyEnterpriseLibraryDLLs"
+				Type="CopyFilesAction">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="SourceDir" RecipeArgument="SupportLibrariesPath"/>
+			<Input Name="TargetDir" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<!-- Add references to CWAB -->
+		<Action Name="AddCompositeWebAssemblyReferencesToWeb"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="WebUIProject"/>
+			<Input Name="AssembliesPath" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<!-- Add references to EntLib -->
+		<Action Name="AddEnterpriseLibraryAssemblyReferencesToWeb"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="WebUIProject"/>
+			<Input Name="AssembliesPath" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<!-- Add references to Shell -->
+		<Action Name="AddCompositeWebAssemblyReferenceToShell"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ShellProject"/>
+			<Input Name="AssembliesPath" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<Action Name="AddEnterpriseLibraryAssemblyReferenceToShell"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ShellProject"/>
+			<Input Name="AssembliesPath" ActionOutput="CreateLibraryDirectory.FullPath"/>
+		</Action>
+		<!-- Add reference to Shell on the website -->
+		<Action Name="AddInfrasutrctureReferenceToWeb" Type="Referencer">
+			<Input Name="ReferringProject" RecipeArgument="WebUIProject"/>
+			<Input Name="ReferencedProject" RecipeArgument="ShellProject"/>
+		</Action>
+
+		<!-- Add Default Masterpage to Webproject-->
+		<Action Name="GenerateViewWebFile"
+		Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4ViewPath"/>
+			<Input Name="ViewName" RecipeArgument="ViewName"/>
+			<Input Name="IsWCSFSolutionWAP" RecipeArgument="IsWCSFSolutionWAP"/>
+			<Input Name="WebsiteNamespace" RecipeArgument="WebsiteNamespace"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+      <Input Name="ApplicationNameArgument" RecipeArgument="ApplicationNameArgument"/>
+      <Input Name="EnableAjaxSupport" RecipeArgument="EnableAjaxSupport"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateViewCodebehind"
+				Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4ViewCodebehindPath"/>
+			<Input Name="ViewName" RecipeArgument="ViewName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateViewDesigner"
+			Type="TextTemplateAction"
+			Condition="$(IsWCSFSolutionWAP)">
+			<Input Name="Template" RecipeArgument="T4ViewDesignerPath"/>
+			<Input Name="ViewName" RecipeArgument="ViewName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateViewPresenter"
+			  Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4ViewPresenterPath"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="ViewName" RecipeArgument="ViewName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Input Name="ViewsFolder" RecipeArgument="ViewsFolder"/>
+			<Output Name="Content" />
+		</Action>
+		<Action Name="GenerateViewInterface"
+       Type="TextTemplateAction">
+			<Input Name="Template" RecipeArgument="T4ViewInterfacePath"/>
+			<Input Name="ViewName" RecipeArgument="ViewName"/>
+			<Input Name="ModuleNamespace" RecipeArgument="ModuleNamespace"/>
+			<Input Name="ViewsFolder" RecipeArgument="ViewsFolder"/>
+			<Output Name="Content" />
+		</Action>
+
+		<Action Name="AddViewWebFileToWebsiteProject"
+      Type="AddItemFromStringToProjectItemByNameAction"
+      Open="false">
+			<Input Name="Content" ActionOutput="GenerateViewWebFile.Content" />
+			<Input Name="ItemName" RecipeArgument="SharedFolderName"/>
+			<Input Name="TargetFileName" RecipeArgument="ViewWebFileName"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<Action Name="AddViewCodebehindToWebsiteProject"
+      Type="AddItemFromStringToProjectItemByNameAction"
+      Open="false">
+			<Input Name="Content" ActionOutput="GenerateViewCodebehind.Content" />
+			<Input Name="ItemName" RecipeArgument="SharedFolderName"/>
+			<Input Name="TargetFileName" RecipeArgument="ViewCodebehindFileName"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<Action Name="AddViewDesignerToWebsiteProject"
+      Type="AddItemFromStringToProjectItemByNameAction"
+			Open="false"
+			Condition="$(IsWCSFSolutionWAP)">
+			<Input Name="Content" ActionOutput="GenerateViewDesigner.Content" />
+			<Input Name="ItemName" RecipeArgument="SharedFolderName"/>
+			<Input Name="TargetFileName" RecipeArgument="ViewDesignerFileName"/>
+			<Input Name="Project" RecipeArgument="WebUIProject" />
+		</Action>
+		<Action Name="AddViewPresenterToModuleProject"
+			  Type="AddItemFromStringToProjectItemByNameAction"
+			  Open="false">
+			<Input Name="Content" ActionOutput="GenerateViewPresenter.Content" />
+			<Input Name="ItemName" RecipeArgument="ViewsFolder"/>
+			<Input Name="TargetFileName" RecipeArgument="ViewPresenterFileName"/>
+			<Input Name="Project" RecipeArgument="ShellProject" />
+		</Action>
+		<Action Name="AddViewInterfaceToModuleProject"
+			  Type="AddItemFromStringToProjectItemByNameAction"
+			  Open="false">
+			<Input Name="Content" ActionOutput="GenerateViewInterface.Content" />
+			<Input Name="ItemName" RecipeArgument="ViewsFolder"/>
+			<Input Name="TargetFileName" RecipeArgument="ViewInterfaceFileName"/>
+			<Input Name="Project" RecipeArgument="ShellProject" />
+		</Action>
+
+		<!-- Set Globlals Flags -->
+    <Action Name="SetSolutionType" Type="AddSolutionGlobalsEntryAction" PropertyName="IsWCSFSolution" PropertyValue="True">
+      <Input Name="Solution" RecipeArgument="SolutionArgument" />
+    </Action>
+    <Action Condition="$(IsWCSFSolutionWAP)"  Name="SetSolutionTypeWAP" Type="AddSolutionGlobalsEntryAction" PropertyName="IsWCSFSolutionWAP" PropertyValue="True">
+      <Input Name="Solution" RecipeArgument="SolutionArgument" />
+    </Action>
+    <Action Name="SetRootNamespace" Type="AddSolutionGlobalsEntryAction" PropertyName="RootNamespace" PropertyValue="RootNamespace">
+			<Input Name="Solution" RecipeArgument="SolutionArgument" />
+		</Action>
+
+    <Action Name="ShowCreateModuleHelpVS2008" Type="Microsoft.Practices.WebClientFactory.Actions.ShowUrlAction, Microsoft.Practices.WebClientFactory.GuidancePackage"
+      RawUrl="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/b9046264-f23f-41fc-8d4d-05f718cb5d4d.html" >
+      <Input Name="ShowDocumentation" RecipeArgument="ShowDocumentation"/>
+    </Action>
+	</Actions>
+
+</Recipe>

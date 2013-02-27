@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{983AEB3B-BC20-4A8A-94CE-42B0EF74C4A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.RecipeFramework.Extensions</RootNamespace>
+    <AssemblyName>Microsoft.Practices.RecipeFramework.Extensions</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Microsoft.Practices.RecipeFramework.Extensions.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)PublicAssemblies\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)PublicAssemblies\EnvDTE80.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Data.ConnectionUI, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)Microsoft.Data.ConnectionUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ComponentModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.ComponentModel.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.RecipeFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.RecipeFramework.VisualStudio.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Library, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.RecipeFramework.Library.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(RecipeFrameworkPath)\Microsoft.Practices.RecipeFramework.Common.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\CodeDom\ClassGeneratorFromCompileUnitAction.cs" />
+    <Compile Include="Actions\CodeDom\Helpers\LanguageType.cs" />
+    <Compile Include="Actions\GAX\EnableGuidancePackageAction.cs" />
+    <Compile Include="Actions\General\EvaluateExpressionAction.cs" />
+    <Compile Include="Actions\General\GetTemplateFilePathAction.cs" />
+    <Compile Include="Actions\OS\CreateDirectoryAction.cs" />
+    <Compile Include="Actions\OS\CreateDirectoryOnProjectAction.cs" />
+    <Compile Include="Actions\OS\ExecuteProcessAction.cs" />
+    <Compile Include="Actions\OS\FileCopyAction.cs" />
+    <Compile Include="Actions\OS\ReadCurrentUserEntryAction.cs" />
+    <Compile Include="Actions\OS\ReadLocalMachineEntryAction.cs" />
+    <Compile Include="Actions\OS\ReadRegistryEntryAction.cs" />
+    <Compile Include="Actions\Templates\ExportSolutionTemplateAction.cs" />
+    <Compile Include="Actions\Templates\UnfoldTemplateAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddAssembliesReferenceAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddItemFromFileToProjectItemAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddItemFromStringAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddItemFromStringToProjectItemAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddItemFromStringToProjectItemByNameAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddItemToProjectItemByNameAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddProjectGlobalsEntryAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddProjectReferenceAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddProjectItemFromFileAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddAssemblyReferenceAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddSolutionFolderAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddSolutionFolderItemFromFileAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddProjectItemsFromDirectoryAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddSolutionGlobalsEntryAction.cs" />
+    <Compile Include="Actions\VisualStudio\AddSolutionItemFromFileAction.cs" />
+    <Compile Include="Actions\VisualStudio\BaseGlobalsEntryAction.cs" />
+    <Compile Include="Actions\VisualStudio\CompileProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\CompileSolutionAction.cs" />
+    <Compile Include="Actions\VisualStudio\DebugProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\DebugWebProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\DeleteItemIfExistsFromProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\DeleteItemIfExistsFromProjectItemAction.cs" />
+    <Compile Include="Actions\VisualStudio\DeleteProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\DeleteProjectItemsAction.cs" />
+    <Compile Include="Actions\VisualStudio\DeleteSolutionItemIfExistsFromProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\ExecuteVSCommandAction.cs" />
+    <Compile Include="Actions\VisualStudio\GetProjectByNameAction.cs" />
+    <Compile Include="Actions\VisualStudio\GetSolutionGlobalsEntryAction.cs" />
+    <Compile Include="Actions\VisualStudio\OpenDocumentationFileAction.cs" />
+    <Compile Include="Actions\VisualStudio\OpenFileInBrowserAction.cs" />
+    <Compile Include="Actions\VisualStudio\RunProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\RunWebProjectAction.cs" />
+    <Compile Include="Actions\VisualStudio\StatusBarAction.cs" />
+    <Compile Include="Actions\VisualStudio\UnfoldTemplateIfProjectNotExistsAction.cs" />
+    <Compile Include="CommonHelpers\CodeDomHelper.cs" />
+    <Compile Include="CommonHelpers\DteHelper2.cs" />
+    <Compile Include="CommonHelpers\DteHelperEx.cs" />
+    <Compile Include="CommonHelpers\ExceptionHelper.cs" />
+    <Compile Include="CommonHelpers\ExpressionEvaluationHelper.cs" />
+    <Compile Include="CommonHelpers\FileCodeModelHelper.cs" />
+    <Compile Include="CommonHelpers\ResponsibilityHelper.cs" />
+    <Compile Include="CommonHelpers\ResponsibleProjectFinder.cs" />
+    <Compile Include="CommonHelpers\TypeHelper.cs" />
+    <Compile Include="CommonHelpers\VsHelper.cs" />
+    <Compile Include="CommonHelpers\X509CertificateHelper.cs" />
+    <Compile Include="Common\Templates\Helpers\ReplaceableExtension.cs" />
+    <Compile Include="Common\Templates\IVSTemplateExporter.cs" />
+    <Compile Include="Common\Templates\LocationField.cs" />
+    <Compile Include="Common\Templates\ProjectType.cs" />
+    <Compile Include="Common\Templates\VSProjectTemplate.cs" />
+    <Compile Include="Common\Templates\VSSolutionTemplate.cs" />
+    <Compile Include="Common\Templates\VSSolutionTemplateExporter.cs" />
+    <Compile Include="Common\Templates\Helpers\VSTemplateExporterHelper.cs" />
+    <Compile Include="Common\Templates\VSProjectTemplateExporter.cs" />
+    <Compile Include="Converters\AgregatorStringConverter.cs" />
+    <Compile Include="Converters\Boolean2StringConverter.cs" />
+    <Compile Include="Converters\ConnectionSettingsInfo.cs" />
+    <Compile Include="Converters\ConnectionStringConverter.cs" />
+    <Compile Include="Converters\ProjectWithResponsibilityConverter.cs" />
+    <Compile Include="Converters\VsAddCodeFileStringOverwritableConverter.cs" />
+    <Compile Include="Converters\VsAddValidFileStringConverter.cs" />
+    <Compile Include="Converters\CSharpIdentifierConverter.cs" />
+    <Compile Include="Converters\CSharpNamespaceConverter.cs" />
+    <Compile Include="Converters\ValidLanguageIndependentIdentifierConverter.cs" />
+    <Compile Include="Converters\VsAddCodeFileStringConverter.cs" />
+    <Compile Include="Converters\OverwriteItemConverter.cs" />
+    <Compile Include="Converters\PathConverter.cs" />
+    <Compile Include="Converters\FileExistsConverter.cs" />
+    <Compile Include="Converters\ProjectExistsConverter.cs" />
+    <Compile Include="Converters\ProjectItemExistsConverter.cs" />
+    <Compile Include="Converters\TypeFromStringConverter.cs" />
+    <Compile Include="Converters\UriConverter.cs" />
+    <Compile Include="Converters\ValidFileNameConverter.cs" />
+    <Compile Include="Converters\XmlNamespaceStringConverter.cs" />
+    <Compile Include="Coordinators\ConditionalCoordinator.cs" />
+    <Compile Include="Coordinators\FailSafeCoordinator.cs" />
+    <Compile Include="Dialogs\CredentialsDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CredentialsDialogFlags.cs" />
+    <Compile Include="Dialogs\DsObjectPickerComTypes.cs" />
+    <Compile Include="Dialogs\DsObjectPickerDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DsObjectPickerFlags.cs" />
+    <Compile Include="Dialogs\DsObjectPickerItem.cs" />
+    <Compile Include="Dialogs\SecureCredential.cs" />
+    <Compile Include="Dialogs\UnsafeNativeMethods.cs" />
+    <Compile Include="Dialogs\X509CertificatePicker.cs" />
+    <Compile Include="Dialogs\X509CertificatePickerDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\X509CertificatePickerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\X509CertificatePickerView.Designer.cs">
+      <DependentUpon>X509CertificatePickerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DteWrapper\DteProjectItemModel.cs" />
+    <Compile Include="DteWrapper\DteProjectModel.cs" />
+    <Compile Include="DteWrapper\DteSolutionModel.cs" />
+    <Compile Include="DteWrapper\DteTypeModel.cs" />
+    <Compile Include="DteWrapper\IProjectItemModel.cs" />
+    <Compile Include="DteWrapper\IProjectModel.cs" />
+    <Compile Include="DteWrapper\ISolutionModel.cs" />
+    <Compile Include="DteWrapper\ITypeModel.cs" />
+    <Compile Include="Editors\AddWebReferenceEditor.cs" />
+    <Compile Include="Editors\ClassBrowser\ClassBrowserEditor.cs" />
+    <Compile Include="Editors\ClassBrowser\ClassBrowserEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ConfigurationFileChooser.cs" />
+    <Compile Include="Editors\ConnectionStringEditor.cs" />
+    <Compile Include="Editors\FileChooser.cs" />
+    <Compile Include="Editors\FolderChooser.cs" />
+    <Compile Include="Editors\WindowsUserNamePickerEditor.cs" />
+    <Compile Include="Editors\X509CertificateEditor.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="Extenders\ISolutionExtender.cs" />
+    <Compile Include="Extenders\ExtenderUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="References\ProjectPropertyReference.cs" />
+    <Compile Include="References\SolutionFolderPropertyTemplateReference.cs" />
+    <Compile Include="References\VisualStudio\CodeElementReference.cs" />
+    <Compile Include="References\VisualStudio\AnyProjectReference.cs" />
+    <Compile Include="References\VisualStudio\CSharpLanguageReference .cs" />
+    <Compile Include="References\VisualStudio\FolderReference.cs" />
+    <Compile Include="References\VisualStudio\ProjectItemReference.cs" />
+    <Compile Include="References\VisualStudio\ProjectReference.cs" />
+    <Compile Include="References\VisualStudio\SolutionReference.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="References\VisualStudio\WebProjectItemReference.cs" />
+    <Compile Include="Services\OutputWindowTraceListener.cs" />
+    <Compile Include="Services\OutputWindowService.cs" />
+    <Compile Include="TypeEditor\CLRType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TypeEditor\CLRTypeConverter.cs" />
+    <Compile Include="TypeEditor\CLRTypeEditor.cs" />
+    <Compile Include="TypeEditor\DefaultCLRTypeEditorConfig.cs" />
+    <Compile Include="TypeEditor\ICLRTypeEditorConfig.cs" />
+    <Compile Include="Validators\TypeNameValidator.cs" />
+    <Compile Include="Validators\TypeNameValidatorAttribute.cs" />
+    <Compile Include="ValueProviders\General\CreateInstanceProvider.cs" />
+    <Compile Include="ValueProviders\General\IsNotNullProvider.cs" />
+    <Compile Include="ValueProviders\OS\LocalMachineEntryProvider.cs" />
+    <Compile Include="ValueProviders\OS\PathCreatorProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\CodeElementUnderCursorProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\CodeLanguageProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ContainingProjectProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\CurrentItemProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\CurrentProjectProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\FirstSelectedProjectProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ItemNameProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectByNameProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectByPathExpressionProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectByPathProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectGlobalsEntryProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectItemByFullNameProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\ProjectNameProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueProviders\VisualStudio\SelectedItemFileCodeModelProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\SelectedItemNameProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueProviders\VisualStudio\SelectedItemPathProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValueProviders\VisualStudio\SelectedSolutionFolderProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\SolutionNameProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\SolutionPathProvider.cs" />
+    <Compile Include="ValueProviders\VisualStudio\WebApplicationURLProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\X509CertificatePickerView.resx">
+      <DependentUpon>X509CertificatePickerView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ClassBrowser\ClassBrowserEditorForm.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClassBrowserEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ClassBrowser\ClassBrowserEditorForm.resx">
+      <DependentUpon>ClassBrowserEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

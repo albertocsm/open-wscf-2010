@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickstartAcceptanceTests", "QuickstartAcceptanceTests", "{60076EA5-69E1-4DAA-8F38-D68A58183391}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationQuickStart", "WebSites\ValidationQuickStart\ValidationQuickStart.csproj", "{7794DF64-7E03-4F07-A538-E91B060AFC10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStartAcceptanceTests", "QuickstartAcceptanceTests\QuickStartAcceptanceTests.csproj", "{6D2DA890-27A6-40E6-941D-0FBE33C32D01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blocks", "Blocks", "{DC7A7347-B86B-4BA9-B212-3E864025EAA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxControlToolkit.WCSFExtensions", "..\..\..\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\AjaxControlToolkit.WCSFExtensions.csproj", "{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7794DF64-7E03-4F07-A538-E91B060AFC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7794DF64-7E03-4F07-A538-E91B060AFC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7794DF64-7E03-4F07-A538-E91B060AFC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7794DF64-7E03-4F07-A538-E91B060AFC10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D2DA890-27A6-40E6-941D-0FBE33C32D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2DA890-27A6-40E6-941D-0FBE33C32D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2DA890-27A6-40E6-941D-0FBE33C32D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2DA890-27A6-40E6-941D-0FBE33C32D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D2DA890-27A6-40E6-941D-0FBE33C32D01} = {60076EA5-69E1-4DAA-8F38-D68A58183391}
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6} = {DC7A7347-B86B-4BA9-B212-3E864025EAA9}
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal

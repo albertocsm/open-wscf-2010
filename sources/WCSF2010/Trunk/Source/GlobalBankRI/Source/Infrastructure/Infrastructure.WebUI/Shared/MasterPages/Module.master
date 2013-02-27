@@ -1,0 +1,68 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="ModuleMasterPage" Codebehind="Module.master.cs" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Reports</title>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<asp:SiteMapDataSource ID="modulesSource" runat="server" ShowStartingNode="False" />
+		<asp:SiteMapDataSource ID="moduleActionsSource" runat="server" ShowStartingNode="False"
+			StartingNodeOffset="1" />
+		<div id="mainwrapper">
+			<div id="header-container">
+				<div id="header-options">
+					<div id="loginImage">
+						&nbsp;</div>
+					<div id="loginText">
+						<asp:LoginStatus ID="LoginStatusText" CssClass="headerLink" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" />
+					</div>
+					<div id="helpImage">
+						&nbsp;</div>
+					<div id="helpText">
+						<asp:HyperLink CssClass="headerLink" NavigateUrl="~/Help.aspx" runat="server" ID="Hyperlink1">Help</asp:HyperLink></div>
+				</div>
+			</div>
+			<div id="module-container">
+				<asp:Menu SkinID="modulesMenu" DataSourceID="modulesSource" runat="server" ID="ModulesMenu"
+					OnMenuItemDataBound="ModulesMenu_MenuItemDataBound">
+					<StaticItemTemplate>
+						<asp:HyperLink CssClass="moduleImage" NavigateUrl='<%# ((MenuItem)Container.DataItem).NavigateUrl %>'
+							ImageUrl='<%# ((MenuItem)Container.DataItem).ImageUrl %>' runat="server" /><br />
+						<asp:HyperLink CssClass="moduleName" NavigateUrl='<%# ((MenuItem)Container.DataItem).NavigateUrl %>'
+							Text='<%# ((MenuItem)Container.DataItem).Text %>' runat="server" />
+					</StaticItemTemplate>
+				</asp:Menu>
+			</div>
+			<div id="content-container">
+				<div id="side">
+					<div id="sideHeader">
+						&nbsp;</div>
+					<div id="sideTitle" class="sectionTitle">
+						<asp:Label EnableViewState="true" runat="server" ID="moduleNameLabel" /></div>
+					<div id="sideContent">
+						<asp:Menu runat="server" SkinID="actionsMenu" ID="ActionsMenu" DataSourceID="moduleActionsSource"
+							OnMenuItemDataBound="ActionsMenu_MenuItemDataBound" />
+					</div>
+					<div id="sideFooter">
+						&nbsp;</div>
+				</div>
+				<div id="moduleContent">
+					<div id="moduleContentHeader">
+						&nbsp;</div>
+					<asp:ContentPlaceHolder ID="moduleActionContent" runat="server">
+					</asp:ContentPlaceHolder>
+					<div id="moduleContentFooter">
+						&nbsp;</div>
+				</div>
+			</div>
+			<div id="footer-container">
+				<span class="footerCompanyName">global bank</span><span><asp:HyperLink ID="Homelink"
+					CssClass="footerLink" NavigateUrl="~/Default.aspx" runat="server" Text="Home" /></span><span><asp:LoginStatus
+						ID="LoginStatus1" CssClass="footerLink" runat="server" />
+					</span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,417 @@
+﻿body
+{
+	min-width: 730px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Verdana;
+	color: Black;
+	background-color: White;
+}
+
+/******************
+Layout Divs
+******************/
+
+#mainwrapper
+{
+	margin: 0 0 0 0;
+	width: 730px;
+	text-align: left;
+}
+#header-container
+{
+	width: 730px;
+	height: 60px;
+	background: #FFFFFF url(Images/bg_header.png) no-repeat;
+}
+
+#module-container
+{
+	position: relative;
+	margin-bottom: -21px;
+	width: 730px;
+	padding-top: 6px;
+}
+
+#module-container a
+{
+	color: White;
+	font-size: .8em;
+	text-decoration: none;
+}
+
+#footer-container
+{
+	width: 730px;
+	height: 25px;
+	padding-left: 50px;
+	padding-top: 4px;
+	font-size: .8em;
+	background: #FFFFFF url(Images/bg_footer.png) no-repeat;
+}
+
+/******************
+Header
+******************/
+#header-options
+{
+	position: absolute;
+	left: 600px;
+	top: 4px;
+	z-index: 1000;
+	text-align: right;
+}
+#loginImage
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 24px;
+	height: 24px;
+	background-image: url(Images/login.png);
+	background-repeat: no-repeat;
+	vertical-align: bottom;
+	padding-right: 4px;
+}
+
+#loginText
+{
+	position: absolute;
+	top: 24px;
+	left: 0px;
+	font-family: Verdana;
+	font-size: 8pt;
+	color: white;
+}
+
+.headerLink
+{
+	font-family: Verdana;
+	font-size: 8pt;
+	text-decoration: none;
+	color: white;
+	z-index: 2000;
+}
+
+#helpImage
+{
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	width: 24px;
+	height: 24px;
+	z-index: 1000;
+	vertical-align: bottom;
+	padding-right: 4px;
+	background-image: url(Images/help.png);
+	background-repeat: no-repeat;
+}
+
+#helpText
+{
+	position: absolute;
+	top: 24px;
+	left: 40px;
+	font-family: Verdana;
+	font-size: 8pt;
+	color: white;
+}
+
+/******************
+Module bar
+******************/
+.moduleNames
+{
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	color: White;
+	font-size: .8em;
+}
+.moduleImage
+{
+	padding-left: 20px;
+	padding-right: 50px;
+}
+
+.moduleName
+{
+	padding-left: 18px;
+	padding-right: 50px;
+	text-align: center;
+}
+
+.moduleMenuItem
+{
+	text-align: center;
+}
+
+/******************
+Action items
+******************/
+
+.actionMenuItem
+{
+	font-size: .9em;
+	margin-bottom: 20px;
+	padding-left: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.actionMenuItem img
+{
+	position: absolute;
+	left: 17px;
+}
+/******************
+Content
+******************/
+
+#content-container
+{
+	width: 710px;
+	min-height: 460px;
+	height: auto;
+	height: 460px;
+	padding: 40px 10px 10px 10px;
+	background-image: url(Images/bgContent.gif);
+	background-repeat: repeat;
+	font-size: .8em;
+}
+
+/******************
+Side bar (for modules)
+******************/
+
+#side
+{
+	width: 150px;
+	float: left;
+	border: solid 0px black;
+}
+
+#sideHeader
+{
+	width: 150px;
+	height: 24px;
+	background: url(Images/sideHeader.gif) no-repeat;
+}
+
+#sideContent
+{
+	padding-left: 4px;
+	padding-top: 14px;
+	min-height: 300px;
+	height: auto;
+	height: 300px;
+	color: Black;
+	background-color: White;
+}
+#sideFooter
+{
+	width: 150px;
+	height: 7px;
+	background: url(Images/sideFooter.png) no-repeat;
+}
+
+/******************
+Content area styles
+******************/
+
+.sectionTitle
+{
+	margin-top: -20px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+	font-size: .85em;
+	color: White;
+}
+
+/******************
+Module master styles
+******************/
+
+#moduleContent
+{
+	width: 545px;
+	float: right;
+}
+
+#moduleContentHeader
+{
+	width: 544px;
+	height: 24px;
+	background: url(Images/moduleContentHeader.gif) no-repeat;
+}
+#moduleContentContent
+{
+	padding-top: 14px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 14px;
+	color: Black;
+	background-color: White;
+}
+#moduleContentFooter
+{
+	width: 544px;
+	height: 7px;
+	background: url(Images/moduleContentFooter.png) no-repeat;
+}
+
+/******************
+Public master styles
+******************/
+
+#publicContentHeader
+{
+	width: 710px;
+	height: 24px;
+	background: url(Images/publicContentHeader.gif) no-repeat;
+}
+
+#publicContentContent
+{
+	padding: 14px;
+	color: Black;
+	background-color: White;
+}
+
+#publicContentFooter
+{
+	width: 710px;
+	height: 24px;
+	background: url(Images/publicContentFooter.gif) no-repeat;
+}
+
+/******************
+Login
+******************/
+
+#loginBox
+{
+	padding-top: 30px;
+	padding-left: 30px;
+}
+.loginTextbox
+{
+	color: #000;
+	text-indent: 3px;
+	border: solid 1px black;
+	height: 18px;
+	margin-right: 2px;
+	width: 110px;
+}
+.loginLabel
+{
+	font-family: Corbel, Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: Black;
+}
+
+#loginGoButton
+{
+	padding-top: 6px;
+	padding-left: 6px;
+}
+#loginHelp
+{
+	padding-top: 140px;
+	color: #b2cfe6;
+}
+
+#enterSite
+{
+	margin-top: 80px;
+	text-align: center;
+	padding-top: 6px;
+	padding-left: 6px;
+}
+
+/******************
+Footer
+******************/
+
+.footerCompanyName
+{
+	color: #b2cfe6;
+}
+.footerLink
+{
+	padding-left: 40px;
+	font-family: Verdana;
+	text-decoration: none;
+	color: white;
+}
+
+/******************
+Grids
+******************/
+
+.sectionHeader
+{
+	color: Black;
+	font-size: .9em;
+}
+
+.grid
+{
+	border: none;
+	border-style: none;
+	border-width: 0px;
+	font-size: .9em;
+	width: 96%;
+}
+
+.gridHeader
+{
+	background-color: White;
+	color: #b2cfe6;
+	font-weight: bold;
+	padding-right: 14px;
+	text-align: left;
+}
+.gridRow
+{
+	background-color: white;
+}
+
+.gridAltRow
+{
+	background-color: #E6F0F8;
+}
+
+.gridEditRow
+{
+	background-color: white;
+}
+
+.editDropDown
+{
+	width: 120px;
+}
+
+.editTextBox
+{
+	width: 60px;
+}
+
+/******************
+New Transfer
+******************/
+
+.newTransferHeader
+{
+	color: black;
+	font-weight: normal;
+	padding-right: 2px;
+	text-align: right;
+}
+
+#newTransferButtons
+{
+	margin-top: 20px;
+	margin-left: 86px;
+}

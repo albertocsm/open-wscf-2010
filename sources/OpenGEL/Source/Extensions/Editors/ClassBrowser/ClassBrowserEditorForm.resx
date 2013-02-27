@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 8</value>
+  </data>
+  <data name="pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 431</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ClassBrowserEditorForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tvBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tvBrowser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="dlgOpenAssembly.Title" xml:space="preserve">
+    <value>Open assembly</value>
+  </data>
+  <data name="pnlButtons.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tvBrowser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>440, 469</value>
+  </data>
+  <data name="tvBrowser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dlgOpenAssembly.Filter" xml:space="preserve">
+    <value>Assemblies|*.dll;*.exe</value>
+  </data>
+  <data name="imgIcons.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADE
+        DQAAAk1TRnQBSQFMAgEBBwEAAQkBAAEEAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/xEAAjEBUgGZARsB9joA
+        AVgBmgF6AVkBWAExAVIBmQEbAfYHAA+sIAABWAF5AaADmgJ6AVgBUgEaBgABrAMAAfQBrAUZAgkB3AGs
+        EAABmQJzA24BSwFKAbwHAAJYAcMGoAF6AVgGAAGsBAABrAYZAgkBrBAAAXkBmgV6AXkBSgcAAVgBWQEa
+        BqABegGaAcMFAAGsAQACkgEAAawBGQaSAQkBrBAAAXoCmgKRAa4CegFKBwABWAF6AZkBwwWgAXoBwwF5
+        BQABrAQAAawIGQGsEAABegOaBHoBSwcAAVgBmgFZAXkBmgEaAfYCwwF6ApkB9gQAAawBAAKSAQABrAEZ
+        BpIBGQGsEAABegKaApEBrgJ6AUsDbgFLAUoBvAEAAVgDoAJ6AVgBwwH2ARoBKAFPAZkEAAGsBAABrAj0
+        AawQAAF6AaAEmgJ6AW4EegF5AUoBAAFYBqABegFYAUkCVgFyBAABrAEAApIBAAGsAfQGkgEAAawQAAHD
+        A3oCeQJSAXkCkQGuAnoBSgEAAVgBwwKgAcMBmgLDAVABTwJ9AU8BmAMAAawEAAGsCAABrBYAAXoDmgR6
+        AUsBAAFYAZoBGgHDAXkCWAInAQICVgEuAicCAAGsAQACkgEAAawBAAaSAQABrBYAAXoCmgKRAa4CegFL
+        AgADWAH2BAABCAJWAQgEAAGsBAABrAcAAfQBrBYAAXoBoASaAnoBbgoAAXIBVgECAfQEAA+sFgABwwN6
+        AnkCUgGZBgAB8gH0AfMBmAIuAZgFAA6sAa0lAAEIAUkBJwECAU8BCAcADawB9CcAAvRSAAHzKAAC9AMA
+        AvQPAAHzAaYB8yYAAfMB7AFDAfQBAAH0AUMB7AHzDQAB8wGtAbQBpgHzJAAB9AHsAQ4B8gMAAfIBDgHs
+        AfQKAAKRAbQB3AG6AbQBpgHzFgACbAdmBAAB9AETAQ4B9AMAAfQBDgETAfQKAAGRAQAB8wG0AdwBugG0
+        AaYB8xQAAa4B8gO1Ae0DkQGuAWYBBwIAAfQBEwEOAfQDAAH0AQ4BEwH0CgABkQIAAfMBtAHcAa0B8woA
+        AfEBkQKuAfACAAG1AZECAAGuAfMC8gHxAfACvAEHAZEBZgG8AgAB9AEOAQcFAAEHAQ4B9AYAARsDAAGR
+        AwABGQG0AfMCAAHxAbUB7QHwBAAB8QG1AQcBvAEHAa4B8AEAAe8BtQHvAe0BkQH0AfMC8gHxAfACvAGR
+        AWYB8wEAAfQBDgFtAfQFAAH0AW0BDgH0BAABGwFLARsCAAGRAwABggEZAwACvAEHAe0BtQGRAa4BbAG1
+        Ae8B8QEAAfEBBwGuAQABvAEHAgABkQL0AfMC8gHxAfABvAGRAWYDAAH0AUMBBwUAAQcBQwH0BAABGwFL
+        AVMBSwEbAQABkQIAArABggMAAfEB9AG8ArUBkQGuAWwBBwG1AwABvAGuBQABtQEAAvQB8wLyAfEB8AGR
+        AWYDAAH0ARMBQwH0AwAB9AFDARMB9AMAARsBSwF6AlkBAwORAbAB3gHYAbABggIAAfIB8QG8AfEEAAEH
+        Ae0B8QEAAfEB7wGRBQABtQIAAvQB8wLyAfEB8AFmAwAB9AETAUMB9AMAAfQBQwETAfQDAAFTAZoCegFZ
+        AVMBAwEbAgABsAHeAdgBsAGCCQAB9AG8Ae0BtQHvAbUB8QYAArUB7QKRAq4BbQFsBAAB9AHsAUMB8gMA
+        AfIBQwHsAfQDAAEbAVMBmgJ6AVkBUwEDARsCAAGwAd4BsAsAAfQCBwG1AfEVAAHzAewBQwH0AQAB9AFD
+        AewB8wUAARsBUwGaAnoBWQFTAQMBGwIAAbAnAAL0AwAC9AcAARsBUwGaAnoBUgEbOgABGwFTAZoBUgEb
+        PAABGwFTARsZAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAC/wEDA/8CAAL/
+        AQABPwGAAwAC/wEAAR8BuAQAAX8BAAEfAbwEAAF/AQABDwGkBAABfwEAAQ8BvAQAAX8BAAEHAaQEAAEB
+        AQABBwG8BAABAQEAAQcBpAECAwABAQEAAQMBvQH+AgAB/AEBAQABAQGlAQICAAH8AQEChwG9AfwCAAH8
+        AQEB/wGHAYADAAH8AQEB+AEPAYADAAL/AfgBHwHAAwAC/wH+AX8C/wIABf8B7wT/AfMBnwH/AccE/wHh
+        AQ8B/wGDBP8BwwGHAf4BAQL/AfgBAwHDAYcB/gGAAv8B8AEAAcMBhwH+AcEB/wGDATABAALHAe4B4wEP
+        AQECAAGHAcMBxgHnAQABEQEwAQECxwGCAccBAAE5AfQBAQHDAYcBAAEDAQ8BEQH2AQEBwwGHAQABwQH/
+        AQEB+AEDAcMBhwEAAWMB/wGDAv8B4QEPAYABNwT/AfMBnwHAAX8G/wHgB/8B8QP/Cw==
+</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tvBrowser.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;imgIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 38</value>
+  </data>
+  <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tvBrowser.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;tvBrowser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Name" xml:space="preserve">
+    <value>btnOK</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;dlgOpenAssembly.Name" xml:space="preserve">
+    <value>dlgOpenAssembly</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>&amp;Accept</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="pnlButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAAAAABoBQAAJgAAACAgAAAAAAAAqAgAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAAAAAB
+        AAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwADA3MAA8MqmAAQE
+        BAAICAgADAwMABEREQAWFhYAHBwcACIiIgApKSkAVVVVAE1NTQBCQkIAOTk5AIB8/wBQUP8AkwDWAP/s
+        zADG1u8A1ufnAJCprQAAADMAAABmAAAAmQAAAMwAADMAAAAzMwAAM2YAADOZAAAzzAAAM/8AAGYAAABm
+        MwAAZmYAAGaZAABmzAAAZv8AAJkAAACZMwAAmWYAAJmZAACZzAAAmf8AAMwAAADMMwAAzGYAAMyZAADM
+        zAAAzP8AAP9mAAD/mQAA/8wAMwAAADMAMwAzAGYAMwCZADMAzAAzAP8AMzMAADMzMwAzM2YAMzOZADMz
+        zAAzM/8AM2YAADNmMwAzZmYAM2aZADNmzAAzZv8AM5kAADOZMwAzmWYAM5mZADOZzAAzmf8AM8wAADPM
+        MwAzzGYAM8yZADPMzAAzzP8AM/8zADP/ZgAz/5kAM//MADP//wBmAAAAZgAzAGYAZgBmAJkAZgDMAGYA
+        /wBmMwAAZjMzAGYzZgBmM5kAZjPMAGYz/wBmZgAAZmYzAGZmZgBmZpkAZmbMAGaZAABmmTMAZplmAGaZ
+        mQBmmcwAZpn/AGbMAABmzDMAZsyZAGbMzABmzP8AZv8AAGb/MwBm/5kAZv/MAMwA/wD/AMwAmZkAAJkz
+        mQCZAJkAmQDMAJkAAACZMzMAmQBmAJkzzACZAP8AmWYAAJlmMwCZM2YAmWaZAJlmzACZM/8AmZkzAJmZ
+        ZgCZmZkAmZnMAJmZ/wCZzAAAmcwzAGbMZgCZzJkAmczMAJnM/wCZ/wAAmf8zAJnMZgCZ/5kAmf/MAJn/
+        /wDMAAAAmQAzAMwAZgDMAJkAzADMAJkzAADMMzMAzDNmAMwzmQDMM8wAzDP/AMxmAADMZjMAmWZmAMxm
+        mQDMZswAmWb/AMyZAADMmTMAzJlmAMyZmQDMmcwAzJn/AMzMAADMzDMAzMxmAMzMmQDMzMwAzMz/AMz/
+        AADM/zMAmf9mAMz/mQDM/8wAzP//AMwAMwD/AGYA/wCZAMwzAAD/MzMA/zNmAP8zmQD/M8wA/zP/AP9m
+        AAD/ZjMAzGZmAP9mmQD/ZswAzGb/AP+ZAAD/mTMA/5lmAP+ZmQD/mcwA/5n/AP/MAAD/zDMA/8xmAP/M
+        mQD/zMwA/8z/AP//MwDM/2YA//+ZAP//zABmZv8AZv9mAGb//wD/ZmYA/2b/AP//ZgAhAKUAX19fAHd3
+        dwCGhoYAlpaWAMvLywCysrIA19fXAN3d3QDj4+MA6urqAPHx8QD4+PgA8Pv/AKSgoACAgIAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAoKCgoKCgoKCgoKCgoKCgoKCgqKswqKiooKCgoKCgoKCgpliopl
+        ioqKioqzCgoKCgqss7NlitStimWKigoKCgoKZYvbtNTUs4uKrYqKCgoKCrOz29uziqzUs62KigoKCgqz
+        29vbimVCirOtiqwKCgoKCqbb3NWmZa2zs86sCgoKCgqL29TV29TU1K2KBnAKCgpKUlADbNTUcrPOa05O
+        BgpzenpSenpKc1FOlndxcU5Ic3qamnp6enpxlpyWd3dxTnOZmnojRHp6cZycSEh2d04Kc5qadEt6enmQ
+        lpZ2lk4KCgpzc5p6eXlzCnFxcU4KCgoKCgpzc3NzCgoKCgoKCgr//wAA5H8AAMAPAACADwAAgAcAAIAH
+        AACABwAAwAcAAMADAACAAQAAAAAAAAAAAAAAAAAAgAEAAMBDAADw/wAAKAAAACAAAABAAAAAAQAIAAAA
+        AAAABAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICAAADAwMAAwNzAAPDK
+        pgAEBAQACAgIAAwMDAAREREAFhYWABwcHAAiIiIAKSkpAFVVVQBNTU0AQkJCADk5OQCAfP8AUFD/AJMA
+        1gD/7MwAxtbvANbn5wCQqa0AAAAzAAAAZgAAAJkAAADMAAAzAAAAMzMAADNmAAAzmQAAM8wAADP/AABm
+        AAAAZjMAAGZmAABmmQAAZswAAGb/AACZAAAAmTMAAJlmAACZmQAAmcwAAJn/AADMAAAAzDMAAMxmAADM
+        mQAAzMwAAMz/AAD/ZgAA/5kAAP/MADMAAAAzADMAMwBmADMAmQAzAMwAMwD/ADMzAAAzMzMAMzNmADMz
+        mQAzM8wAMzP/ADNmAAAzZjMAM2ZmADNmmQAzZswAM2b/ADOZAAAzmTMAM5lmADOZmQAzmcwAM5n/ADPM
+        AAAzzDMAM8xmADPMmQAzzMwAM8z/ADP/MwAz/2YAM/+ZADP/zAAz//8AZgAAAGYAMwBmAGYAZgCZAGYA
+        zABmAP8AZjMAAGYzMwBmM2YAZjOZAGYzzABmM/8AZmYAAGZmMwBmZmYAZmaZAGZmzABmmQAAZpkzAGaZ
+        ZgBmmZkAZpnMAGaZ/wBmzAAAZswzAGbMmQBmzMwAZsz/AGb/AABm/zMAZv+ZAGb/zADMAP8A/wDMAJmZ
+        AACZM5kAmQCZAJkAzACZAAAAmTMzAJkAZgCZM8wAmQD/AJlmAACZZjMAmTNmAJlmmQCZZswAmTP/AJmZ
+        MwCZmWYAmZmZAJmZzACZmf8AmcwAAJnMMwBmzGYAmcyZAJnMzACZzP8Amf8AAJn/MwCZzGYAmf+ZAJn/
+        zACZ//8AzAAAAJkAMwDMAGYAzACZAMwAzACZMwAAzDMzAMwzZgDMM5kAzDPMAMwz/wDMZgAAzGYzAJlm
+        ZgDMZpkAzGbMAJlm/wDMmQAAzJkzAMyZZgDMmZkAzJnMAMyZ/wDMzAAAzMwzAMzMZgDMzJkAzMzMAMzM
+        /wDM/wAAzP8zAJn/ZgDM/5kAzP/MAMz//wDMADMA/wBmAP8AmQDMMwAA/zMzAP8zZgD/M5kA/zPMAP8z
+        /wD/ZgAA/2YzAMxmZgD/ZpkA/2bMAMxm/wD/mQAA/5kzAP+ZZgD/mZkA/5nMAP+Z/wD/zAAA/8wzAP/M
+        ZgD/zJkA/8zMAP/M/wD//zMAzP9mAP//mQD//8wAZmb/AGb/ZgBm//8A/2ZmAP9m/wD//2YAIQClAF9f
+        XwB3d3cAhoaGAJaWlgDLy8sAsrKyANfX1wDd3d0A4+PjAOrq6gDx8fEA+Pj4APD7/wCkoKAAgICAAAAA
+        /wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK
+        CgoKCgoKCgoKCoqKioqKCgoKCgoKCgoKCgoKCgoKCgoKCgprZaysCgoKioqKiooKCgoKCgoKCgoKCgoK
+        CgoKCgoKZWVlrKyKZYqKioqKigoKCgoKCgoKCgoKCgoKCgoKCgplZYqsrIpliqampoqKioplZayLCgoK
+        CgoKCgoKCgoKCmVliqysZYqLioprioqKimWKrKyKCgoKCgoKCgoKCgplZYuLiqxla7Ozs7OLioqKZYqs
+        rKwKCgoKCgoKCgoKCouz29uLimVrs9Sz1IuKimVliqysrAoKCgoKCgoKCgqmirPb29uzs7PUs7Ozi4qK
+        ZYuLiqysCgoKCgoKCgoKCmVliorb29vV1dXV1NSzrYutrayLioplCgoKCgoKCgoKiopli9vb1dvVrays
+        s9Szs7OtrKyti6YKCgoKCgoKCgrb3LTb29vb1ayKimVlrNSzs7Oti4uKigoKCgoKCgoKCrTh3Nzb29uz
+        rIqKimVCrNSzs62LZWWmCgoKCgoKCgoKCoqLs9zb29SsioqKZWVl1LOzs4uLi4oKCgoKCgoKCgoKCgpl
+        tNzb27OmZWVlQqbUs7Ozs62trQoKCgoKCgoKCgoKiovV3Nvb29SspmWK1NSzs7Otrc2tCgoKCgoKCgoK
+        CkqK1OHc29vc29vV1NXV1LOzrYqLi60KTgYKCgoKCgoKS0zrrNSKiqzV29Xb1dTU1LOLioFUSE5wTnAK
+        CgoKCutKUlnrFExSSqzc29WKi4uz1NSti05ITnBwBgoKCgoKS0p0ektMUlFLrLLU04tZSIqtrYpwTkhO
+        cHBOSE4KCutLdFJ0SlJ6eXRSURNsHFJITpBxd3dISHFOTk5IcAoKUnqamlJSdJqaelJSS1JZcnBOcZac
+        kXGRlpZ3SEh2CgpLUVKampqampp6eVJ5elKWwJ1xlpyclpZ7d51ISHYKCnRSdJqamnp6eXqaenp6enF3
+        wJyclnZ2e5x3cXFxdgoKdMPDmpp6UktESnqaenpST3GdwJxwSEhIdpx2d5ZxCgp0dHmamnpRS0tERHqa
+        elKQnODA4HZISEJInHt3d3cKCgpSUZqamlhKRENKepp6enmWlnfAnHZISHCce5ZxcQoKClJ0w8Oaw3p0
+        Unqamnp0elMKcZ3gwJycnJZ3dpaQCgoKClJ5dFJ5w6CgmpqadFJSCgqQlpZxcZaccZCRdwoKCgoKCgoK
+        ClKaw3lSUnqaUgoKCgoKCgoKcXd3CgoKCgoKCgoKCgoKCnN0UgoKc3MKCgoKCgoKCgoKCgoKCgoKCgoK
+        CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK///////wf//4cH//8AB///AAAf/wAAD/4AAA/+AA
+        AP/AAAD/wAAAf8AAAH/AAAB/wAAAf+AAAH/4AAB/8AAAf+AAAE/gAAAHwAAAB8AAAAGAAAABgAAAAYAA
+        AAGAAAABgAAAAYAAAAHAAAABwAAgAeAAYAP+AP8f/xn///////8=
+</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dlgOpenAssembly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tvBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 431</value>
+  </data>
+  <data name="&gt;&gt;imgIcons.Name" xml:space="preserve">
+    <value>imgIcons</value>
+  </data>
+  <data name="tvBrowser.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>5, 13</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="pnlButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;tvBrowser.Name" xml:space="preserve">
+    <value>tvBrowser</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 8</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Class Browser</value>
+  </data>
+  <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCancel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnlButtons.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tpTooltip.Name" xml:space="preserve">
+    <value>tpTooltip</value>
+  </data>
+  <data name="tvBrowser.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOK.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tpTooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="tvBrowser.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4
+        CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQJY2hp
+        bGRyZW4wAQEAAAEAAQAEAQgICB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQIAAAACAAAABgMA
+        AAAFTm9kZTAGBAAAAAAA/////wkEAAAA/////wkEAAAAAQAAAAkFAAAAAQUAAAABAAAABgYAAAAFTm9k
+        ZTEJBAAAAAD/////CQQAAAD/////CQQAAAABAAAACQgAAAAFCAAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jt
+        cy5UcmVlTm9kZQgAAAAEVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVj
+        dGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQAAAQABAAEICAgCAAAABgkA
+        AAAFTm9kZTIJBAAAAAD/////CQQAAAD/////CQQAAAAAAAAACw==
+</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="dlgOpenAssembly.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="imgIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tpTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>254, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English (United States)</value>
+  </metadata>
+</root>

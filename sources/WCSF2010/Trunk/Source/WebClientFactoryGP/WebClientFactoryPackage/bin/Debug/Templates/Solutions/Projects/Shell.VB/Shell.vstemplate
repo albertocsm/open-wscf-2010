@@ -1,0 +1,36 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <Name>Shell</Name>
+    <Description>Web Client Software Factory Shell</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>Shell</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Shell.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="ShellModuleInitializer.vb">ShellModuleInitializer.vb</ProjectItem>
+      <Folder Name="MasterPages" TargetFolderName="MasterPages">
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DefaultViewPresenter.vb">DefaultViewPresenter.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDefaultView.vb">IDefaultView.vb</ProjectItem>
+      </Folder>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>      
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=023ca9fed18f34f0</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0">
+    </Template>
+  </WizardData>
+</VSTemplate>

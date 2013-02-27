@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateModuleVB" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Add Business Module</Caption>
+  <Description>Add Business Module</Description>
+  <HostData>
+    <Icon ID="2579" />
+    <CommandBar Menu="WCSFFolder" />
+  </HostData>
+  <Arguments>
+    
+    <Argument Name="RecipeLanguage" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="vb" />
+    </Argument>
+    
+    <xi:include href="../Common/CreateWebClientFactoryModuleCommon.xml"
+         xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Arguments/gax:Argument)" />
+
+
+    <Argument Name="TestsTemplatePath" Type="System.String">
+      <ValueProvider Type="Evaluator"
+                     Stage="OnBeforeActions"
+                     Expression="Projects\Module.Tests.VB\BusinessModule.Tests.vstemplate">
+      </ValueProvider>
+    </Argument>
+
+    <Argument Name="InterfaceTemplatePath" Type="System.String">
+      <ValueProvider Type="Evaluator"
+                     Stage="OnBeforeActions"
+                     Expression="Projects\Module.Interface.VB\Module.Interface.vstemplate">
+      </ValueProvider>
+    </Argument>
+
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/0502ab90-5982-4307-964a-56b7812cd07b.html">
+      <Pages>
+        <Page Type="Microsoft.Practices.WebClientFactory.CustomWizardPages.CreateModulePage, Microsoft.Practices.WebClientFactory.GuidancePackage">
+          <Title>Add Business Module</Title>
+          <LinkTitle>Business Module properties</LinkTitle>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.ConditionalCoordinator, Microsoft.Practices.RecipeFramework.Extensions">
+
+    <xi:include href="../Common/CreateWebClientFactoryModuleCommon.xml"
+                 xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Actions/gax:Action)" />
+  </Actions>
+</Recipe>

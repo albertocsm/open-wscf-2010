@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{EA1D59E3-1BA7-4119-AD9D-1BAA34E62D6F}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEE4B5EE-4AED-4CDB-B441-60710926A73F}"
+	ProjectSection(SolutionItems) = preProject
+		HowToDebugGP.txt = HowToDebugGP.txt
+		readme.txt = readme.txt
+	EndProjectSection
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blocks", "Blocks", "{4BA8D967-60A1-48D1-85A3-6B7D63B1DE1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClientFactoryPackage", "WebClientFactoryPackage\WebClientFactoryPackage.csproj", "{08A46747-7C1C-44D3-A8EC-08F776A6D461}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54} = {0F60CA71-9C20-4337-B34D-D837BBC53A54}
+		{062567D9-73FC-4CD9-BD93-48066699CBB9} = {062567D9-73FC-4CD9-BD93-48066699CBB9}
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6} = {D9FC9EE8-943D-44B0-B4CB-BE327433CED6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClientFactoryPackage.Tests", "UnitTests (VSTS)\WebClientFactoryPackage.Tests\WebClientFactoryPackage.Tests.csproj", "{B0F2157C-862B-4202-AF34-B5A1328D2F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWeb", "..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\CompositeWeb.csproj", "{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWeb.EnterpriseLibrary", "..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\CompositeWeb.EnterpriseLibrary.csproj", "{062567D9-73FC-4CD9-BD93-48066699CBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebControls", "..\..\..\BlocksTrunk\Source\WebControls\Source\WebControls\WebControls.csproj", "{0F60CA71-9C20-4337-B34D-D837BBC53A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxControlToolkit.WCSFExtensions", "..\..\..\BlocksTrunk\Source\AjaxControlToolkit.WCSFExtensions\Source\AjaxControlToolkit.WCSFExtensions.csproj", "{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08A46747-7C1C-44D3-A8EC-08F776A6D461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A46747-7C1C-44D3-A8EC-08F776A6D461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A46747-7C1C-44D3-A8EC-08F776A6D461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A46747-7C1C-44D3-A8EC-08F776A6D461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F2157C-862B-4202-AF34-B5A1328D2F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F2157C-862B-4202-AF34-B5A1328D2F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F2157C-862B-4202-AF34-B5A1328D2F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F2157C-862B-4202-AF34-B5A1328D2F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062567D9-73FC-4CD9-BD93-48066699CBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08A46747-7C1C-44D3-A8EC-08F776A6D461} = {EA1D59E3-1BA7-4119-AD9D-1BAA34E62D6F}
+		{B0F2157C-862B-4202-AF34-B5A1328D2F1B} = {EA1D59E3-1BA7-4119-AD9D-1BAA34E62D6F}
+		{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7} = {4BA8D967-60A1-48D1-85A3-6B7D63B1DE1A}
+		{062567D9-73FC-4CD9-BD93-48066699CBB9} = {4BA8D967-60A1-48D1-85A3-6B7D63B1DE1A}
+		{0F60CA71-9C20-4337-B34D-D837BBC53A54} = {4BA8D967-60A1-48D1-85A3-6B7D63B1DE1A}
+		{D9FC9EE8-943D-44B0-B4CB-BE327433CED6} = {4BA8D967-60A1-48D1-85A3-6B7D63B1DE1A}
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal

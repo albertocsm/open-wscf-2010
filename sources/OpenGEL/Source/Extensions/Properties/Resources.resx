@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnyProjectReference" xml:space="preserve">
+    <value>Any Project of any language </value>
+  </data>
+  <data name="ChooseCertificateDielogMessage" xml:space="preserve">
+    <value>Choose a Certificate used for signing/encryption.\nThe Current store is : {0} - {1}.</value>
+  </data>
+  <data name="CodeElementReference" xml:space="preserve">
+    <value>A CodeElement</value>
+  </data>
+  <data name="CompilationFailed" xml:space="preserve">
+    <value>{0} project(s) failed to compile.</value>
+  </data>
+  <data name="ConfigurationFileChooserTitle" xml:space="preserve">
+    <value>Choose application configuration file</value>
+  </data>
+  <data name="CreateNewFolderMessage" xml:space="preserve">
+    <value>The folder '{0}' does not exists. 
+Do you want to create the new folder?</value>
+  </data>
+  <data name="CreateSolutionDirectory_NoDots" xml:space="preserve">
+    <value>Invalid directory name {0}</value>
+  </data>
+  <data name="CredUIReturn" xml:space="preserve">
+    <value>Invalid operation: {0}</value>
+  </data>
+  <data name="DefaultFileChooserTitle" xml:space="preserve">
+    <value>Please select a file</value>
+  </data>
+  <data name="DefaultFilterExpression" xml:space="preserve">
+    <value>All Files (*.*) |*.*</value>
+  </data>
+  <data name="DefaultFolderChooserTitle" xml:space="preserve">
+    <value>Please select a folder</value>
+  </data>
+  <data name="DteHelper_NoSelection" xml:space="preserve">
+    <value>No selection available</value>
+  </data>
+  <data name="DteHelper_NoSolutionExplorer" xml:space="preserve">
+    <value>Solution Explorer not active</value>
+  </data>
+  <data name="DteHelper_PathNotRelativeToSln" xml:space="preserve">
+    <value>Path not relative to the solution path</value>
+  </data>
+  <data name="DteHelper_UnsupportedProjectKind" xml:space="preserve">
+    <value>Un supported project kind</value>
+  </data>
+  <data name="ExecutingAction" xml:space="preserve">
+    <value>Executing action {0}</value>
+  </data>
+  <data name="FailSafeCoordinatorExceptionMessage" xml:space="preserve">
+    <value>The recipe '{0}' ({1}) throw an exception while executing the action '{2}'.
+Error description: {3}.</value>
+  </data>
+  <data name="FolderDoesNotExist" xml:space="preserve">
+    <value>Folder {0} does not exist</value>
+  </data>
+  <data name="FunctionNotSupported" xml:space="preserve">
+    <value>The Credential Management API requires Windows XP / Windows Server 2003 or later.</value>
+  </data>
+  <data name="HierarchyArgumentException" xml:space="preserve">
+    <value>Hierarchy is not a project.</value>
+  </data>
+  <data name="HierarchyIsNotProjectException" xml:space="preserve">
+    <value>Hierarchy is not a project.</value>
+  </data>
+  <data name="HierarchyNotSitedException" xml:space="preserve">
+    <value>Hierarchy is not sited.</value>
+  </data>
+  <data name="InnerExceptionMessage" xml:space="preserve">
+    <value>{0}{1}{2}</value>
+  </data>
+  <data name="InsertionPointException" xml:space="preserve">
+    <value>Cannot find insertion point {0}</value>
+  </data>
+  <data name="InvalidCaptionLength" xml:space="preserve">
+    <value>The caption has a maximum length of {0} characters.</value>
+  </data>
+  <data name="InvalidConditionException" xml:space="preserve">
+    <value>Invalid Condition {0}/n{1}</value>
+  </data>
+  <data name="InvalidIdentifiedArgumentException" xml:space="preserve">
+    <value>Invalid Identifier.</value>
+  </data>
+  <data name="InvalidImageHeight" xml:space="preserve">
+    <value>The banner image height must be {0} pixels.</value>
+  </data>
+  <data name="InvalidImageWidth" xml:space="preserve">
+    <value>The banner image width must be {0} pixels.</value>
+  </data>
+  <data name="InvalidMessageLength" xml:space="preserve">
+    <value>The message has a maximum length of {0} characters.</value>
+  </data>
+  <data name="InvalidPasswordLength" xml:space="preserve">
+    <value>The password has a maximum length of {0} characters.</value>
+  </data>
+  <data name="InvalidPrincipalLength" xml:space="preserve">
+    <value>The principal name has a maximum length of {0} characters.</value>
+  </data>
+  <data name="InvalidTargetLength" xml:space="preserve">
+    <value>The target has a maximum length of {0} characters.</value>
+  </data>
+  <data name="LanguageNotSupported" xml:space="preserve">
+    <value>Language {0} not supported.</value>
+  </data>
+  <data name="NodeName0" xml:space="preserve">
+    <value>Node0</value>
+  </data>
+  <data name="NodeName1" xml:space="preserve">
+    <value>Node1</value>
+  </data>
+  <data name="NodeName2" xml:space="preserve">
+    <value>Node2</value>
+  </data>
+  <data name="OverwriteFilesInFolder" xml:space="preserve">
+    <value>The folder '{0}' already contains files. These files may be overwritten by this process. 
+Do you want to proceed and overwrite this files?</value>
+  </data>
+  <data name="OverwriteItemMessage" xml:space="preserve">
+    <value>An item with the name '{0}' already exists on disk in the specified project. 
+Do you want to overwrite it?</value>
+  </data>
+  <data name="ProjectIsNotVSProject" xml:space="preserve">
+    <value>Project is not a VS project.</value>
+  </data>
+  <data name="ProjectItemReference" xml:space="preserve">
+    <value>Any Project Item</value>
+  </data>
+  <data name="ProjectReference" xml:space="preserve">
+    <value>Any CSharp Project</value>
+  </data>
+  <data name="SolutionFolderReference" xml:space="preserve">
+    <value>Any Solution Folder</value>
+  </data>
+  <data name="SolutionOrSolutionFolderReference" xml:space="preserve">
+    <value>Solution or Solution Folder</value>
+  </data>
+  <data name="SolutionReference" xml:space="preserve">
+    <value>A Solution</value>
+  </data>
+  <data name="StatusBarProgressMessage" xml:space="preserve">
+    <value>Processing Actions... </value>
+  </data>
+  <data name="StatusBarReadyMessage" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="TypeNameValidatorExpectsString" xml:space="preserve">
+    <value>A string was expected</value>
+  </data>
+  <data name="TypeNameValidatorTypeNotFound" xml:space="preserve">
+    <value>The type named '{0}' was not found.</value>
+  </data>
+  <data name="TypeNameValidatorValueNotOptional" xml:space="preserve">
+    <value>The value is not optional</value>
+  </data>
+</root>

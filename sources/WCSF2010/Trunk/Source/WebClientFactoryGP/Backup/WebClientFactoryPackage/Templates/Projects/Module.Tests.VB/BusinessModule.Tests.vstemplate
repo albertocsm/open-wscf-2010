@@ -1,0 +1,41 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <Name>Business Module Test Project</Name>
+    <Description>Web Client Software Factory Module Test</Description>
+	<ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Module.Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="BusinessModule.Tests.vbproj" ReplaceParameters="true">
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DefaultViewPresenterFixture.vb">DefaultViewPresenterFixture.vb</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ModuleName$ModuleInitializerFixture.vb">ModuleInitializerFixture.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ModuleName$ModuleControllerFixture.vb">ModuleControllerFixture.vb</ProjectItem>
+      <Folder Name="Mocks" TargetFolderName="Mocks">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Mock$ModuleName$Controller.vb">MockModuleController.vb</ProjectItem>
+      </Folder>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0">
+    </Template>
+  </WizardData>
+</VSTemplate>

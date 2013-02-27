@@ -1,0 +1,38 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <Name>Add Business Module (Visual Basic)</Name>
+    <Description>Web Client Software Factory Business Module</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>30</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Module</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="BusinessModule.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ModuleName$ModuleInitializer.vb">ModuleInitializer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="I$ModuleName$Controller.vb">IModuleController.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ModuleName$Controller.vb">ModuleController.vb</ProjectItem>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services" />
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDefaultView.vb">IDefaultView.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DefaultViewPresenter.vb">DefaultViewPresenter.vb</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0"
+              Recipe="CreateModuleVB">
+    </Template>
+  </WizardData>
+</VSTemplate>

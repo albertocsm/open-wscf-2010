@@ -1,0 +1,50 @@
+<%-- Module menus. --%>
+<asp:Menu SkinID="modulesMenu" StaticMenuItemStyle-CssClass="moduleMenuItem" Orientation="Horizontal" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0" runat="server"/>
+<asp:Menu SkinID="actionsMenu" StaticMenuItemStyle-CssClass="actionMenuItem" Orientation="Vertical" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0" runat="server"/>
+
+<%-- Header images for login status and help. --%>
+<asp:hyperlink AlternateText="Help" runat="server" ImageUrl="Images/help.png" SkinID="helpImage" NavigateUrl="~/Help.aspx"/>
+
+<%-- Login control. --%>
+<asp:Login SkinID="login" runat="server">
+<LayoutTemplate>
+    <asp:Label ID="UserNameLabel" CssClass="loginLabel" runat="server" AssociatedControlID="UserName">Online ID</asp:Label><br/>
+    <asp:TextBox ID="UserName" CssClass="loginTextbox" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+    ControlToValidate="UserName" ErrorMessage="User Name is required." 
+    ToolTip="User Name is required." ValidationGroup="Login1">*<br/>
+    </asp:RequiredFieldValidator>    
+    <asp:Label ID="PasswordLabel" CssClass="loginLabel" runat="server" AssociatedControlID="Password">Password</asp:Label><br/>
+    <asp:TextBox ID="Password"  CssClass="loginTextbox" runat="server" TextMode="Password"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+    ControlToValidate="Password" ErrorMessage="Password is required." 
+    ToolTip="Password is required." ValidationGroup="Login1">*<br/>
+    </asp:RequiredFieldValidator>        
+    <asp:Literal ID="FailureText" runat="server" EnableViewState="False">
+    </asp:Literal>
+    <div id="loginGoButton">
+    <asp:ImageButton id="goButton" SkinID="goButton" runat="server" AlternateText="Login" CommandName="Login" ValidationGroup="Login1" />
+    </div>
+</LayoutTemplate>
+</asp:Login>
+ 
+<%-- Grids. --%>
+<asp:GridView runat="server" GridLines="None" CssClass="grid">
+	<HeaderStyle CssClass="gridHeader"></HeaderStyle>
+	<RowStyle CssClass="gridRow" />
+	<AlternatingRowStyle CssClass="gridAltRow"/>
+	<EditRowStyle CssClass="gridEditRow" />
+</asp:GridView>
+
+<asp:DropDownList CssClass="editDropDown" runat="server" />
+<asp:TextBox CssClass="editTextBox" runat="server" />
+<asp:DetailsView GridLines="None" runat="server" />
+
+<%-- Buttons. --%>
+<asp:ImageButton SkinID="startButton" runat="server" ImageUrl="Images\startButton.gif" />
+<asp:ImageButton SkinID="cancelButton" runat="server" ImageUrl="Images\cancelButton.gif" />
+<asp:ImageButton SkinID="addButton" runat="server" ImageUrl="Images\addButton.gif" />
+<asp:ImageButton SkinID="nextButton" runat="server" ImageUrl="Images\nextButton.gif" />
+<asp:ImageButton SkinID="changeButton" runat="server" ImageUrl="Images\changeButton.gif" />
+<asp:ImageButton SkinID="submitButton" runat="server" ImageUrl="Images\submitButton.gif" />
+<asp:ImageButton SkinID="goButton" runat="server" ImageUrl="Images\goButton.gif" />

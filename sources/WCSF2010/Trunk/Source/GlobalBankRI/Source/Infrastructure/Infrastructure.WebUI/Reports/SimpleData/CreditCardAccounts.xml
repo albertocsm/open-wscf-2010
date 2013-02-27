@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Accounts>
+  <Account Type="p&amp;p Platinum" Number="1111-0000-2335-4567" Balance="$12,220.00" Limit="$50,000" Payment="02/01/07"/>
+  <Account Type="p&amp;p Business" Number="777-0000-295-5555" Balance="$2,000.00" Limit="$100,000" Payment="02/15/07"/>
+</Accounts>

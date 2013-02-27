@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateWebClientFactorySolutionCS" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Create Web Client Solution</Caption>
+  <Description>Create Web Client Solution</Description>
+  <Arguments>
+    <Argument Name="IsWCSFSolutionWAP" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="false">
+      </ValueProvider>
+    </Argument>
+	<xi:include href="../Common/CreateWebClientFactorySolutionCommon.xml"
+					  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Arguments/gax:Argument)" /> 
+	  <Argument Name="RecipeLanguage" Type="System.String">
+		  <ValueProvider Type="Evaluator" Expression="cs"></ValueProvider>
+	  </Argument>
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/f40cb5a5-f591-4d75-85f9-53fe5c951675.html">
+      <Pages>
+        <Page Type="Microsoft.Practices.WebClientFactory.CustomWizardPages.SolutionPropertiesPage, Microsoft.Practices.WebClientFactory.GuidancePackage">
+          <Title>Create Web Client Solution</Title>
+          <LinkTitle>Solution properties</LinkTitle>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.ConditionalCoordinator, Microsoft.Practices.RecipeFramework.Extensions">
+	  <xi:include href="../Common/CreateWebClientFactorySolutionCommon.xml"
+						xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Actions/gax:Action)" />
+  </Actions>
+</Recipe>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Arguments xmlns="http://schemas.microsoft.com/pag/gax-core">
+  <Argument Name="SolutionArgument" Type="EnvDTE.Solution, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <Converter Type="SolutionConverter" />
+    <ValueProvider Type="Evaluator"
+            Expression="/">
+    </ValueProvider>
+  </Argument>
+  <Argument Name="ApplicationNameArgument">
+    <ValueProvider Type="Evaluator"
+            Expression="$(SolutionArgument.Properties.Item('Name').Value)">
+    </ValueProvider>
+  </Argument>
+  <Argument Name="SolutionPath" Type="System.String">
+    <ValueProvider Type="SolutionPathProvider" />
+  </Argument>
+  <Argument Name="LibraryPathArgument">
+    <ValueProvider Type="Evaluator"
+            Expression="$(SolutionPath)\Library">
+    </ValueProvider>
+  </Argument>
+  <Argument Name="CompositeWebDlls" Required="true" Type="System.String">
+    <ValueProvider Type="Evaluator" Expression="Microsoft.Practices.ObjectBuilder.dll;Microsoft.Practices.CompositeWeb.dll" />
+  </Argument>
+  <Argument Name="EnterpriseLibraryDlls" Required="true" Type="System.String">
+    <ValueProvider Type="Evaluator" Expression="Microsoft.Practices.EnterpriseLibrary.Common.dll;Microsoft.Practices.EnterpriseLibrary.Security.dll;Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll;Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll;Microsoft.Practices.EnterpriseLibrary.Logging.dll;Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll;Microsoft.Practices.ServiceLocation.dll;Microsoft.Practices.Unity.dll;Microsoft.Practices.Unity.Interception.dll" />
+  </Argument>
+  <Argument Name="GlobalTypesLanguageArgument" 
+        Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.CodeDom.Helpers.LanguageType, Microsoft.Practices.RecipeFramework.Extensions">
+    <ValueProvider Type="Evaluator"
+             Expression="cs"/>
+  </Argument>
+  <Argument Name="WebConfigFileName" Type="System.String">
+    <ValueProvider Type="Evaluator"
+                   Expression="Web.config" />
+  </Argument>
+  <!--<Argument Name="IsInVS2005" Type="System.Boolean">
+    <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.IsInVisualStudio2005Provider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+                         Stage="OnBeginRecipe">
+    </ValueProvider>
+  </Argument>
+  <Argument Name="IsInVS2008" Type="System.Boolean">
+    <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.NegateValueProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+               ValueToNegate="$(IsInVS2005)"
+               Stage="OnBeginRecipe">
+    </ValueProvider>
+  </Argument>-->
+</Arguments>

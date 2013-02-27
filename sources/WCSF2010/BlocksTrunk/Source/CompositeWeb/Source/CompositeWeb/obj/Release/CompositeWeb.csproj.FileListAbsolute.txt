@@ -1,0 +1,8 @@
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\bin\Release\Microsoft.Practices.CompositeWeb.XML
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\bin\Release\Microsoft.Practices.CompositeWeb.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\bin\Release\Microsoft.Practices.CompositeWeb.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\obj\Release\Microsoft.Practices.CompositeWeb.Properties.Resources.resources
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\obj\Release\CompositeWeb.csproj.GenerateResource.Cache
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\obj\Release\Microsoft.Practices.CompositeWeb.dll
+D:\Projectos\PCSources\WCSF 2012\sources\WCSF2010\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\obj\Release\Microsoft.Practices.CompositeWeb.pdb

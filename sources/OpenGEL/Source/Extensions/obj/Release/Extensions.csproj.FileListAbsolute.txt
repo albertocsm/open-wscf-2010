@@ -1,0 +1,14 @@
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Release\Microsoft.Practices.RecipeFramework.Extensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Release\Microsoft.Practices.RecipeFramework.Extensions.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Release\en-US\Microsoft.Practices.RecipeFramework.Extensions.resources.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Release\Microsoft.VisualStudio.Settings.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Release\Microsoft.VisualStudio.Settings.xml
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Extensions.csprojResolveAssemblyReference.cache
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.Dialogs.X509CertificatePickerView.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.Editors.ClassBrowser.ClassBrowserEditorForm.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.Properties.Resources.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.Editors.ClassBrowser.ClassBrowserEditorForm.en-US.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Extensions.csproj.GenerateResource.Cache
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\en-US\Microsoft.Practices.RecipeFramework.Extensions.resources.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Release\Microsoft.Practices.RecipeFramework.Extensions.pdb

@@ -1,0 +1,14 @@
+<asp:TreeView runat="server">
+    <NodeStyle CssClass="Menu_NodeStyle" />
+    <HoverNodeStyle CssClass="Menu_HoverNodeStyle"/>
+    <SelectedNodeStyle CssClass="Menu_SelectedNodeStyle"/>
+</asp:TreeView>
+<asp:GridView runat="server" CellPadding="4" ForeColor="#333333" GridLines="Vertical">
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <RowStyle BackColor="#EFF3FB" />
+    <EditRowStyle BackColor="#CCEEBB" ForeColor="Black" />
+    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>

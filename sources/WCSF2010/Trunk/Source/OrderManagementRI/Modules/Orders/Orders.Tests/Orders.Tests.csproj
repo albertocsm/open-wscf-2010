@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93224371-7EF2-4B24-B92A-5ECA6665B197}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OrderManagement.Orders.Tests</RootNamespace>
+    <AssemblyName>OrderManagement.Orders.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mocks\MockCustomerService.cs" />
+    <Compile Include="Mocks\MockEmployeeService.cs" />
+    <Compile Include="Mocks\MockGenericConverter.cs" />
+    <Compile Include="Mocks\MockHttpContext.cs" />
+    <Compile Include="Mocks\MockHttpContextLocatorService.cs" />
+    <Compile Include="Mocks\MockOrderEntryFlowService.cs" />
+    <Compile Include="Mocks\MockOrdersService.cs" />
+    <Compile Include="Mocks\MockPostalInfoLookupService.cs" />
+    <Compile Include="Mocks\MockProductService.cs" />
+    <Compile Include="Mocks\MockServiceCollection.cs" />
+    <Compile Include="Views\Parts\ApprovalsPresenterFixture.cs" />
+    <Compile Include="Views\OrderConfirmationPresenterFixture.cs" />
+    <Compile Include="Views\DefaultViewPresenterFixture.cs" />
+    <Compile Include="OrdersModuleControllerFixture.cs" />
+    <Compile Include="OrdersModuleInitializerFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mocks\MockOrdersController.cs" />
+    <Compile Include="Views\OrderDetailsPresenterFixture.cs" />
+    <Compile Include="Views\OrderEntryPresenterFixture.cs" />
+    <Compile Include="Views\OrderInformationPresenterFixture.cs" />
+    <Compile Include="Views\OrderPreviewPresenterFixture.cs" />
+    <Compile Include="Views\OrderReviewPresenterFixture.cs" />
+    <Compile Include="Views\Parts\SearchProductPresenterFixture.cs" />
+    <Compile Include="Views\Parts\SavedDraftsPresenterFixture.cs" />
+    <Compile Include="Views\SearchOrdersPresenterFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\CompositeWeb.csproj">
+      <Project>{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}</Project>
+      <Name>CompositeWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\OrdersRepository\Source\Business Logic\OrdersRepository.BusinessEntities\OrdersRepository.BusinessEntities.csproj">
+      <Project>{DDD66A18-EEF8-471A-808A-2231A120B6F6}</Project>
+      <Name>OrdersRepository.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\OrdersRepository\Source\OrdersRepository.Interfaces\OrdersRepository.Interfaces.csproj">
+      <Project>{BA67E83E-035E-45C0-9DEC-4D860D28F9C8}</Project>
+      <Name>OrdersRepository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orders.PresentationEntities\Orders.PresentationEntities.csproj">
+      <Project>{D0561B28-8B64-47C8-95B4-72302B6D7706}</Project>
+      <Name>Orders.PresentationEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orders\Orders.csproj">
+      <Project>{CF1FA627-27A8-477F-A27E-C12287EECE9C}</Project>
+      <Name>Orders %28Modules\Orders\Orders%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties IsModuleTestProject="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

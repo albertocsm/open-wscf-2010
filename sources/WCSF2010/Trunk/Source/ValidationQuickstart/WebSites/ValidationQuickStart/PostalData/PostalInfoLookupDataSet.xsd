@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PostalInfoLookupDataSet" targetNamespace="http://tempuri.org/PostalInfoLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/PostalInfoLookupDataSet.xsd" xmlns="http://tempuri.org/PostalInfoLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PostalInfoLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PostalInfoLookupDataSet" msprop:Generator_DataSetName="PostalInfoLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="States" msprop:Generator_UserTableName="States" msprop:Generator_RowDeletedName="StatesRowDeleted" msprop:Generator_RowChangedName="StatesRowChanged" msprop:Generator_RowClassName="StatesRow" msprop:Generator_RowChangingName="StatesRowChanging" msprop:Generator_RowEvArgName="StatesRowChangeEvent" msprop:Generator_RowEvHandlerName="StatesRowChangeEventHandler" msprop:Generator_TableClassName="StatesDataTable" msprop:Generator_TableVarName="tableStates" msprop:Generator_RowDeletingName="StatesRowDeleting" msprop:Generator_TablePropName="States">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Zip" msprop:Generator_UserTableName="Zip" msprop:Generator_RowDeletedName="ZipRowDeleted" msprop:Generator_RowChangedName="ZipRowChanged" msprop:Generator_RowClassName="ZipRow" msprop:Generator_RowChangingName="ZipRowChanging" msprop:Generator_RowEvArgName="ZipRowChangeEvent" msprop:Generator_RowEvHandlerName="ZipRowChangeEventHandler" msprop:Generator_TableClassName="ZipDataTable" msprop:Generator_TableVarName="tableZip" msprop:Generator_RowDeletingName="ZipRowDeleting" msprop:Generator_TablePropName="Zip">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fips" msprop:Generator_UserColumnName="Fips" msprop:Generator_ColumnVarNameInTable="columnFips" msprop:Generator_ColumnPropNameInRow="Fips" msprop:Generator_ColumnPropNameInTable="FipsColumn" type="xs:int" />
+              <xs:element name="ZipCode" msprop:Generator_UserColumnName="ZipCode" msprop:Generator_ColumnVarNameInTable="columnZipCode" msprop:Generator_ColumnPropNameInRow="ZipCode" msprop:Generator_ColumnPropNameInTable="ZipCodeColumn" type="xs:string" />
+              <xs:element name="City" msprop:Generator_UserColumnName="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="State" msprop:Generator_UserColumnName="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PrimaryKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:States" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

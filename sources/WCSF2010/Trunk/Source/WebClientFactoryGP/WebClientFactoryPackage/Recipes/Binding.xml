@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="BindingRecipe" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="Common/CommonTypeAliases.xml"
+              xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Creates unbound references to the guidance package</Caption>
+  <Arguments>
+    <Argument Name="VBInstalled" Type="System.Boolean">
+      <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.VBInstallationCheck, Microsoft.Practices.WebClientFactory.GuidancePackage"/>
+    </Argument>
+  </Arguments>
+  <Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.ConditionalCoordinator, Microsoft.Practices.RecipeFramework.Extensions">
+    <Action Name="CreateBusinessModuleTemplateRefCS" Type="RefCreator" AssetName="Projects\Module.CS\BusinessModule.vstemplate"
+						ReferenceType="Microsoft.Practices.WebClientFactory.References.ModuleTemplateReference, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+    <Action Name="CreateFoundationalModuleTemplateRefCS" Type="RefCreator" AssetName="Projects\Module.CS\FoundationalModule.vstemplate"
+						ReferenceType="Microsoft.Practices.WebClientFactory.References.ModuleTemplateReference, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+    <Action Name="CreateViewRefCS" Type="RefCreator" AssetName="CreateViewCS"
+        ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceCS, Microsoft.Practices.WebClientFactory.GuidancePackage"
+        IsEnabledForProperty="IsWebProject"/>
+    <Action Name="CreateUserControlViewRefCS" Type="RefCreator" AssetName="CreateUserControlViewCS"
+        ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceCS, Microsoft.Practices.WebClientFactory.GuidancePackage"
+        IsEnabledForProperty="IsWebProject"/>
+    <Action Name="CreateMasterViewRefCS" Type="RefCreator" AssetName="CreateMasterViewCS"
+            ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceCS, Microsoft.Practices.WebClientFactory.GuidancePackage"
+            IsEnabledForProperty="IsWebProject"/>
+
+
+    <Action Condition="$(VBInstalled)" Name="CreateBusinessModuleTemplateRefVB" Type="RefCreator" AssetName="Projects\Module.VB\BusinessModule.vstemplate"
+						ReferenceType="Microsoft.Practices.WebClientFactory.References.ModuleTemplateReference, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+    <Action Condition="$(VBInstalled)" Name="CreateFoundationalModuleTemplateRefVB" Type="RefCreator" AssetName="Projects\Module.VB\FoundationalModule.vstemplate"
+						  ReferenceType="Microsoft.Practices.WebClientFactory.References.ModuleTemplateReference, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+    <Action Condition="$(VBInstalled)" Name="CreateViewRefVB" Type="RefCreator" AssetName="CreateViewVB"
+						 ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceVB, Microsoft.Practices.WebClientFactory.GuidancePackage"
+			 IsEnabledForProperty="IsWebProject"/>
+    <Action Condition="$(VBInstalled)" Name="CreateUserControlViewRefVB" Type="RefCreator" AssetName="CreateUserControlViewVB"
+						 ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceVB, Microsoft.Practices.WebClientFactory.GuidancePackage"
+			 IsEnabledForProperty="IsWebProject"/>
+    <Action Condition="$(VBInstalled)" Name="CreateMasterViewRefVB" Type="RefCreator" AssetName="CreateMasterViewVB"
+						 ReferenceType="Microsoft.Practices.WebClientFactory.References.WcsfWebProjectItemOrProjectReferenceVB, Microsoft.Practices.WebClientFactory.GuidancePackage"
+			 IsEnabledForProperty="IsWebProject"/>
+
+  </Actions>
+</Recipe>

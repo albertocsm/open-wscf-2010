@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateFoundationalModuleCommon">
+	<Arguments xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+		<xi:include href="../Common/CommonArguments.xml"
+						 xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+		<Argument Name="SelectedSolutionFolder" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.FirstSelectedProjectProvider, Microsoft.Practices.RecipeFramework.Extensions" />
+		</Argument>
+		<Argument Name="TestProjectContainerSolutionFolder" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.ContainerSolutionFolderForActiveItemProvider, Microsoft.Practices.WebClientFactory.GuidancePackage" />
+		</Argument>
+		<Argument Name="ModuleProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.FirstSelectedProjectProvider, Microsoft.Practices.RecipeFramework.Extensions" />
+		</Argument>
+		<Argument Name="ModuleProjectName">
+			<ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.ItemNameProvider, Microsoft.Practices.RecipeFramework.Extensions"
+                     Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="ModuleName" >
+			<ValueProvider Type="StringToIdentifier" Expression="$(ModuleProjectName)" Stage="OnBeginRecipe" />
+		</Argument>
+		<Argument Name="WebUIProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Required="false">
+			<Converter
+					Type="Microsoft.Practices.RecipeFramework.Extensions.Converters.ProjectWithResponsibilityConverter, Microsoft.Practices.RecipeFramework.Extensions"
+					ResponsibilityArgument="IsWebProject"/>
+		</Argument>
+		<Argument Name="CreateTestProject" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="false" />
+		</Argument>
+    <Argument Name="CreateModuleInterfaceLibrary" Type="System.Boolean">
+      <ValueProvider Type="Evaluator" Expression="true" />
+    </Argument>
+		<Argument Name="ShowDocumentation" Type="System.Boolean">
+			<ValueProvider Type="Evaluator" Expression="false" />
+		</Argument>
+		<Argument Name="RootNamespace" Type="System.String">
+			<ValueProvider Type="GlobalValueProvider" Key="RootNamespace" />
+		</Argument>
+		<!-- The following arguments defines folder names, namespaces, assembly names, etc. -->
+		<Argument Name="ModuleNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName)">
+				<MonitorArgument Name="ModuleName"/>
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleTestProjectNamespace" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName).Tests">
+				<MonitorArgument Name="ModuleName"/>
+			</ValueProvider>
+		</Argument>
+    <Argument Name="ModuleInterfaceProjectNamespace" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(RootNamespace).$(ModuleName).Interface">
+        <MonitorArgument Name="ModuleName"/>
+      </ValueProvider>
+    </Argument>
+		<Argument Name="ModuleMainProjectName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleProjectName)">
+				<MonitorArgument Name="ModuleName"/>
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleTestProjectName" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleMainProjectName).Tests">
+				<MonitorArgument Name="ModuleName"/>
+			</ValueProvider>
+		</Argument>
+    <Argument Name="ModuleInterfaceProjectName" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(ModuleMainProjectName).Interface">
+        <MonitorArgument Name="ModuleName"/>
+      </ValueProvider>
+    </Argument>
+		<Argument Name="ModulesContainerFolder" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="Modules" />
+		</Argument>
+		<Argument Name="ModuleContainerPath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleProject.Properties.Item('FullPath').Value.ToString())" Stage="OnBeforeActions"/>
+		</Argument>
+		<Argument Name="ModuleTestProjectRelativePath" Type="System.String">
+			<ValueProvider Type="Evaluator" Expression="$(ModuleContainerPath)..\$(ModuleTestProjectName)">
+				<MonitorArgument Name="ModuleContainerPath"/>
+				<MonitorArgument Name="ModuleTestProjectName"/>
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ModuleTestProjectPath" Type="System.String">
+			<ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.RelativePathResolverProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+						   FolderExpression="$(ModuleTestProjectRelativePath)"
+						   Stage="OnBeforeActions">
+				<MonitorArgument Name="ModuleTestProjectRelativePath"/>
+			</ValueProvider>
+		</Argument>
+    <Argument Name="ModuleInterfaceProjectRelativePath" Type="System.String">
+      <ValueProvider Type="Evaluator" Expression="$(ModuleContainerPath)..\$(ModuleInterfaceProjectName)">
+        <MonitorArgument Name="ModuleContainerPath"/>
+        <MonitorArgument Name="ModuleInterfaceProjectName"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="ModuleInterfaceProjectPath" Type="System.String">
+      <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.RelativePathResolverProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+						   FolderExpression="$(ModuleInterfaceProjectRelativePath)"
+						   Stage="OnBeforeActions">
+        <MonitorArgument Name="ModuleInterfaceProjectRelativePath"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="UnitTestFrameworkVersion" Type="System.String">
+      <ValueProvider Type="Microsoft.Practices.WebClientFactory.ValueProviders.UnitTestFrameworkVersionProvider, Microsoft.Practices.WebClientFactory.GuidancePackage"
+                     Stage="OnBeginRecipe">
+      </ValueProvider>
+    </Argument>
+	</Arguments>
+	<Actions xmlns="http://schemas.microsoft.com/pag/gax-core">
+		<!-- Add references to Module project and CWAB in the Test project -->
+		<Action Condition="$(CreateTestProject)" Name="AddReferenceModuleToTestProject" Type="Referencer">
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleTestProjectTemplate.NewItem"/>
+			<Input Name="ReferencedProject" RecipeArgument="ModuleProject"/>
+		</Action>
+		<Action Condition="$(CreateTestProject)" Name="AddCompositeWebAssemblyReferencesToTestProject"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" ActionOutput="UnfoldModuleTestProjectTemplate.NewItem"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+
+    <!-- Add reference to Interface project in Module project-->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="AddReferenceInterfaceToModuleProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+      <Input Name="ReferencedProject" ActionOutput="UnfoldModuleInterfaceProjectTemplate.NewItem"/>
+    </Action>
+    <!-- Add reference to CWAB in the Interface project -->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="AddCompositeWebAssemblyReferencesToInterfaceProject"
+			   Type="AddAssembliesReferenceAction">
+      <Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+      <Input Name="ReferringProject" ActionOutput="UnfoldModuleInterfaceProjectTemplate.NewItem"/>
+      <Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+    </Action>
+		<!-- Add references to CWAB in Module project -->
+		<Action Name="AddCompositeWebAssemblyReferencesToModule"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="CompositeWebDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+		<!-- Add references to EntLib in Module project -->
+		<Action Name="AddEnterpriseLibraryAssemblyReferencesToModule"
+			   Type="AddAssembliesReferenceAction">
+			<Input Name="FileNames" RecipeArgument="EnterpriseLibraryDlls"/>
+			<Input Name="ReferringProject" RecipeArgument="ModuleProject"/>
+			<Input Name="AssembliesPath" RecipeArgument="LibraryPathArgument"/>
+		</Action>
+		<!-- Add references to Module in WebSite project -->
+		<Action Name="AddReferenceModuleToWebProject"
+			   Type="Referencer">
+			<Input Name="ReferringProject" RecipeArgument="WebUIProject"/>
+			<Input Name="ReferencedProject" RecipeArgument="ModuleProject"/>
+		</Action>
+		<!-- Modify the web.config modules section -->
+		<Action Name="UpdateWebConfigModules"
+			   Type="Microsoft.Practices.WebClientFactory.Actions.UpdateModulesConfigurationAction, Microsoft.Practices.WebClientFactory.GuidancePackage">
+			<Input Name="WebProject" RecipeArgument="WebUIProject"/>
+			<Input Name="ModuleName" RecipeArgument="ModuleName"/>
+			<Input Name="ModuleProject" RecipeArgument="ModuleProject"/>
+		</Action>
+
+    <Action Name="ShowCreateModuleHelpVS2008" Type="Microsoft.Practices.WebClientFactory.Actions.ShowUrlAction, Microsoft.Practices.WebClientFactory.GuidancePackage"
+    RawUrl="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/fd774cc2-5b29-4fcb-8901-16f9a10eb282.html" >
+      <Input Name="ShowDocumentation" RecipeArgument="ShowDocumentation"/>
+    </Action>
+	</Actions>
+</Recipe>

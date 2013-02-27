@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AjaxControlToolkit.WCSFExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.CompletionContextItem">
+            <summary>
+            A class representing a server control used as context for filtering Autocomplete
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.CompletionContextItem.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.CompletionContextItem.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"> The key that will be used to access a given context item</param>
+            <param name="controlId"> The controlId of the server control used as context</param>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.CompletionContextItem.Key">
+            <summary>
+            A key value that is used to access the context control
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.CompletionContextItem.ControlId">
+            <summary>
+            The controlId of the server control used as context
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.ContextSensitiveAutoCompleteDesigner">
+            <summary>
+            Designer
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ContextSensitiveAutoCompleteDesigner.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.ContextSensitiveAutoCompleteExtender">
+            <summary>
+            Extends the AutocompleteExtender providing context sensitive filtering.
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ContextSensitiveAutoCompleteExtender.RenderScriptAttributes(System.Web.UI.ScriptBehaviorDescriptor)">
+            <summary>
+            Renders the javascript code required for setting the client attributes.
+            </summary>
+            <param name="descriptor"></param>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.ContextSensitiveAutoCompleteExtender.CompletionContextItems">
+            <summary>
+            This property is stored manually at RenderScriptAttributes at a dictionary.
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.CommonToolkitScripts">
+            <summary>
+            This class just exists as a type to get common scripts loaded.  For further info
+            see Common.js in this folder.
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.Properties.Resources.CannotFindControlToValidate">
+            <summary>
+              Looks up a localized string similar to The control named {0} could not be located on the page..
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.Properties.Resources.NoValidationProperty">
+            <summary>
+              Looks up a localized string similar to The control {0} does not have a properly configured validation property..
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender">
+            <summary>
+            An extender that provides validation capabilities accessing server resources from the client side
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.GetCallbackResult">
+            <summary>
+            Obtains the serialized result message that will be used in the client side
+            </summary>
+            <returns> A JSON object</returns>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.RaiseCallbackEvent(System.String)">
+            <summary>
+            Implementation of a Callback event.
+            </summary>
+            <param name="eventArgument"> The argument of the event</param>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.OnPreRender(System.EventArgs)">
+            <summary>
+            Implementation of OnPreRender that links the Validator in the page with javascript code
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.RenderScriptAttributes(System.Web.UI.ScriptBehaviorDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="descriptor"></param>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Required method to prevent full page validation when handling a callback triggered by this control
+            </summary>
+            <param name="postDataKey"></param>
+            <param name="postCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.RaisePostDataChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.RaisePostBackEvent(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.ServerSideValidationExtender.ValidateEmptyText">
+            <summary>
+            Gets or sets a Boolean value indicating whether empty text should be validated on the client.
+            </summary>
+            <returns>
+            <see langword="true"/> if empty text should be validated on the client; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.ServerValidationResults">
+            <summary>
+            Class used for Client-Server communication on validation
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.ServerValidationResults.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"> Value present in validated control</param>
+            <param name="isValid"> Result of validation</param>
+            <param name="errorMessage"> Error message that will be shown in the Validator</param>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.ServerValidationResults.Value">
+            <summary>
+            Value present in the validated control
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.ServerValidationResults.IsValid">
+            <summary>
+            Result of the validation
+            </summary>
+        </member>
+        <member name="P:AjaxControlToolkit.WCSFExtensions.ServerValidationResults.ErrorMessage">
+            <summary>
+            Error message that will be shown in the Validator
+            </summary>
+        </member>
+        <member name="T:AjaxControlToolkit.WCSFExtensions.Utility.Guard">
+            <summary>
+            Utility class used to check for exceptions.
+            </summary>
+        </member>
+        <member name="M:AjaxControlToolkit.WCSFExtensions.Utility.Guard.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Checks an argument to ensure it isn't null
+            </summary>
+            <param name="argumentValue">The argument value to check.</param>
+            <param name="argumentName">The name of the argument.</param>
+        </member>
+    </members>
+</doc>

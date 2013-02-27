@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{342E0E74-64B4-4154-8B75-EB3A208A03B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation><TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security">
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\entlib5\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewRolePermissionsView.aspx.cs">
+      <DependentUpon>ViewRolePermissionsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewRolePermissionsView.aspx.designer.cs">
+      <DependentUpon>ViewRolePermissionsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMembershipProvider.cs" />
+    <Compile Include="CustomRoleProvider.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFT\ConfirmTransfersView.aspx.cs">
+      <DependentUpon>ConfirmTransfersView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFT\ConfirmTransfersView.aspx.designer.cs">
+      <DependentUpon>ConfirmTransfersView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFT\CreateTransfer.aspx.cs">
+      <DependentUpon>CreateTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFT\CreateTransfer.aspx.designer.cs">
+      <DependentUpon>CreateTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFT\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFT\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFT\NewTransferView.aspx.cs">
+      <DependentUpon>NewTransferView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFT\NewTransferView.aspx.designer.cs">
+      <DependentUpon>NewTransferView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFT\SummaryView.aspx.cs">
+      <DependentUpon>SummaryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFT\SummaryView.aspx.designer.cs">
+      <DependentUpon>SummaryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElectronicBankingApplication.cs" />
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AccountsSummaryView.aspx.cs">
+      <DependentUpon>AccountsSummaryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\AccountsSummaryView.aspx.designer.cs">
+      <DependentUpon>AccountsSummaryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentHistoryView.aspx.cs">
+      <DependentUpon>PaymentHistoryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentHistoryView.aspx.designer.cs">
+      <DependentUpon>PaymentHistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\MasterPages\Module.master.cs">
+      <DependentUpon>Module.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\MasterPages\Module.master.designer.cs">
+      <DependentUpon>Module.master</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\MasterPages\PublicMaster.master.cs">
+      <DependentUpon>PublicMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\MasterPages\PublicMaster.master.designer.cs">
+      <DependentUpon>PublicMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="ThrowException.aspx.cs">
+      <DependentUpon>ThrowException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThrowException.aspx.designer.cs">
+      <DependentUpon>ThrowException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ViewRolePermissionsView.aspx" />
+    <Content Include="App_Themes\Default\Images\addButton.gif" />
+    <Content Include="App_Themes\Default\Images\adminAction.gif" />
+    <Content Include="App_Themes\Default\Images\adminActive.png" />
+    <Content Include="App_Themes\Default\Images\adminInactive.png" />
+    <Content Include="App_Themes\Default\Images\bgContent.gif" />
+    <Content Include="App_Themes\Default\Images\bg_footer.png" />
+    <Content Include="App_Themes\Default\Images\bg_header.png" />
+    <Content Include="App_Themes\Default\Images\cancelButton.gif" />
+    <Content Include="App_Themes\Default\Images\changeButton.gif" />
+    <Content Include="App_Themes\Default\Images\fundsAction.gif" />
+    <Content Include="App_Themes\Default\Images\fundsActive.png" />
+    <Content Include="App_Themes\Default\Images\fundsInactive.png" />
+    <Content Include="App_Themes\Default\Images\goButton.gif" />
+    <Content Include="App_Themes\Default\Images\help.png" />
+    <Content Include="App_Themes\Default\Images\login.png" />
+    <Content Include="App_Themes\Default\Images\moduleContentFooter.png" />
+    <Content Include="App_Themes\Default\Images\moduleContentHeader.gif" />
+    <Content Include="App_Themes\Default\Images\nextButton.gif" />
+    <Content Include="App_Themes\Default\Images\publicContentFooter.gif" />
+    <Content Include="App_Themes\Default\Images\publicContentHeader.gif" />
+    <Content Include="App_Themes\Default\Images\reportsAction.gif" />
+    <Content Include="App_Themes\Default\Images\reportsActive.png" />
+    <Content Include="App_Themes\Default\Images\reportsInactive.png" />
+    <Content Include="App_Themes\Default\Images\sideFooter.png" />
+    <Content Include="App_Themes\Default\Images\sideHeader.gif" />
+    <Content Include="App_Themes\Default\Images\space.gif" />
+    <Content Include="App_Themes\Default\Images\space.png" />
+    <Content Include="App_Themes\Default\Images\startButton.gif" />
+    <Content Include="App_Themes\Default\Images\submitButton.gif" />
+    <Content Include="App_Themes\Default\StyleSheet.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EFT\ConfirmTransfersView.aspx" />
+    <Content Include="EFT\CreateTransfer.aspx" />
+    <Content Include="EFT\Default.aspx" />
+    <Content Include="EFT\NewTransferView.aspx" />
+    <Content Include="EFT\SummaryView.aspx" />
+    <Content Include="Errors\AccessDenied.htm" />
+    <Content Include="Errors\ApplicationError.htm" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="Reports\AccountsSummaryView.aspx" />
+    <Content Include="Reports\Default.aspx" />
+    <Content Include="Reports\PaymentHistoryView.aspx" />
+    <Content Include="Reports\SimpleData\CashAccounts.xml" />
+    <Content Include="Reports\SimpleData\CreditCardAccounts.xml" />
+    <Content Include="Reports\SimpleData\InvestmentAccounts.xml" />
+    <Content Include="ThrowException.aspx" />
+    <Content Include="UserLogin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Web.config" />
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="EFT\Web.config" />
+    <Content Include="Reports\Web.config" />
+    <Content Include="Shared\MasterPages\Module.master" />
+    <Content Include="Shared\MasterPages\PublicMaster.master" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb.EnterpriseLibrary\CompositeWeb.EnterpriseLibrary.csproj">
+      <Project>{062567D9-73FC-4CD9-BD93-48066699CBB9}</Project>
+      <Name>CompositeWeb.EnterpriseLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\CompositeWeb\Source\CompositeWeb\CompositeWeb.csproj">
+      <Project>{FC5B67D6-DD97-48FE-BB31-AEB7E1539BA7}</Project>
+      <Name>CompositeWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\BlocksTrunk\Source\WebControls\Source\WebControls\WebControls.csproj">
+      <Project>{0F60CA71-9C20-4337-B34D-D837BBC53A54}</Project>
+      <Name>WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Admin.Module\Admin.Module.csproj">
+      <Project>{75AEC134-2651-4EBC-A539-142D97DA6725}</Project>
+      <Name>Admin.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EFT\EFT.BusinessEntities\EFT.BusinessEntities.csproj">
+      <Project>{20610E25-254D-4949-8B2E-05C296BE5AFA}</Project>
+      <Name>EFT.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EFT\EFT.Module\EFT.Module.csproj">
+      <Project>{8E3BF60D-7684-4C94-83BF-BE8AFA613EF5}</Project>
+      <Name>EFT.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EFT\EFT.ServiceProxies\EFT.ServiceProxies.csproj">
+      <Project>{286098FC-F803-4195-BB26-3944B690BE22}</Project>
+      <Name>EFT.ServiceProxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Reports\Reports.Module\Reports.Module.csproj">
+      <Project>{5C5E7877-4CE4-468D-981A-7160E9258A9E}</Project>
+      <Name>Reports.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shell\Shell.Module\Shell.Module.csproj">
+      <Project>{7C0D908E-F9BA-4A35-AD63-B11FD137D383}</Project>
+      <Name>Shell.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Testing\Infrastructure.Testing.UI.csproj">
+      <Project>{4C671615-B3C3-4AE1-A246-62AF1B4D347E}</Project>
+      <Name>Infrastructure.Testing.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1050</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

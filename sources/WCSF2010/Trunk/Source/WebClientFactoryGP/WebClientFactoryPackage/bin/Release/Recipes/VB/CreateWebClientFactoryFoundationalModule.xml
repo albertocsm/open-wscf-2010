@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateFoundationalModuleVB" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Add Foundational Module</Caption>
+  <Description>Add Foundational Module</Description>
+  <HostData>
+    <Icon ID="2580" />
+    <CommandBar Menu="WCSFFolder" />
+  </HostData>
+  <Arguments>
+	  <xi:include href="../Common/CreateWebClientFactoryFoundationalModuleCommon.xml"
+						  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Arguments/gax:Argument)" />
+	  <Argument Name="RecipeLanguage" Type="System.String">
+		  <ValueProvider Type="Evaluator" Expression="vb"></ValueProvider>
+	  </Argument>
+  </Arguments>
+  <GatheringServiceData>
+	  <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="ms-help://MS.VSCC.v90/MS.VSIPCC.v90/ms.practices.wcsf.2008feb/wcsf/html/baf185d8-7a17-4341-ad03-e20f8f928a99.html">
+		  <Pages>
+			  <Page Type="Microsoft.Practices.WebClientFactory.CustomWizardPages.CreateFoundationalModulePage, Microsoft.Practices.WebClientFactory.GuidancePackage">
+				  <Title>Add Foundational Module</Title>
+				  <LinkTitle>Foundational Module properties</LinkTitle>
+			  </Page>
+		  </Pages>
+	  </Wizard>
+  </GatheringServiceData>
+  <Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.ConditionalCoordinator, Microsoft.Practices.RecipeFramework.Extensions">
+	  <!-- Unfold the test project template if needed -->
+	  <Action Condition="$(CreateTestProject)" Name="UnfoldModuleTestProjectTemplate"
+			Type="UnfoldTemplateAction"
+			Template="Projects\Module.Tests.VB\FoundationalModule.Tests.vstemplate">
+		  <Input Name="Root" RecipeArgument="TestProjectContainerSolutionFolder" />
+		  <Input Name="ItemName" RecipeArgument="ModuleTestProjectName" />
+		  <Input Name="DestinationFolder" RecipeArgument="ModuleTestProjectPath" />
+		  <Output Name="NewItem" />
+	  </Action>
+    <!-- Unfold the interface project template if needed -->
+    <Action Condition="$(CreateModuleInterfaceLibrary)" Name="UnfoldModuleInterfaceProjectTemplate"
+          Type="UnfoldTemplateAction"
+          Template="Projects\Module.Interface.VB\Module.Interface.vstemplate">
+      <Input Name="Root" RecipeArgument="TestProjectContainerSolutionFolder" />
+      <Input Name="ItemName" RecipeArgument="ModuleInterfaceProjectName" />
+      <Input Name="DestinationFolder" RecipeArgument="ModuleInterfaceProjectPath" />
+      <Output Name="NewItem" />
+    </Action>
+	  <xi:include href="../Common/CreateWebClientFactoryFoundationalModuleCommon.xml"
+						 xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) 
+				xpointer(/Recipe/gax:Actions/gax:Action)" />
+  </Actions>
+</Recipe>

@@ -1,0 +1,38 @@
+<#@ Template Language="C#" #>
+<#@ Assembly name="System.dll" #>
+<#@ Import Namespace="System" #>
+<#@ property processor="PropertyProcessor" name="ModuleName" #>
+<#@ property processor="PropertyProcessor" name="ViewName" #>
+<#@ property processor="PropertyProcessor" name="ModuleNamespace" #>
+<#@ property processor="PropertyProcessor" name="ViewsFolder" #>
+Imports System
+Imports System.Collections.Generic
+Imports System.Text
+Imports Microsoft.Practices.ObjectBuilder
+Imports Microsoft.Practices.CompositeWeb
+
+Namespace <#= this.ViewsFolder #>
+
+	Public Class <#= this.ViewName #>Presenter
+		Inherits Presenter(Of I<#= this.ViewName #>View)
+
+		' NOTE: Uncomment the following code if you want ObjectBuilder to inject the module controller
+		'
+		'Private _controller As I<#= this.ModuleName #>Controller
+		'Public Sub New(<CreateNew()> ByVal moduleController As I<#= this.ModuleName #>Controller)
+		'    _controller = moduleController
+		'End Sub
+
+		Public Overrides Sub OnViewLoaded()
+			'TODO: Implement code that will be executed every time the view loads
+		End Sub
+
+		Public Overrides Sub OnViewInitialized()
+			' TODO: Implement code that will be executed the first time the view loads
+		End Sub
+
+		' TODO: Handle other view events and set state in the view
+
+	End Class
+
+End Namespace

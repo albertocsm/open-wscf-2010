@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://GlobalBankServices.ServiceContracts/2006/11/IAccountService" elementFormDefault="qualified" xmlns="http://GlobalBankServices.ServiceContracts/2006/11/IAccountService" xmlns:tns="http://GlobalBankServices.ServiceContracts/2006/11/IAccountService" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GetAccountRequestType">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAccountResponseType">
+    <xs:sequence>
+      <xs:element name="userAccounts" type="AccountTableEntityType">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccountTableEntityType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="number" type="xs:string" />
+      <xs:element name="ownerId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateAccountRequestType">
+    <xs:sequence>
+      <xs:element name="account" type="AccountTableEntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransferTableEntry">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="sourceAccount" type="xs:string" />
+      <xs:element name="destinationAccount" type="xs:string" />
+      <xs:element name="amount" type="xs:float" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="status" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProcessTransfersRequestType">
+    <xs:sequence>
+      <xs:element name="accountsToProcess" type="TransferTableEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProcessTransfersResponseType">
+    <xs:sequence>
+      <xs:element name="processedAccounts" type="TransferTableEntry" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\Microsoft.Practices.RecipeFramework.Extensions.XML
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\Microsoft.Practices.RecipeFramework.Extensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\Microsoft.Practices.RecipeFramework.Extensions.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\en-US\Microsoft.Practices.RecipeFramework.Extensions.resources.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Extensions.csprojResolveAssemblyReference.cache
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.Dialogs.X509CertificatePickerView.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.Editors.ClassBrowser.ClassBrowserEditorForm.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.Properties.Resources.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.Editors.ClassBrowser.ClassBrowserEditorForm.en-US.resources
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Extensions.csproj.GenerateResource.Cache
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\en-US\Microsoft.Practices.RecipeFramework.Extensions.resources.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\obj\Debug\Microsoft.Practices.RecipeFramework.Extensions.pdb
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\Microsoft.VisualStudio.Settings.dll
+D:\Projectos\PCSources\WCSF 2012\sources\OpenGEL\Source\Extensions\bin\Debug\Microsoft.VisualStudio.Settings.xml

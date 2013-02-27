@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Accounts>
+  <Account Type="Checking Account" Number="99-123-1000" Balance="$9,320.00" />
+  <Account Type="Savings Account" Number="99-345-1000" Balance="$4,010.00" />
+</Accounts>

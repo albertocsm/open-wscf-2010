@@ -1,0 +1,49 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <Name>WebUI</Name>
+    <Description>WebUI</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>VisualBasic</ProjectSubType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebUI</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableEditOfLocationField>true</EnableEditOfLocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="WebUI.webproj" File="WebUI.webproj" ReplaceParameters="true">
+      <Folder Name="App_Code" />
+      <Folder Name="Errors">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AccessDenied.htm">AccessDenied.htm</ProjectItem>
+      </Folder>
+      <Folder Name="App_Themes">
+        <Folder Name="Default">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Default.css">Default.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Default.skin">Default.skin</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.vb">Default.aspx.vb</ProjectItem>
+      <Folder Name="Shared">
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="vwd.webinfo">vwd.webinfo</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=2.0.0.0, Culture=neutral, PublicKeyToken=023ca9fed18f34f0</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+				  SchemaVersion="1.0">
+      <References>
+      </References>
+    </Template>
+  </WizardData>
+</VSTemplate>
