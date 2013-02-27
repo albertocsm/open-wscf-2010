@@ -1,12 +1,13 @@
 OpenWSCF2010
 ============
 
-Custom built from [patterns &amp; practices Web Client Developer Guidance](http://webclientguidance.codeplex.com/wikipage?title=Web%20Client%20Software%20Factory&referringTitle=Home) original code to run WCSF on VS2012
+This is a port from [patterns &amp; practices Web Client Developer Guidance](http://webclientguidance.codeplex.com/wikipage?title=Web%20Client%20Software%20Factory&referringTitle=Home) package to run WCSF on VS2012
 
-WCSF2010-VS2012.vsix was custom built to be used with Visual Studio 2012.<br>
-It depends on OpenGAX2010 and a custom built version of GEL
+WCSF2010-VS2012.vsix is a new package built from the original code in rder to be used with Visual Studio 2012.<br>
+It depends on OpenGAX2010 and a refreshed built of GEL 2.0.0.0
+None of the sources were changed (GAX, GEL or WCSF). I just refreshed the dependencies and at most updated config files as recomendedd on OpenGAX documentation.
 
-All the sources used are available is this repository.<br>
+All the sources are also available in the repository.<br>
 All the dependencies are already refreshed and Web Client Software Factory 2010 Source should be all ready to be build again if needed.
 
 
